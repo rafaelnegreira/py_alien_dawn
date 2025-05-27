@@ -1,0 +1,156 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "sem título.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "#ground_white": {
+            "scaleInEditor": 0.25
+        },
+        ":/automap-tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "City Prop Tileset update 2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "central.tmj": {
+            "scale": 0.33,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 953.0303030303032,
+                "y": 881.8181818181819
+            }
+        },
+        "escola.tmx": {
+            "expandedObjectLayers": [
+                4
+            ],
+            "scale": 1,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 550.5,
+                "y": 239.5
+            }
+        },
+        "escola.tmx#NES_MStreet_Tile_Set_MockUp": {
+            "scaleInDock": 1
+        },
+        "escola.tmx#japanese-school_8x8-final.tilesetx2": {
+            "scaleInDock": 1
+        },
+        "escola.tmx#tileset x2": {
+            "scaleInDock": 1
+        },
+        "ground_white.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "sem título.json": {
+            "scale": 0.35624999999999996,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 960,
+                "y": 958.5964912280701
+            }
+        },
+        "sem título.json#tileset x1": {
+            "scaleInDock": 1
+        },
+        "sem título.json#tileset x2": {
+            "scaleInDock": 1
+        },
+        "sem título.json#tileset x3": {
+            "scaleInDock": 1
+        },
+        "sem título.tmj": {
+            "scale": 0.33,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 998.4848484848486,
+                "y": 809.0909090909092
+            }
+        },
+        "sem título.tmj#tileset x1": {
+            "scaleInDock": 1
+        },
+        "sem título.tmj#tileset x2": {
+            "scaleInDock": 1
+        },
+        "sem título.tmj#tileset x3": {
+            "scaleInDock": 1
+        },
+        "sem título.tmx": {
+            "expandedObjectLayers": [
+                6
+            ],
+            "scale": 1,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 480.5,
+                "y": 479.5
+            }
+        },
+        "sem título.tmx#CP_V1.0.4": {
+            "scaleInDock": 1
+        },
+        "sem título.tmx#CP_V1.0.4 2x": {
+            "scaleInDock": 0.5
+        },
+        "sem título.tmx#City Prop Tileset update 2": {
+            "scaleInDock": 0.75
+        },
+        "sem título.tmx#NES_MStreet_Tile_Set_MockUp": {
+            "scaleInDock": 1
+        },
+        "sem título.tmx#SL001 2x": {
+            "scaleInDock": 1
+        },
+        "sem título.tmx#tileset x1": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "sem título.tmx#tileset x2": {
+            "scaleInDock": 1
+        },
+        "sem título.tmx#tileset x3": {
+            "scaleInDock": 0.5,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "C:/Users/rafin/OneDrive/Área de Trabalho/Exercicios/Projeto_lab_jogos/mapa",
+    "last.imagePath": "D:/Downloads/CP_V1.1.0_nyknck/CP_V1.1.0_nyknck/Animations",
+    "map.height": 30,
+    "map.lastUsedExportFilter": "Arquivos de mapa JSON (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 40,
+    "openFiles": [
+        "sem título.tmx",
+        "escola.tmx"
+    ],
+    "project": "sem título.tiled-project",
+    "recentFiles": [
+        "escola.tmx",
+        "sem título.tmx",
+        "City Prop Tileset update 2.tsx",
+        "central.tmj",
+        "sem título.json",
+        "sem título.tmj",
+        "ground_white.tsx"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}
