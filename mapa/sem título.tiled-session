@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "sem título.tmx",
+    "activeFile": "cidade.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -29,6 +29,32 @@
                 "y": 881.8181818181819
             }
         },
+        "cidade.tmx": {
+            "expandedObjectLayers": [
+                6
+            ],
+            "scale": 1,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 473.5,
+                "y": 299
+            }
+        },
+        "cidade.tmx#CP_V1.0.4": {
+            "scaleInDock": 1
+        },
+        "cidade.tmx#CP_V1.0.4 2x": {
+            "scaleInDock": 0.5
+        },
+        "cidade.tmx#City Prop Tileset update 2": {
+            "scaleInDock": 0.75
+        },
+        "cidade.tmx#NES_MStreet_Tile_Set_MockUp": {
+            "scaleInDock": 1
+        },
+        "cidade.tmx#SL001 2x": {
+            "scaleInDock": 1
+        },
         "escola.tmx": {
             "expandedObjectLayers": [
                 4
@@ -36,8 +62,8 @@
             "scale": 1,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 550.5,
-                "y": 239.5
+                "x": 312.5,
+                "y": 239
             }
         },
         "escola.tmx#NES_MStreet_Tile_Set_MockUp": {
@@ -52,6 +78,67 @@
         "ground_white.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
+        },
+        "laboratorio.tmx": {
+            "expandedObjectLayers": [
+                3,
+                9,
+                8
+            ],
+            "scale": 1,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 485.5,
+                "y": 294
+            }
+        },
+        "laboratorio.tmx#Gemini_G_512-removebg-preview": {
+            "scaleInDock": 1
+        },
+        "laboratorio.tmx#Gemini_Generated_Image_2x": {
+            "scaleInDock": 1
+        },
+        "laboratorio.tmx#Gemini_Generated_Image_ycahrkycahrkycah-removebg-preview": {
+            "scaleInDock": 0.75
+        },
+        "laboratorio.tmx#neo_zero_tiles_and_buildings_01": {
+            "scaleInDock": 1.5
+        },
+        "laboratorio.tmx#tileset x1": {
+            "scaleInDock": 2
+        },
+        "laboratorio.tmx#tileset x2": {
+            "scaleInDock": 1
+        },
+        "laboratorio_fechado.tmx": {
+            "expandedObjectLayers": [
+                3,
+                8
+            ],
+            "scale": 1,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 497.5,
+                "y": 276
+            }
+        },
+        "laboratorio_fechado.tmx#Gemini_G_512-removebg-preview": {
+            "scaleInDock": 1
+        },
+        "laboratorio_fechado.tmx#Gemini_Generated_Image_2x": {
+            "scaleInDock": 1
+        },
+        "laboratorio_fechado.tmx#Gemini_Generated_Image_ycahrkycahrkycah-removebg-preview": {
+            "scaleInDock": 0.75
+        },
+        "laboratorio_fechado.tmx#neo_zero_tiles_and_buildings_01": {
+            "scaleInDock": 2
+        },
+        "laboratorio_fechado.tmx#tileset x1": {
+            "scaleInDock": 2
+        },
+        "laboratorio_fechado.tmx#tileset x2": {
+            "scaleInDock": 1
         },
         "sem título.json": {
             "scale": 0.35624999999999996,
@@ -91,11 +178,11 @@
             "expandedObjectLayers": [
                 6
             ],
-            "scale": 1,
+            "scale": 0.75,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 480.5,
-                "y": 479.5
+                "x": 435.3333333333333,
+                "y": 494.66666666666663
             }
         },
         "sem título.tmx#CP_V1.0.4": {
@@ -125,22 +212,24 @@
             "scaleInEditor": 1
         }
     },
-    "last.exportedFilePath": "C:/Users/rafin/OneDrive/Área de Trabalho/Exercicios/Projeto_lab_jogos/mapa",
-    "last.imagePath": "D:/Downloads/CP_V1.1.0_nyknck/CP_V1.1.0_nyknck/Animations",
-    "map.height": 30,
+    "last.exportedFilePath": "C:/Users/rafin/OneDrive/Área de Trabalho/Exercicios/Alien Dawn LAB JOGOS/py_alien_dawn/mapa",
+    "last.imagePath": "D:/Downloads",
+    "map.height": 40,
     "map.lastUsedExportFilter": "Arquivos de mapa JSON (*.tmj *.json)",
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
-    "map.width": 40,
+    "map.width": 60,
     "openFiles": [
-        "sem título.tmx",
-        "escola.tmx"
+        "cidade.tmx"
     ],
     "project": "sem título.tiled-project",
     "recentFiles": [
-        "escola.tmx",
+        "cidade.tmx",
+        "laboratorio_fechado.tmx",
         "sem título.tmx",
+        "laboratorio.tmx",
+        "escola.tmx",
         "City Prop Tileset update 2.tsx",
         "central.tmj",
         "sem título.json",
