@@ -3,13 +3,14 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "cidade.tmx",
+    "activeFile": "supermercado.tmx",
     "expandedProjectPaths": [
         "."
     ],
+    "file.lastUsedOpenFilter": "Todos os Ficheiros (*)",
     "fileStates": {
         "": {
-            "scaleInDock": 1
+            "scaleInDock": 3
         },
         "#ground_white": {
             "scaleInEditor": 0.25
@@ -29,15 +30,38 @@
                 "y": 881.8181818181819
             }
         },
+        "cidade.json": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 479.5,
+                "y": 480
+            }
+        },
+        "cidade.json#CP_V1.0.4": {
+            "scaleInDock": 1
+        },
+        "cidade.json#CP_V1.0.4 2x": {
+            "scaleInDock": 1
+        },
+        "cidade.json#City Prop Tileset update 2": {
+            "scaleInDock": 1
+        },
+        "cidade.json#NES_MStreet_Tile_Set_MockUp": {
+            "scaleInDock": 1
+        },
+        "cidade.json#SL001 2x": {
+            "scaleInDock": 1
+        },
         "cidade.tmx": {
             "expandedObjectLayers": [
                 6
             ],
             "scale": 1,
-            "selectedLayer": 6,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 473.5,
-                "y": 299
+                "x": 479,
+                "y": 480
             }
         },
         "cidade.tmx#CP_V1.0.4": {
@@ -55,6 +79,20 @@
         "cidade.tmx#SL001 2x": {
             "scaleInDock": 1
         },
+        "escola.json": {
+            "scale": 1.2599375,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 399.6229971724788,
+                "y": 239.694429287167
+            }
+        },
+        "escola.json#japanese-school_8x8-final.tilesetx2": {
+            "scaleInDock": 1
+        },
+        "escola.json#tileset x2": {
+            "scaleInDock": 1
+        },
         "escola.tmx": {
             "expandedObjectLayers": [
                 4
@@ -62,8 +100,8 @@
             "scale": 1,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 312.5,
-                "y": 239
+                "x": 399,
+                "y": 240
             }
         },
         "escola.tmx#NES_MStreet_Tile_Set_MockUp": {
@@ -79,16 +117,42 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "laboratorio.json": {
+            "scale": 0.899955357142857,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 559.4721960414704,
+                "y": 320.0158738032642
+            }
+        },
+        "laboratorio.json#Gemini_G_512-removebg-preview": {
+            "scaleInDock": 1
+        },
+        "laboratorio.json#Gemini_Generated_Image_2x": {
+            "scaleInDock": 1
+        },
+        "laboratorio.json#Gemini_Generated_Image_ycahrkycahrkycah-removebg-preview": {
+            "scaleInDock": 1
+        },
+        "laboratorio.json#neo_zero_tiles_and_buildings_01": {
+            "scaleInDock": 1
+        },
+        "laboratorio.json#tileset x1": {
+            "scaleInDock": 1
+        },
+        "laboratorio.json#tileset x2": {
+            "scaleInDock": 1
+        },
         "laboratorio.tmx": {
             "expandedObjectLayers": [
-                3,
+                8,
                 9,
-                8
+                3
             ],
             "scale": 1,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 485.5,
+                "x": 373,
                 "y": 294
             }
         },
@@ -99,10 +163,10 @@
             "scaleInDock": 1
         },
         "laboratorio.tmx#Gemini_Generated_Image_ycahrkycahrkycah-removebg-preview": {
-            "scaleInDock": 0.75
+            "scaleInDock": 0.5
         },
         "laboratorio.tmx#neo_zero_tiles_and_buildings_01": {
-            "scaleInDock": 1.5
+            "scaleInDock": 1
         },
         "laboratorio.tmx#tileset x1": {
             "scaleInDock": 2
@@ -110,10 +174,36 @@
         "laboratorio.tmx#tileset x2": {
             "scaleInDock": 1
         },
+        "laboratorio_fechado.json": {
+            "scale": 0.899955357142857,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 559.4721960414704,
+                "y": 320.0158738032642
+            }
+        },
+        "laboratorio_fechado.json#Gemini_G_512-removebg-preview": {
+            "scaleInDock": 1
+        },
+        "laboratorio_fechado.json#Gemini_Generated_Image_2x": {
+            "scaleInDock": 1
+        },
+        "laboratorio_fechado.json#Gemini_Generated_Image_ycahrkycahrkycah-removebg-preview": {
+            "scaleInDock": 1
+        },
+        "laboratorio_fechado.json#neo_zero_tiles_and_buildings_01": {
+            "scaleInDock": 1
+        },
+        "laboratorio_fechado.json#tileset x1": {
+            "scaleInDock": 1
+        },
+        "laboratorio_fechado.json#tileset x2": {
+            "scaleInDock": 1
+        },
         "laboratorio_fechado.tmx": {
             "expandedObjectLayers": [
-                3,
-                8
+                8,
+                3
             ],
             "scale": 1,
             "selectedLayer": 4,
@@ -210,6 +300,59 @@
         "sem título.tmx#tileset x3": {
             "scaleInDock": 0.5,
             "scaleInEditor": 1
+        },
+        "supermercado.tmx": {
+            "expandedObjectLayers": [
+                10,
+                4
+            ],
+            "scale": 0.75,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 410.66666666666663,
+                "y": 333.3333333333333
+            }
+        },
+        "supermercado.tmx#CP_V1.0.4": {
+            "scaleInDock": 0.75
+        },
+        "supermercado.tmx#Interiors_free_16x16": {
+            "scaleInDock": 1
+        },
+        "supermercado.tmx#RetailFIXED": {
+            "scaleInDock": 0.75
+        },
+        "supermercado.tmx#Room_Builder_free_16x16": {
+            "scaleInDock": 2
+        },
+        "supermercado.tmx#japanese-school_8x8-final.tilesetx2": {
+            "scaleInDock": 1
+        },
+        "supermercado_fechado.tmx": {
+            "expandedObjectLayers": [
+                4
+            ],
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 470,
+                "y": 317
+            }
+        },
+        "supermercado_fechado.tmx#CP_V1.0.4": {
+            "scaleInDock": 1
+        },
+        "supermercado_fechado.tmx#Interiors_free_16x16": {
+            "scaleInDock": 1
+        },
+        "supermercado_fechado.tmx#RetailFIXED": {
+            "scaleInDock": 0.75
+        },
+        "supermercado_fechado.tmx#Room_Builder_free_16x16": {
+            "scaleInDock": 0.75
+        },
+        "supermercado_fechado.tmx#japanese-school_8x8-final.tilesetx2": {
+            "scaleInDock": 1
         }
     },
     "last.exportedFilePath": "C:/Users/rafin/OneDrive/Área de Trabalho/Exercicios/Alien Dawn LAB JOGOS/py_alien_dawn/mapa",
@@ -221,23 +364,25 @@
     "map.tileWidth": 16,
     "map.width": 60,
     "openFiles": [
-        "cidade.tmx"
+        "supermercado.tmx",
+        "supermercado_fechado.tmx"
     ],
     "project": "sem título.tiled-project",
     "recentFiles": [
+        "supermercado_fechado.tmx",
+        "supermercado.tmx",
+        "escola.tmx",
+        "laboratorio.tmx",
         "cidade.tmx",
         "laboratorio_fechado.tmx",
+        "laboratorio_fechado.json",
+        "laboratorio.json",
+        "escola.json",
+        "cidade.json",
         "sem título.tmx",
-        "laboratorio.tmx",
-        "escola.tmx",
-        "City Prop Tileset update 2.tsx",
-        "central.tmj",
-        "sem título.json",
-        "sem título.tmj",
-        "ground_white.tsx"
+        "City Prop Tileset update 2.tsx"
     ],
     "tileset.embedInMap": true,
-    "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
         "height": 16,
         "width": 16
