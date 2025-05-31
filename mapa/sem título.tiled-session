@@ -202,14 +202,14 @@
         },
         "laboratorio_fechado.tmx": {
             "expandedObjectLayers": [
-                8,
-                3
+                3,
+                8
             ],
             "scale": 1,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 497.5,
-                "y": 276
+                "x": 1012,
+                "y": 344
             }
         },
         "laboratorio_fechado.tmx#Gemini_G_512-removebg-preview": {
@@ -303,14 +303,14 @@
         },
         "supermercado.tmx": {
             "expandedObjectLayers": [
-                10,
-                4
+                4,
+                10
             ],
-            "scale": 0.75,
+            "scale": 1,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 410.66666666666663,
-                "y": 333.3333333333333
+                "x": 473,
+                "y": 291
             }
         },
         "supermercado.tmx#CP_V1.0.4": {
@@ -369,12 +369,12 @@
     ],
     "project": "sem título.tiled-project",
     "recentFiles": [
+        "laboratorio_fechado.tmx",
         "supermercado_fechado.tmx",
         "supermercado.tmx",
         "escola.tmx",
         "laboratorio.tmx",
         "cidade.tmx",
-        "laboratorio_fechado.tmx",
         "laboratorio_fechado.json",
         "laboratorio.json",
         "escola.json",

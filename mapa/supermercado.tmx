@@ -365,7 +365,7 @@
   <object id="75" x="407.333" y="329.219" width="18.6667" height="6.89583"/>
   <object id="83" x="325.833" y="144.625" width="42.3333" height="28.0834"/>
  </objectgroup>
- <objectgroup id="10" name="Interacao">
+ <objectgroup id="10" name="Interacao" visible="0">
   <object id="79" x="592.167" y="34.125" width="15" height="23.4167"/>
   <object id="80" x="656.167" y="35.2917" width="15" height="23.4167"/>
   <object id="82" x="305.5" y="144.292" width="19.3333" height="28.0834"/>

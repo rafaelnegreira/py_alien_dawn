@@ -326,7 +326,7 @@
 2684359990,2684359990,2684359990,2684359990,2684359990,2684359990,2684359990,2684359990,2684359990,2684359990,2684359990,2684359990,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="4" name="solidos">
+ <objectgroup id="4" name="solidos" visible="0">
   <object id="5" x="643.122" y="428.667" width="120.667" height="92.6667"/>
   <object id="6" x="0.666667" y="-0.666667" width="5.33333" height="640.333"/>
   <object id="8" x="4" y="633.333" width="955.333" height="6"/>
@@ -367,7 +367,7 @@
   <object id="75" x="407.333" y="329.219" width="18.6667" height="6.89583"/>
   <object id="83" x="317.167" y="144.625" width="51" height="28.0834"/>
  </objectgroup>
- <objectgroup id="10" name="Interacao">
+ <objectgroup id="10" name="Interacao" visible="0">
   <object id="78" x="413" y="36.5" width="37" height="7.75"/>
   <object id="79" x="592.167" y="34.125" width="15" height="23.4167"/>
   <object id="80" x="656.167" y="35.2917" width="15" height="23.4167"/>
