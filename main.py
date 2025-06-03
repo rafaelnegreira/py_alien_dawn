@@ -11,7 +11,7 @@ from PPlay.sound import *
 from PPlay.sprite import *
 from PPlay.window import *
 
-janela = Window(600, 400)
+janela = Window(800, 600)
 teclado = Keyboard()
 
 class Camera:
