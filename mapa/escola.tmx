@@ -4,10 +4,10 @@
   <export target="escola.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="japanese-school_8x8-final.tilesetx2" tilewidth="16" tileheight="16" tilecount="880" columns="16">
-  <image source="D:/Downloads/japanese-school_8x8-final.tilesetx2.png" width="256" height="880"/>
+  <image source="../tiles/escola/japanese-school_8x8-final.tilesetx2.png" width="256" height="880"/>
  </tileset>
  <tileset firstgid="881" name="tileset x2" tilewidth="16" tileheight="16" tilecount="13616" columns="148">
-  <image source="D:/Downloads/Tech Dungeon Roguelite - Asset Pack (DEMO)/Tech Dungeon Roguelite - Asset Pack (DEMO)/tileset x2.png" width="2368" height="1472"/>
+  <image source="../tiles/escola/tileset x2.png" width="2368" height="1472"/>
  </tileset>
  <layer id="3" name="chao" width="50" height="30">
   <data encoding="csv">

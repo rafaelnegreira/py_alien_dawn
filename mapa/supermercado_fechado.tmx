@@ -4,19 +4,19 @@
   <export target="supermercado.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="RetailFIXED" tilewidth="16" tileheight="16" tilecount="4000" columns="100">
-  <image source="D:/Downloads/RetailFIXED.png" width="1600" height="640"/>
+  <image source="../tiles/supermercado/RetailFIXED.png" width="1600" height="640"/>
  </tileset>
  <tileset firstgid="4001" name="Interiors_free_16x16" tilewidth="16" tileheight="16" tilecount="1424" columns="16">
-  <image source="D:/Downloads/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" width="256" height="1424"/>
+  <image source="../tiles/supermercado/Interiors_free_16x16.png" width="256" height="1424"/>
  </tileset>
  <tileset firstgid="5425" name="Room_Builder_free_16x16" tilewidth="16" tileheight="16" tilecount="391" columns="17">
-  <image source="D:/Downloads/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" width="272" height="368"/>
+  <image source="../tiles/supermercado/Room_Builder_free_16x16.png" width="272" height="368"/>
  </tileset>
  <tileset firstgid="5816" name="CP_V1.0.4" tilewidth="16" tileheight="16" tilecount="4096" columns="64">
-  <image source="D:/Downloads/CP_V1.1.0_nyknck/CP_V1.1.0_nyknck/CP_V1.0.4_nyknck/CP_V1.0.4.png" width="1024" height="1024"/>
+  <image source="../tiles/supermercado/CP_V1.0.4.png" width="1024" height="1024"/>
  </tileset>
  <tileset firstgid="9912" name="japanese-school_8x8-final.tilesetx2" tilewidth="16" tileheight="16" tilecount="880" columns="16">
-  <image source="D:/Downloads/japanese-school_8x8-final.tilesetx2.png" width="256" height="880"/>
+  <image source="../tiles/supermercado/japanese-school_8x8-final.tilesetx2.png" width="256" height="880"/>
  </tileset>
  <layer id="1" name="chao" width="60" height="40">
   <data encoding="csv">

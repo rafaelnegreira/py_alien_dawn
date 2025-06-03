@@ -4,22 +4,22 @@
   <export target="laboratorio.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="tileset x2" tilewidth="16" tileheight="16" tilecount="13616" columns="148">
-  <image source="D:/Downloads/Tech Dungeon Roguelite - Asset Pack (DEMO)/Tech Dungeon Roguelite - Asset Pack (DEMO)/tileset x2.png" width="2368" height="1472"/>
+  <image source="../tiles/laboratorio/tileset x2.png" width="2368" height="1472"/>
  </tileset>
  <tileset firstgid="13617" name="tileset x1" tilewidth="16" tileheight="16" tilecount="3404" columns="74">
-  <image source="D:/Downloads/Tech Dungeon Roguelite - Asset Pack (DEMO)/Tech Dungeon Roguelite - Asset Pack (DEMO)/tileset x1.png" width="1184" height="736"/>
+  <image source="../tiles/laboratorio/tileset x1.png" width="1184" height="736"/>
  </tileset>
  <tileset firstgid="17021" name="neo_zero_tiles_and_buildings_01" tilewidth="16" tileheight="16" tilecount="400" columns="20">
-  <image source="D:/Downloads/neo_zero_V1.0/neo_zero_tiles_and_buildings_01.png" width="320" height="320"/>
+  <image source="../tiles/laboratorio/neo_zero_tiles_and_buildings_01.png" width="320" height="320"/>
  </tileset>
- <tileset firstgid="17421" name="Gemini_Generated_Image_ycahrkycahrkycah-removebg-preview" tilewidth="16" tileheight="16" tilecount="961" columns="31">
-  <image source="D:/Downloads/Gemini_Generated_Image_ycahrkycahrkycah-removebg-preview.png" width="500" height="500"/>
+ <tileset firstgid="17421" name="objetos_scifi" tilewidth="16" tileheight="16" tilecount="961" columns="31">
+  <image source="../tiles/laboratorio/objetos_scifi.png" width="500" height="500"/>
  </tileset>
- <tileset firstgid="18382" name="Gemini_G_512-removebg-preview" tilewidth="16" tileheight="16" tilecount="961" columns="31">
-  <image source="D:/Downloads/Gemini_G_512-removebg-preview.png" width="500" height="500"/>
+ <tileset firstgid="18382" name="portas_e_mesas_scifi" tilewidth="16" tileheight="16" tilecount="961" columns="31">
+  <image source="../tiles/laboratorio/portas_e_mesas_scifi.png" width="500" height="500"/>
  </tileset>
- <tileset firstgid="19343" name="Gemini_Generated_Image_2x" tilewidth="16" tileheight="16" tilecount="324" columns="18">
-  <image source="D:/Downloads/Gemini_Generated_Image_2x.png" width="300" height="300"/>
+ <tileset firstgid="19343" name="objetos_scifi_2x" tilewidth="16" tileheight="16" tilecount="324" columns="18">
+  <image source="../tiles/laboratorio/objetos_scifi_2x.png" width="300" height="300"/>
  </tileset>
  <layer id="4" name="chao" width="70" height="40">
   <data encoding="csv">

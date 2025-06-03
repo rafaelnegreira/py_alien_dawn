@@ -3,14 +3,15 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "supermercado.tmx",
+    "activeFile": "",
     "expandedProjectPaths": [
         "."
     ],
     "file.lastUsedOpenFilter": "Todos os Ficheiros (*)",
     "fileStates": {
         "": {
-            "scaleInDock": 3
+            "scaleInDock": 3,
+            "scaleInEditor": 1
         },
         "#ground_white": {
             "scaleInEditor": 0.25
@@ -57,27 +58,32 @@
             "expandedObjectLayers": [
                 6
             ],
-            "scale": 1,
+            "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 479,
-                "y": 480
+                "x": 612,
+                "y": 498.66666666666663
             }
         },
         "cidade.tmx#CP_V1.0.4": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "cidade.tmx#CP_V1.0.4 2x": {
-            "scaleInDock": 0.5
+            "scaleInDock": 0.5,
+            "scaleInEditor": 1
         },
         "cidade.tmx#City Prop Tileset update 2": {
-            "scaleInDock": 0.75
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
         },
         "cidade.tmx#NES_MStreet_Tile_Set_MockUp": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "cidade.tmx#SL001 2x": {
-            "scaleInDock": 1
+            "scaleInDock": 0.5,
+            "scaleInEditor": 1
         },
         "escola.json": {
             "scale": 1.2599375,
@@ -108,10 +114,12 @@
             "scaleInDock": 1
         },
         "escola.tmx#japanese-school_8x8-final.tilesetx2": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "escola.tmx#tileset x2": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "ground_white.tsx": {
             "scaleInDock": 1,
@@ -145,34 +153,50 @@
         },
         "laboratorio.tmx": {
             "expandedObjectLayers": [
-                8,
+                3,
                 9,
-                3
+                8
             ],
-            "scale": 1,
+            "scale": 0.75,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 373,
-                "y": 294
+                "x": 599.3333333333333,
+                "y": 294.66666666666663
             }
         },
         "laboratorio.tmx#Gemini_G_512-removebg-preview": {
             "scaleInDock": 1
         },
         "laboratorio.tmx#Gemini_Generated_Image_2x": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "laboratorio.tmx#Gemini_Generated_Image_ycahrkycahrkycah-removebg-preview": {
             "scaleInDock": 0.5
         },
         "laboratorio.tmx#neo_zero_tiles_and_buildings_01": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "laboratorio.tmx#objetos_scifi": {
+            "scaleInDock": 0.5,
+            "scaleInEditor": 1
+        },
+        "laboratorio.tmx#objetos_scifi_2x": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "laboratorio.tmx#portas_e_mesas_scifi": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "laboratorio.tmx#tileset x1": {
-            "scaleInDock": 2
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "laboratorio.tmx#tileset x2": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "laboratorio_fechado.json": {
             "scale": 0.899955357142857,
@@ -206,10 +230,10 @@
                 8
             ],
             "scale": 1,
-            "selectedLayer": 4,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 1012,
-                "y": 344
+                "x": 495.5,
+                "y": 281
             }
         },
         "laboratorio_fechado.tmx#Gemini_G_512-removebg-preview": {
@@ -219,16 +243,32 @@
             "scaleInDock": 1
         },
         "laboratorio_fechado.tmx#Gemini_Generated_Image_ycahrkycahrkycah-removebg-preview": {
-            "scaleInDock": 0.75
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
         },
         "laboratorio_fechado.tmx#neo_zero_tiles_and_buildings_01": {
-            "scaleInDock": 2
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
+        "laboratorio_fechado.tmx#objetos_scifi": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "laboratorio_fechado.tmx#objetos_scifi_2x": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
+        "laboratorio_fechado.tmx#portas_e_mesas_scifi": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
         },
         "laboratorio_fechado.tmx#tileset x1": {
-            "scaleInDock": 2
+            "scaleInDock": 2,
+            "scaleInEditor": 1
         },
         "laboratorio_fechado.tmx#tileset x2": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "sem título.json": {
             "scale": 0.35624999999999996,
@@ -307,26 +347,31 @@
                 10
             ],
             "scale": 1,
-            "selectedLayer": 5,
+            "selectedLayer": 7,
             "viewCenter": {
-                "x": 473,
-                "y": 291
+                "x": 948.5,
+                "y": 178
             }
         },
         "supermercado.tmx#CP_V1.0.4": {
-            "scaleInDock": 0.75
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
         },
         "supermercado.tmx#Interiors_free_16x16": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "supermercado.tmx#RetailFIXED": {
-            "scaleInDock": 0.75
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
         },
         "supermercado.tmx#Room_Builder_free_16x16": {
-            "scaleInDock": 2
+            "scaleInDock": 2,
+            "scaleInEditor": 1
         },
         "supermercado.tmx#japanese-school_8x8-final.tilesetx2": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "supermercado_fechado.tmx": {
             "expandedObjectLayers": [
@@ -335,27 +380,33 @@
             "scale": 1,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 470,
-                "y": 317
+                "x": 500.5,
+                "y": 280
             }
         },
         "supermercado_fechado.tmx#CP_V1.0.4": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "supermercado_fechado.tmx#Interiors_free_16x16": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "supermercado_fechado.tmx#RetailFIXED": {
-            "scaleInDock": 0.75
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
         },
         "supermercado_fechado.tmx#Room_Builder_free_16x16": {
-            "scaleInDock": 0.75
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
         },
         "supermercado_fechado.tmx#japanese-school_8x8-final.tilesetx2": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         }
     },
     "last.exportedFilePath": "C:/Users/rafin/OneDrive/Área de Trabalho/Exercicios/Alien Dawn LAB JOGOS/py_alien_dawn/mapa",
+    "last.externalTilesetPath": "C:/Users/rafin/OneDrive/Área de Trabalho/Exercicios/Alien Dawn LAB JOGOS/py_alien_dawn/tiles/laboratorio",
     "last.imagePath": "D:/Downloads",
     "map.height": 40,
     "map.lastUsedExportFilter": "Arquivos de mapa JSON (*.tmj *.json)",
@@ -364,16 +415,14 @@
     "map.tileWidth": 16,
     "map.width": 60,
     "openFiles": [
-        "supermercado.tmx",
-        "supermercado_fechado.tmx"
     ],
     "project": "sem título.tiled-project",
     "recentFiles": [
         "supermercado_fechado.tmx",
         "supermercado.tmx",
         "laboratorio_fechado.tmx",
-        "escola.tmx",
         "laboratorio.tmx",
+        "escola.tmx",
         "cidade.tmx",
         "laboratorio_fechado.json",
         "laboratorio.json",
@@ -383,6 +432,7 @@
         "City Prop Tileset update 2.tsx"
     ],
     "tileset.embedInMap": true,
+    "tileset.lastUsedFilter": "Todos os Ficheiros(*)",
     "tileset.tileSize": {
         "height": 16,
         "width": 16
