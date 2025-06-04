@@ -3,14 +3,14 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "cidade.tmx",
     "expandedProjectPaths": [
         "."
     ],
     "file.lastUsedOpenFilter": "Todos os Ficheiros (*)",
     "fileStates": {
         "": {
-            "scaleInDock": 3,
+            "scaleInDock": 0.5,
             "scaleInEditor": 1
         },
         "#ground_white": {
@@ -55,14 +55,18 @@
             "scaleInDock": 1
         },
         "cidade.tmx": {
+            "expandedGroupLayers": [
+                12
+            ],
             "expandedObjectLayers": [
+                11,
                 6
             ],
-            "scale": 0.75,
-            "selectedLayer": 0,
+            "scale": 1.5,
+            "selectedLayer": 9,
             "viewCenter": {
-                "x": 612,
-                "y": 498.66666666666663
+                "x": 784,
+                "y": 509.3333333333333
             }
         },
         "cidade.tmx#CP_V1.0.4": {
@@ -78,12 +82,15 @@
             "scaleInEditor": 1
         },
         "cidade.tmx#NES_MStreet_Tile_Set_MockUp": {
-            "scaleInDock": 1,
+            "scaleInDock": 0.75,
             "scaleInEditor": 1
         },
         "cidade.tmx#SL001 2x": {
             "scaleInDock": 0.5,
             "scaleInEditor": 1
+        },
+        "cidade.tmx#neo_zero_tiles_and_buildings_01": {
+            "scaleInDock": 1.5
         },
         "escola.json": {
             "scale": 1.2599375,
@@ -346,11 +353,11 @@
                 4,
                 10
             ],
-            "scale": 1,
-            "selectedLayer": 7,
+            "scale": 2,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 948.5,
-                "y": 178
+                "x": 197,
+                "y": 270.5
             }
         },
         "supermercado.tmx#CP_V1.0.4": {
@@ -377,11 +384,11 @@
             "expandedObjectLayers": [
                 4
             ],
-            "scale": 1,
+            "scale": 1.5,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 500.5,
-                "y": 280
+                "x": 194,
+                "y": 244
             }
         },
         "supermercado_fechado.tmx#CP_V1.0.4": {
@@ -407,7 +414,7 @@
     },
     "last.exportedFilePath": "C:/Users/rafin/OneDrive/Área de Trabalho/Exercicios/Alien Dawn LAB JOGOS/py_alien_dawn/mapa",
     "last.externalTilesetPath": "C:/Users/rafin/OneDrive/Área de Trabalho/Exercicios/Alien Dawn LAB JOGOS/py_alien_dawn/tiles/laboratorio",
-    "last.imagePath": "D:/Downloads",
+    "last.imagePath": "C:/Users/rafin/OneDrive/Área de Trabalho/Exercicios/Alien Dawn LAB JOGOS/py_alien_dawn/tiles/laboratorio",
     "map.height": 40,
     "map.lastUsedExportFilter": "Arquivos de mapa JSON (*.tmj *.json)",
     "map.lastUsedFormat": "tmx",
@@ -415,15 +422,16 @@
     "map.tileWidth": 16,
     "map.width": 60,
     "openFiles": [
+        "cidade.tmx"
     ],
     "project": "sem título.tiled-project",
     "recentFiles": [
+        "cidade.tmx",
         "supermercado_fechado.tmx",
         "supermercado.tmx",
         "laboratorio_fechado.tmx",
         "laboratorio.tmx",
         "escola.tmx",
-        "cidade.tmx",
         "laboratorio_fechado.json",
         "laboratorio.json",
         "escola.json",

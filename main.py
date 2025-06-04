@@ -34,7 +34,7 @@ class Camera:
         obj.set_position(obj.x + self.x, obj.y + self.y)
 
 # Carrega colisores do JSON exportado do Tiled
-with open("mapa\laboratorio.json") as f:
+with open("mapa\cidade.json") as f:
     mapa = json.load(f)
 
 colisores = []
@@ -150,7 +150,7 @@ player = Player(
 
 player.position(100,350)
 
-tile1 = GameImage("mapa\laboratorio.png")
+tile1 = GameImage("mapa\cidade.png")
 
 camera = Camera(janela.width, janela.height)
 
