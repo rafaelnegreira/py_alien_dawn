@@ -3,14 +3,14 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "cidade.tmx",
+    "activeFile": "puzzle.tmx",
     "expandedProjectPaths": [
         "."
     ],
     "file.lastUsedOpenFilter": "Todos os Ficheiros (*)",
     "fileStates": {
         "": {
-            "scaleInDock": 0.5,
+            "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "#ground_white": {
@@ -62,11 +62,11 @@
                 11,
                 6
             ],
-            "scale": 1.5,
+            "scale": 0.75,
             "selectedLayer": 9,
             "viewCenter": {
-                "x": 784,
-                "y": 509.3333333333333
+                "x": 1061.3333333333335,
+                "y": 574.6666666666666
             }
         },
         "cidade.tmx#CP_V1.0.4": {
@@ -277,6 +277,20 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "puzzle.tmx": {
+            "scale": 1,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 476,
+                "y": 286
+            }
+        },
+        "puzzle.tmx#Captura de tela 2025-06-10 010803": {
+            "scaleInDock": 1
+        },
+        "puzzle.tmx#tileset x3_vermelho": {
+            "scaleInDock": 1
+        },
         "sem título.json": {
             "scale": 0.35624999999999996,
             "selectedLayer": 0,
@@ -312,14 +326,11 @@
             "scaleInDock": 1
         },
         "sem título.tmx": {
-            "expandedObjectLayers": [
-                6
-            ],
-            "scale": 0.75,
-            "selectedLayer": 1,
+            "scale": 1,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 435.3333333333333,
-                "y": 494.66666666666663
+                "x": 393,
+                "y": 315
             }
         },
         "sem título.tmx#CP_V1.0.4": {
@@ -327,6 +338,9 @@
         },
         "sem título.tmx#CP_V1.0.4 2x": {
             "scaleInDock": 0.5
+        },
+        "sem título.tmx#Captura de tela 2025-06-10 010803": {
+            "scaleInDock": 0.33
         },
         "sem título.tmx#City Prop Tileset update 2": {
             "scaleInDock": 0.75
@@ -346,6 +360,10 @@
         },
         "sem título.tmx#tileset x3": {
             "scaleInDock": 0.5,
+            "scaleInEditor": 1
+        },
+        "sem título.tmx#tileset x3_vermelho": {
+            "scaleInDock": 0.33,
             "scaleInEditor": 1
         },
         "supermercado.tmx": {
@@ -414,18 +432,20 @@
     },
     "last.exportedFilePath": "C:/Users/rafin/OneDrive/Área de Trabalho/Exercicios/Alien Dawn LAB JOGOS/py_alien_dawn/mapa",
     "last.externalTilesetPath": "C:/Users/rafin/OneDrive/Área de Trabalho/Exercicios/Alien Dawn LAB JOGOS/py_alien_dawn/tiles/laboratorio",
-    "last.imagePath": "C:/Users/rafin/OneDrive/Área de Trabalho/Exercicios/Alien Dawn LAB JOGOS/py_alien_dawn/tiles/laboratorio",
-    "map.height": 40,
+    "last.imagePath": "C:/Users/rafin/OneDrive/Área de Trabalho/Exercicios/Alien Dawn LAB JOGOS/py_alien_dawn",
+    "map.height": 38,
     "map.lastUsedExportFilter": "Arquivos de mapa JSON (*.tmj *.json)",
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
-    "map.width": 60,
+    "map.width": 50,
     "openFiles": [
-        "cidade.tmx"
+        "puzzle.tmx"
     ],
     "project": "sem título.tiled-project",
     "recentFiles": [
+        "puzzle.tmx",
+        "sem título.tmx",
         "cidade.tmx",
         "supermercado_fechado.tmx",
         "supermercado.tmx",
@@ -435,14 +455,14 @@
         "laboratorio_fechado.json",
         "laboratorio.json",
         "escola.json",
-        "cidade.json",
-        "sem título.tmx",
-        "City Prop Tileset update 2.tsx"
+        "cidade.json"
     ],
     "tileset.embedInMap": true,
     "tileset.lastUsedFilter": "Todos os Ficheiros(*)",
     "tileset.tileSize": {
         "height": 16,
         "width": 16
-    }
+    },
+    "tileset.transparentColor": "#c8c8c8",
+    "tileset.useTransparentColor": true
 }
