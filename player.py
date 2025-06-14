@@ -12,22 +12,28 @@ from PPlay.sprite import *
 from PPlay.window import *
 
 class Character:
-    def __init__(self, tipo, jump, hp):
+    def __init__(self, tipo, hp):
         self.tipo = tipo
-        self.jump = jump
         self.hp = hp
 
+class arma():
+    def __init__(self, qtd_municao, projetil):
+        self.qtd_municao = qtd_municao
+        self.projetil = Sprite("",1)
+
+    def disparo(self):
+        if self.qtd_municao > 0:
+            self.qtd_municao -= 1
+
 class Player(Character):
-    def __init__(self, tipo, jump, speed, hp,
-                 sprite_stay, sprite_left, sprite_right, sprite_down, sprite_up):
+    def __init__(self, tipo, speed, hp,
+                 sprite_stay, sprite_left, sprite_right, sprite_down, sprite_up, 
+                 sprite_shoot_up,sprite_shoot_down, sprite_shoot_left, sprite_shoot_right):
         
-        super().__init__(tipo, jump, hp)
-        self.position(100,350)
+        super().__init__(tipo, hp)
         self.speed = speed
-        self.vy = 0
-        self.is_jumping = False
-        self.gravity = 1800
-        self.jump_force = -500
+
+        self.hp = hp
 
         self.sprite_stay = Sprite(sprite_stay, 2)
         self.sprite_right = Sprite(sprite_right, 4)
@@ -35,11 +41,21 @@ class Player(Character):
         self.sprite_down = Sprite(sprite_down, 4)
         self.sprite_up = Sprite(sprite_up, 4)
 
+        self.sprite_shoot_up = Sprite(sprite_shoot_up, 2)
+        self.sprite_shoot_down = Sprite(sprite_shoot_down, 2)
+        self.sprite_shoot_left = Sprite(sprite_shoot_left, 2)
+        self.sprite_shoot_right = Sprite(sprite_shoot_right, 2)
+    
         self.sprite_stay.set_sequence_time(0, 2, 220, True)
         self.sprite_left.set_sequence_time(0, 4, 220, True)
         self.sprite_right.set_sequence_time(0, 4, 220, True)
         self.sprite_down.set_sequence_time(0, 4, 220, True)
         self.sprite_up.set_sequence_time(0, 4, 220, True)
+        
+        self.sprite_shoot_up.set_sequence_time(0,1,200, True)
+        self.sprite_shoot_down.set_sequence_time(0,1,200, True)
+        self.sprite_shoot_left.set_sequence_time(0,1,200, True)
+        self.sprite_shoot_right.set_sequence_time(0,1,200, True)
 
         self.sprite = self.sprite_stay
 
@@ -61,6 +77,18 @@ class Player(Character):
 
         self.sprite_down.x = self.sprite.x
         self.sprite_down.y = self.sprite.y
+
+        self.sprite_shoot_up.x = self.sprite.x
+        self.sprite_shoot_up.y = self.sprite.y
+
+        self.sprite_shoot_down.x = self.sprite.x
+        self.sprite_shoot_down.y = self.sprite.y
+
+        self.sprite_shoot_left.x = self.sprite.x
+        self.sprite_shoot_left.y = self.sprite.y
+
+        self.sprite_shoot_right.x = self.sprite.x
+        self.sprite_shoot_right.y = self.sprite.y
 
     def mover(self, teclado, colisores, janela):
         if teclado.key_pressed("LEFT"):
@@ -97,6 +125,16 @@ class Player(Character):
         else:
             self.sprite = self.sprite_stay
 
+    def atirar(self, teclado):
+        if teclado.key_pressed("UP") and teclado.key_pressed("SPACE"):
+            self.sprite = self.sprite_shoot_up
+        if teclado.key_pressed("DOWN") and teclado.key_pressed("SPACE"):
+            self.sprite = self.sprite_shoot_down        
+        if teclado.key_pressed("LEFT") and teclado.key_pressed("SPACE"):
+            self.sprite = self.sprite_shoot_left
+        if teclado.key_pressed("RIGHT") and teclado.key_pressed("SPACE"):
+            self.sprite = self.sprite_shoot_right        
+    
     def desenhar(self):
         self.sprite.update()
         self.sprite.draw()

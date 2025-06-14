@@ -69,7 +69,7 @@ class Maps:
 
                 if obj_type is not None:
                     for obj in layer['objects']:
-                        bloco = Sprite("assets/bloco_transparente.png") # Sprite invisível para colisão
+                        bloco = Sprite("bloco_transparente.png") # Sprite invisível para colisão
                         bloco.set_position(obj['x'], obj['y'])
                         bloco.width = obj['width']
                         bloco.height = obj['height']
