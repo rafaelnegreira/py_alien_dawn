@@ -55,7 +55,9 @@ class Character:
 
 class Player(Character):
     def __init__(self, tipo, jump, speed, hp,
-                 sprite_stay, sprite_left, sprite_right, sprite_down, sprite_up):
+                 sprite_stay, sprite_left, sprite_right, sprite_down, sprite_up, 
+                 sprite_shoot_up,sprite_shoot_down, sprite_shoot_left, sprite_shoot_right,
+                 inventario):
         
         super().__init__(tipo, jump, hp)
         self.speed = speed
@@ -64,17 +66,29 @@ class Player(Character):
         self.gravity = 1800
         self.jump_force = -500
 
+        self.hp = 5
+
         self.sprite_stay = Sprite(sprite_stay, 2)
         self.sprite_right = Sprite(sprite_right, 4)
         self.sprite_left = Sprite(sprite_left, 4)
         self.sprite_down = Sprite(sprite_down, 4)
         self.sprite_up = Sprite(sprite_up, 4)
 
+        self.sprite_shoot_up = Sprite(sprite_shoot_up, 1)
+        self.sprite_shoot_down = Sprite(sprite_shoot_down, 1)
+        self.sprite_shoot_left = Sprite(sprite_shoot_left, 1)
+        self.sprite_shoot_right = Sprite(sprite_shoot_right, 1)
+    
         self.sprite_stay.set_sequence_time(0, 2, 220, True)
         self.sprite_left.set_sequence_time(0, 4, 220, True)
         self.sprite_right.set_sequence_time(0, 4, 220, True)
         self.sprite_down.set_sequence_time(0, 4, 220, True)
         self.sprite_up.set_sequence_time(0, 4, 220, True)
+        
+        self.sprite_shoot_up.set_sequence_time(1,1)
+        self.sprite_shoot_up.set_sequence_time(2,2)
+        self.sprite_shoot_up.set_sequence_time(3,3)
+        self.sprite_shoot_up.set_sequence_time(0,0)
 
         self.sprite = self.sprite_stay
 
@@ -96,6 +110,22 @@ class Player(Character):
 
         self.sprite_down.x = self.sprite.x
         self.sprite_down.y = self.sprite.y
+
+        self.sprite_shoot_up.x = self.sprite.x
+        self.sprite_shoot_up.y = self.sprite.y
+
+        self.sprite_shoot_down.x = self.sprite.x
+        self.sprite_shoot_down.y = self.sprite.y
+
+        self.sprite_shoot_left.x = self.sprite.x
+        self.sprite_shoot_left.y = self.sprite.y
+
+        self.sprite_shoot_right.x = self.sprite.x
+        self.sprite_shoot_right.y = self.sprite.y
+
+    def atirar(self):
+        if teclado.key_pressed("space"):
+
 
     def mover(self):
         if teclado.key_pressed("LEFT"):
