@@ -1,11 +1,14 @@
-from game_conf import *
+# main.py (CORRIGIDO)
 
+from game_conf import Game_Manager
+from PPlay.window import Window
+
+# Cria a janela
 janela = Window(800, 600)
-teclado = Keyboard()
 janela.set_title("Alien Dawn")
-game_manager = Portais(Game_Manager(janela))
 
-while True:
-    game_manager.draw()
-    # Atualiza a janela
-    janela.update()
+# 1. Cria a instância principal do gerenciador do jogo
+game_manager = Game_Manager(janela)
+
+# 2. Inicia o loop principal do jogo, que agora está dentro do Game_Manager
+game_manager.run()
