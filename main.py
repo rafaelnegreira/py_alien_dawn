@@ -15,6 +15,9 @@ from game_conf import *
 GAME_STATE = 0
 janela = Window(800, 600)
 teclado = Keyboard()
+
+arma = Arma(1000, 200)
+
 player = Player(
     tipo="Player",
     speed=100,
@@ -27,9 +30,11 @@ player = Player(
     sprite_shoot_down="Apocalypse Character Pack\Player\shoot_down.png",
     sprite_shoot_left="Apocalypse Character Pack\Player\shoot_left.png",
     sprite_shoot_right="Apocalypse Character Pack\Player\shoot_right.png",
-    hp=5
-    )
+    hp=5,
+    arma=arma)
+
 player.position(100,300)
+tempo_atual = 0
 
 mapa = Maps("cidade")
 camera = Camera(janela.width, janela.height)
@@ -37,25 +42,42 @@ camera = Camera(janela.width, janela.height)
 while True:
     if GAME_STATE == 0:
         janela.set_background_color((0, 0, 0))
+        
+        delta = janela.delta_time()
+        tempo_atual += delta
 
-        camera.update(player.sprite)
-
+        # --- 1. ATUALIZAR A LÓGICA DO JOGO ---
         player.atualizar_sprites()
-
         player.mover(teclado, mapa.colisores, janela)
-        # Blocos com offset de câmera
-        for bloco in mapa.colisores:
-            camera.apply(bloco)
-            bloco.draw()
-            camera.undo(bloco)
-        player.atirar(teclado)
+        player.atirar(teclado, tempo_atual)
+        arma.atualizar_projeteis(delta) # Atualiza a posição dos projéteis no "mundo"
+        camera.update(player.sprite) # Atualiza a posição da câmera para seguir o jogador
 
+        # --- 2. DESENHAR TUDO NA TELA (com correção da câmera) ---
+        
+        # Desenha o fundo
         camera.apply(mapa.background)
         mapa.background.draw()
         camera.undo(mapa.background)
 
+        # Desenha os colisores (para debug, se desejar)
+        for bloco in mapa.colisores:
+            camera.apply(bloco)
+            # bloco.draw() # Descomente se quiser ver as caixas de colisão
+            camera.undo(bloco)
+            
+        # Desenha o jogador
         camera.apply(player.sprite)
         player.desenhar()
         camera.undo(player.sprite)
 
+        # >>> A CORREÇÃO ESTÁ AQUI <<<
+        # Desenha os projéteis, aplicando a câmera a cada um
+        for proj in arma.projeteis_ativos:
+            sprite_proj = proj["sprite"]
+            camera.apply(sprite_proj)
+            sprite_proj.draw()
+            camera.undo(sprite_proj)
+
+        # Atualiza a janela
         janela.update()

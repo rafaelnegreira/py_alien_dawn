@@ -16,24 +16,76 @@ class Character:
         self.tipo = tipo
         self.hp = hp
 
-class arma():
-    def __init__(self, qtd_municao, projetil):
+class Arma:
+    def __init__(self, qtd_municao, speed):
         self.qtd_municao = qtd_municao
-        self.projetil = Sprite("",1)
+        self.speed = speed
+        self.projeteis_ativos = []
+        self.cooldown = 0.3  # segundos
+        self.tempo_ultimo_disparo = 0
 
-    def disparo(self):
-        if self.qtd_municao > 0:
-            self.qtd_municao -= 1
+    def disparo(self, x, y, direcao, tempo_atual):
+        if self.qtd_municao > 0 and tempo_atual - self.tempo_ultimo_disparo > self.cooldown:
+            proj_sprite = None
+
+            match direcao.upper():
+                case "UP":
+                    proj_sprite = Sprite("img/projetil_up.png", 1)
+                    proj_sprite.set_position(x - proj_sprite.width / 2, y - proj_sprite.height)
+                case "DOWN":
+                    proj_sprite = Sprite("img/projetil_down.png", 1)
+                    proj_sprite.set_position(x - proj_sprite.width / 2, y)
+                case "LEFT":
+                    proj_sprite = Sprite("img/projetil_left.png", 1)
+                    proj_sprite.set_position(x - proj_sprite.width, y - proj_sprite.height / 2)
+                case "RIGHT":
+                    proj_sprite = Sprite("img/projetil_right.png", 1)
+                    proj_sprite.set_position(x, y - proj_sprite.height / 2)
+
+            if proj_sprite:
+                self.projeteis_ativos.append({"sprite": proj_sprite, "direcao": direcao.upper()})
+                self.qtd_municao -= 1
+                self.tempo_ultimo_disparo = tempo_atual
+
+    def atualizar_projeteis(self, delta_time):
+        for proj in self.projeteis_ativos:
+            match proj["direcao"]:
+                case "UP":
+                    proj["sprite"].y -= self.speed * delta_time
+                case "DOWN":
+                    proj["sprite"].y += self.speed * delta_time
+                case "LEFT":
+                    proj["sprite"].x -= self.speed * delta_time
+                case "RIGHT":
+                    proj["sprite"].x += self.speed * delta_time
+
+        # Remove projéteis fora da tela
+        self.projeteis_ativos = [
+            p for p in self.projeteis_ativos
+            if 0 <= p["sprite"].x <= 1800 and 0 <= p["sprite"].y <= 1600
+        ]
+
+    def desenhar_projeteis(self):
+        for proj in self.projeteis_ativos:
+            proj["sprite"].draw()
+
 
 class Player(Character):
     def __init__(self, tipo, speed, hp,
                  sprite_stay, sprite_left, sprite_right, sprite_down, sprite_up, 
-                 sprite_shoot_up,sprite_shoot_down, sprite_shoot_left, sprite_shoot_right):
+                 sprite_shoot_up,sprite_shoot_down, sprite_shoot_left, sprite_shoot_right,
+                 arma):
         
         super().__init__(tipo, hp)
         self.speed = speed
 
         self.hp = hp
+
+        self.arma_equip = True
+    
+        self.arma = arma
+
+        self.inventario = []
 
         self.sprite_stay = Sprite(sprite_stay, 2)
         self.sprite_right = Sprite(sprite_right, 4)
@@ -125,16 +177,44 @@ class Player(Character):
         else:
             self.sprite = self.sprite_stay
 
-    def atirar(self, teclado):
-        if teclado.key_pressed("UP") and teclado.key_pressed("SPACE"):
-            self.sprite = self.sprite_shoot_up
-        if teclado.key_pressed("DOWN") and teclado.key_pressed("SPACE"):
-            self.sprite = self.sprite_shoot_down        
-        if teclado.key_pressed("LEFT") and teclado.key_pressed("SPACE"):
-            self.sprite = self.sprite_shoot_left
-        if teclado.key_pressed("RIGHT") and teclado.key_pressed("SPACE"):
-            self.sprite = self.sprite_shoot_right        
-    
+    def atirar(self, teclado, tempo_atual):
+        if not self.arma_equip:
+            return
+
+        if teclado.key_pressed("SPACE"):
+            if teclado.key_pressed("UP"):
+                self.sprite = self.sprite_shoot_up
+                self.arma.disparo(
+                    self.sprite.x + self.sprite.width / 2,
+                    self.sprite.y,
+                    "up",
+                    tempo_atual
+                )
+            elif teclado.key_pressed("DOWN"):
+                self.sprite = self.sprite_shoot_down
+                self.arma.disparo(
+                    self.sprite.x + self.sprite.width / 2,
+                    self.sprite.y + self.sprite.height,
+                    "down",
+                    tempo_atual
+                )
+            elif teclado.key_pressed("LEFT"):
+                self.sprite = self.sprite_shoot_left
+                self.arma.disparo(
+                    self.sprite.x,
+                    self.sprite.y + self.sprite.height / 2,
+                    "left",
+                    tempo_atual
+                )
+            elif teclado.key_pressed("RIGHT"):
+                self.sprite = self.sprite_shoot_right
+                self.arma.disparo(
+                    self.sprite.x + self.sprite.width,
+                    self.sprite.y + self.sprite.height / 2,
+                    "right",
+                    tempo_atual
+                )
+
     def desenhar(self):
         self.sprite.update()
         self.sprite.draw()
