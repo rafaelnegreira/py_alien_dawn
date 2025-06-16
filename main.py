@@ -12,9 +12,13 @@ from PPlay.sprite import *
 from PPlay.window import *
 from player import *
 from game_conf import *
-GAME_STATE = 0
+from menu import *
+
+GAME_STATE = "menu"
+
 janela = Window(800, 600)
 teclado = Keyboard()
+mouse = Mouse()
 
 arma = Arma(1000, 200)
 
@@ -33,14 +37,20 @@ player = Player(
     hp=5,
     arma=arma)
 
-player.position(100,300)
+player.position(150,130)
 tempo_atual = 0
 
-mapa = Maps("cidade")
+mapa = Maps("laboratorio")
 camera = Camera(janela.width, janela.height)
 
 while True:
-    if GAME_STATE == 0:
+    if GAME_STATE == "sair":
+        janela.close()
+
+    if GAME_STATE == "menu":
+        GAME_STATE = game_menu(janela, mouse)
+
+    if GAME_STATE == "jogo":
         janela.set_background_color((0, 0, 0))
         
         delta = janela.delta_time()
