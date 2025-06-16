@@ -46,21 +46,18 @@ while True:
         delta = janela.delta_time()
         tempo_atual += delta
 
-        # --- 1. ATUALIZAR A LÓGICA DO JOGO ---
         player.atualizar_sprites()
         player.mover(teclado, mapa.colisores, janela)
         player.atirar(teclado, tempo_atual)
-        arma.atualizar_projeteis(delta) # Atualiza a posição dos projéteis no "mundo"
-        camera.update(player.sprite) # Atualiza a posição da câmera para seguir o jogador
+        arma.atualizar_projeteis(delta)
+        camera.update(player.sprite)
 
-        # --- 2. DESENHAR TUDO NA TELA (com correção da câmera) ---
+        # --- DESENHAR TUDO NA TELA (com correção da câmera) ---
         
-        # Desenha o fundo
         camera.apply(mapa.background)
         mapa.background.draw()
         camera.undo(mapa.background)
 
-        # Desenha os colisores (para debug, se desejar)
         for bloco in mapa.colisores:
             camera.apply(bloco)
             # bloco.draw() # Descomente se quiser ver as caixas de colisão
@@ -71,7 +68,6 @@ while True:
         player.desenhar()
         camera.undo(player.sprite)
 
-        # >>> A CORREÇÃO ESTÁ AQUI <<<
         # Desenha os projéteis, aplicando a câmera a cada um
         for proj in arma.projeteis_ativos:
             sprite_proj = proj["sprite"]
