@@ -10,7 +10,9 @@ from PPlay.window import *
 from LevelManager import load_map_objects
 from player import *
 from menu import game_menu
-from GameObjects import * # <--- ADICIONE ESTA LINHA
+from GameObjects import * 
+from inimigo import *
+import math
 
 
 class Camera:
@@ -47,11 +49,12 @@ class Game_Manager:
         self.portais = []
         self.puzzles = []
         self.itens = []
+        self.inimigos_vivos = []
 
         # Componentes do jogo
         self.arma = Arma(1000, 200)
         self.player = Player(
-            tipo="Player", speed=150, hp=5, arma=self.arma,
+            tipo="Player", speed=100, hp=5, arma=self.arma,
             sprite_stay="assets/Apocalypse Character Pack/Player/iddle_front2.png",
             sprite_left="assets/Apocalypse Character Pack/Player/walk_left2.png",
             sprite_right="assets/Apocalypse Character Pack/Player/walk_right2.png",
@@ -69,12 +72,33 @@ class Game_Manager:
         self.all_objects = load_map_objects(nome_mapa)
         self.background = GameImage(f"mapa/{nome_mapa}.png")
         
-        # Popula as listas de objetos para fácil acesso
+        # --- MUDANÇA 1: Limpar a lista de inimigos do mapa anterior ---
+        # É importante para garantir que inimigos não passem de uma fase para outra.
+        self.inimigos_vivos.clear() 
+
         self.colisores = [obj for obj in self.all_objects if isinstance(obj, Colisores)]
         self.portais = [obj for obj in self.all_objects if isinstance(obj, Portais)]
         self.puzzles = [obj for obj in self.all_objects if isinstance(obj, Puzzle)]
         self.itens = [obj for obj in self.all_objects if isinstance(obj, Item)]
         
+        # --- MUDANÇA 2: Encontrar os "spawners" de inimigos carregados do mapa ---
+        # Aqui, filtramos os objetos que foram marcados como 'Inimigo' no Tiled.
+        map_inimigos_spawners = [obj for obj in self.all_objects if isinstance(obj, Inimigo)]
+
+        # --- MUDANÇA 3: Criar os inimigos 'vivos' a partir dos spawners ---
+        # Para cada marcador encontrado no mapa, criamos um inimigo real e controlável
+        # e o adicionamos na lista de inimigos ativos da fase.
+        for spawner in map_inimigos_spawners:
+            novo_inimigo = InimigoControlavel(
+                tipo="zumbi", 
+                hp=3, 
+                speed=60,
+                x=spawner.x,  # Usa a posição X definida no mapa
+                y=spawner.y   # Usa a posição Y definida no mapa
+            )
+            self.inimigos_vivos.append(novo_inimigo)
+
+        # Esta linha continua no final para posicionar o jogador corretamente
         self.player.position(spawn_x, spawn_y)
 
     def update_game(self, delta):
@@ -104,6 +128,9 @@ class Game_Manager:
                          self.puzzle_ativo = pz
                          self.GAME_STATE = "puzzle"
                          break
+                     
+        for inimigo in self.inimigos_vivos:
+            inimigo.perseguir(self.player, delta)
 
     def draw_game(self):
         self.janela.set_background_color((0, 0, 0))
@@ -128,6 +155,11 @@ class Game_Manager:
             sprite_proj.draw()
             self.camera.undo(sprite_proj)
 
+        for inimigo in self.inimigos_vivos:
+            self.camera.apply(inimigo.sprite)
+            inimigo.desenhar()
+            self.camera.undo(inimigo.sprite)
+
     def run(self):
         """O loop principal que controla todos os estados do jogo."""
         while True:
@@ -137,7 +169,7 @@ class Game_Manager:
                 # game_menu agora retorna para qual estado ir
                 proximo_estado = game_menu(self.janela, self.mouse)
                 if proximo_estado == "jogo":
-                    self.carregar_mapa("laboratorio", 150, 130) # Carrega o mapa inicial
+                    self.carregar_mapa("cidade", 150, 130) # Carrega o mapa inicial
                     self.GAME_STATE = "jogo"
                 elif proximo_estado == "sair":
                     self.GAME_STATE = "sair"

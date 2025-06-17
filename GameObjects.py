@@ -23,6 +23,11 @@ class Object(Sprite): # Não precisa herdar de GameObject aqui
             for prop in game_object_data['properties']:
                 setattr(self, prop['name'], prop['value'])    
 
+class Inimigo(Object):
+    """Esta classe representa um inimigo carregado do mapa. 
+    Ela serve como um 'spawner' com as informações de posição e tipo."""
+    pass
+
 class Colisores(Object):
     pass
 

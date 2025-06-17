@@ -31,6 +31,9 @@ def load_map_objects(map_name):
                 elif layer_name == 'solidos':
                     new_obj = Colisores(obj_data)
                 
+                elif layer_name == 'inimigos':
+                    new_obj = Inimigo(obj_data) # Cria um objeto Inimigo com os dados do mapa
+                
                 if new_obj is not None:
                     all_objects.append(new_obj)
                     
