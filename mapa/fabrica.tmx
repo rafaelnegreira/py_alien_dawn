@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="107">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="109">
  <editorsettings>
   <export target="fabrica_fechado.tmx" format="tmx"/>
  </editorsettings>
@@ -388,5 +388,9 @@
     <property name="spawn_y" value="473"/>
    </properties>
   </object>
+ </objectgroup>
+ <objectgroup id="8" name="inimigos">
+  <object id="107" x="518.465" y="257.632" width="8.001" height="7.2009"/>
+  <object id="108" x="559.27" y="256.832" width="8.001" height="8.8011"/>
  </objectgroup>
 </map>

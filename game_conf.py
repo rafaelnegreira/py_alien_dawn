@@ -130,7 +130,29 @@ class Game_Manager:
                          break
                      
         for inimigo in self.inimigos_vivos:
-            inimigo.perseguir(self.player, delta)
+            inimigo.perseguir(self.player, self.colisores, delta)
+
+        projeteis_para_remover = []
+        inimigos_para_remover = []
+
+        # Loop aninhado para testar cada projétil contra cada inimigo
+        for proj in self.arma.projeteis_ativos:
+            for inimigo in self.inimigos_vivos:
+                # Usamos a colisão da própria PPlay
+                if proj["sprite"].collided(inimigo.sprite):
+                    
+                    # Adiciona ambos às listas de remoção
+                    if proj not in projeteis_para_remover:
+                        projeteis_para_remover.append(proj)
+                    if inimigo not in inimigos_para_remover:
+                        inimigos_para_remover.append(inimigo)
+
+        # Agora, remove os itens marcados de suas listas originais
+        for proj in projeteis_para_remover:
+            self.arma.projeteis_ativos.remove(proj)
+            
+        for inimigo in inimigos_para_remover:
+            self.inimigos_vivos.remove(inimigo)
 
     def draw_game(self):
         self.janela.set_background_color((0, 0, 0))
@@ -169,7 +191,7 @@ class Game_Manager:
                 # game_menu agora retorna para qual estado ir
                 proximo_estado = game_menu(self.janela, self.mouse)
                 if proximo_estado == "jogo":
-                    self.carregar_mapa("cidade", 150, 130) # Carrega o mapa inicial
+                    self.carregar_mapa("laboratorio", 150, 130) # Carrega o mapa inicial
                     self.GAME_STATE = "jogo"
                 elif proximo_estado == "sair":
                     self.GAME_STATE = "sair"
