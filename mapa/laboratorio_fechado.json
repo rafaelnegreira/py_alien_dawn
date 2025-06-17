@@ -219,8 +219,8 @@
                  "type":"",
                  "visible":true,
                  "width":31.6364,
-                 "x":776.1818,
-                 "y":50.45455
+                 "x":776.182,
+                 "y":50.4545
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -232,18 +232,7 @@
          "draworder":"topdown",
          "id":8,
          "name":"municao",
-         "objects":[
-                {
-                 "height":16,
-                 "id":67,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":29,
-                 "x":559.666666666667,
-                 "y":417.666666666667
-                }],
+         "objects":[],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -274,8 +263,8 @@
                  "type":"",
                  "visible":true,
                  "width":10.6667,
-                 "x":575.66665,
-                 "y":536.99965
+                 "x":563.667,
+                 "y":541
                 }, 
                 {
                  "height":10.6667,
@@ -285,8 +274,8 @@
                  "type":"",
                  "visible":true,
                  "width":10.6667,
-                 "x":343.66665,
-                 "y":542.33365
+                 "x":293.667,
+                 "y":551.334
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -707,15 +696,26 @@
                  "y":33.4167
                 }, 
                 {
-                 "height":45.5,
+                 "height":15.5,
                  "id":46,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":92.5,
-                 "x":355.25,
-                 "y":403
+                 "width":62.75,
+                 "x":369.333333333333,
+                 "y":399.5
+                }, 
+                {
+                 "height":17,
+                 "id":69,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":28,
+                 "x":560.25,
+                 "y":417
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -724,7 +724,7 @@
          "y":0
         }],
  "nextlayerid":12,
- "nextobjectid":69,
+ "nextobjectid":70,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

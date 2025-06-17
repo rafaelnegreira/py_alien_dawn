@@ -106,7 +106,6 @@ class Game_Manager:
         self.player.atualizar_sprites()
         self.player.mover(self.teclado, self.colisores, self.janela)
         self.player.atirar(self.teclado, self.tempo_atual)
-        # CORREÇÃO: Passando a variável local 'delta'
         self.arma.atualizar_projeteis(delta)
         self.camera.update(self.player.sprite)
 
@@ -134,6 +133,16 @@ class Game_Manager:
 
         projeteis_para_remover = []
         inimigos_para_remover = []
+
+        for proj in self.arma.projeteis_ativos:
+            for bloco in self.colisores:
+                # Se um projétil colidiu com um bloco sólido...
+                if proj["sprite"].collided(bloco):
+                    # ...e ainda não foi marcado para remoção...
+                    if proj not in projeteis_para_remover:
+                        # ...marque-o para ser removido.
+                        projeteis_para_remover.append(proj)
+                    break # Otimização: se o projétil já bateu, não precisa checar outras paredes.
 
         # Loop aninhado para testar cada projétil contra cada inimigo
         for proj in self.arma.projeteis_ativos:
@@ -191,7 +200,7 @@ class Game_Manager:
                 # game_menu agora retorna para qual estado ir
                 proximo_estado = game_menu(self.janela, self.mouse)
                 if proximo_estado == "jogo":
-                    self.carregar_mapa("laboratorio", 150, 130) # Carrega o mapa inicial
+                    self.carregar_mapa("laboratorio_fechado", 150, 130) # Carrega o mapa inicial
                     self.GAME_STATE = "jogo"
                 elif proximo_estado == "sair":
                     self.GAME_STATE = "sair"

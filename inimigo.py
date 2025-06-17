@@ -31,27 +31,31 @@ class InimigoControlavel(Character):
 
             # --- LÓGICA DE COLISÃO ---
             
-            # Move no eixo X
-            self.sprite.x += vetor_x_normalizado * self.speed * delta_time
-            # Verifica colisão no eixo X
-            for bloco in colisores:
-                if self.sprite.collided(bloco):
-                    # Se colidiu, volta para a posição anterior NO EIXO X
-                    if vetor_x_normalizado > 0: # Estava indo para a direita
-                        self.sprite.x = bloco.x - self.sprite.width
-                    else: # Estava indo para a esquerda
-                        self.sprite.x = bloco.x + bloco.width
-            
-            # Move no eixo Y
-            self.sprite.y += vetor_y_normalizado * self.speed * delta_time
-            # Verifica colisão no eixo Y
-            for bloco in colisores:
-                if self.sprite.collided(bloco):
-                     # Se colidiu, volta para a posição anterior NO EIXO Y
-                    if vetor_y_normalizado > 0: # Estava indo para baixo
-                        self.sprite.y = bloco.y - self.sprite.height
-                    else: # Estava indo para cima
-                        self.sprite.y = bloco.y + bloco.height
+        # 1. Salva a posição original antes de qualquer movimento neste frame
+        old_x = self.sprite.x
+        old_y = self.sprite.y
+
+        # 2. Calcula o quanto mover em cada eixo
+        movimento_x = vetor_x_normalizado * self.speed * delta_time
+        movimento_y = vetor_y_normalizado * self.speed * delta_time
+
+        # 3. Tenta mover no eixo X
+        self.sprite.x += movimento_x
+        # 4. Verifica colisão no eixo X
+        for bloco in colisores:
+            if self.sprite.collided(bloco):
+                # Se colidiu, REVERTE a posição X para a que era antes.
+                self.sprite.x = old_x
+                break # Para o loop de colisores para este eixo
+
+        # 5. Tenta mover no eixo Y
+        self.sprite.y += movimento_y
+        # 6. Verifica colisão no eixo Y
+        for bloco in colisores:
+            if self.sprite.collided(bloco):
+                # Se colidiu, REVERTE a posição Y para a que era antes.
+                self.sprite.y = old_y
+                break # Para o loop de colisores para este eixo
 
     def desenhar(self):
         """Atualiza e desenha o sprite atual do inimigo."""
