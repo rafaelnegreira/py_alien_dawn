@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="16" tileheight="16" infinite="0" nextlayerid="20" nextobjectid="107">
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="16" tileheight="16" infinite="0" nextlayerid="20" nextobjectid="132">
  <editorsettings>
   <export format="json"/>
  </editorsettings>
@@ -609,12 +609,12 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23481,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2147507129,0
 </data>
  </layer>
- <objectgroup id="6" name="solidos">
+ <objectgroup id="6" name="solidos" visible="0">
   <object id="1" x="432.084" y="49.0837" width="286.833" height="123.583"/>
   <object id="8" x="369.288" y="433.364" width="11.7576" height="13.4394"/>
   <object id="9" x="573.955" y="390.03" width="8.75758" height="9.9394"/>
   <object id="10" x="369.121" y="208.572" width="12.7576" height="13.4394"/>
-  <object id="11" x="254.371" y="390.155" width="8.75758" height="9.9394"/>
+  <object id="11" x="165.038" y="480.822" width="60.7576" height="39.2727"/>
   <object id="12" x="160.746" y="337.905" width="13.7576" height="12.9394"/>
   <object id="13" x="160.371" y="193.155" width="14.7576" height="13.4394"/>
   <object id="14" x="48.7462" y="256.655" width="13.2576" height="14.4394"/>
@@ -650,69 +650,101 @@
   <object id="53" x="104.5" y="768" width="23" height="15"/>
   <object id="54" x="240.5" y="690.5" width="63" height="30.5"/>
   <object id="56" x="415.959" y="512.458" width="127.083" height="80.5833"/>
-  <object id="58" x="537.959" y="1001.79" width="127.083" height="79.0833"/>
   <object id="60" x="0" y="0" width="9.33333" height="960"/>
   <object id="64" x="9.5" y="0.5" width="950.5" height="4.16667"/>
   <object id="65" x="950.833" y="-1" width="9.33333" height="960"/>
   <object id="66" x="3.5" y="952" width="954.75" height="8.5"/>
   <object id="72" x="862" y="531.875" width="65" height="62.25"/>
-  <object id="73" x="3.33333" y="352.667" width="254.667" height="288"/>
-  <object id="74" x="383.333" y="817.333" width="164" height="144"/>
-  <object id="75" x="553.333" y="768.667" width="262.667" height="34"/>
+  <object id="73" x="30" y="554" width="196" height="60"/>
+  <object id="74" x="395" y="826.333" width="145.333" height="56"/>
+  <object id="75" x="553.333" y="770" width="260" height="26"/>
   <object id="76" x="385.333" y="768.667" width="56" height="22"/>
-  <object id="77" x="577.333" y="805.333" width="238" height="36"/>
-  <object id="78" x="705.333" y="843.333" width="60.0003" height="12.6667"/>
-  <object id="79" x="706" y="844" width="60" height="10.6667"/>
-  <object id="80" x="784.667" y="860" width="32" height="44.6667"/>
-  <object id="81" x="806.667" y="906.667" width="10" height="52.6667"/>
+  <object id="77" x="574.333" y="798.333" width="238" height="14.6667"/>
+  <object id="78" x="409" y="884" width="26.667" height="63.3334"/>
+  <object id="79" x="440.333" y="917.333" width="122.667" height="30.6667"/>
+  <object id="80" x="790" y="858" width="17.3333" height="40.6667"/>
+  <object id="81" x="803.667" y="906.667" width="10" height="52.6667"/>
   <object id="82" x="780" y="913.333" width="24.6667" height="46"/>
-  <object id="83" x="550.667" y="821.333" width="12" height="140.667"/>
-  <object id="84" x="565.333" y="914.667" width="111.333" height="44.6667"/>
-  <object id="85" x="578" y="893.333" width="64.6667" height="21.3333"/>
-  <object id="86" x="646.667" y="903.333" height="2"/>
-  <object id="87" x="646" y="902" width="27.3333" height="11.3333"/>
-  <object id="88" x="677.333" y="910.667" width="28.6667" height="8.66667"/>
-  <object id="89" x="704.667" y="892.667" width="20" height="12"/>
-  <object id="90" x="578.667" y="842" width="20" height="30.6667"/>
-  <object id="91" x="705.333" y="906" width="61.3333" height="54.6667"/>
-  <object id="92" x="618.667" y="842" width="68.6667" height="15.3333"/>
-  <object id="93" x="632.667" y="862" width="52" height="18.6667"/>
-  <object id="94" x="769.333" y="934.667" width="3.33333" height="25.3333"/>
+  <object id="83" x="543" y="833" width="12" height="48.667"/>
+  <object id="84" x="565.333" y="916" width="100.666" height="43.3334"/>
+  <object id="85" x="592.667" y="825.333" width="4.6667" height="42.6666"/>
+  <object id="86" x="684" y="916.666" width="4" height="6"/>
+  <object id="87" x="692.333" y="917.667" width="5.99997" height="5.99997"/>
+  <object id="88" x="579" y="814.667" width="8.6667" height="23.3333"/>
+  <object id="89" x="711.334" y="818" width="98.6667" height="8"/>
+  <object id="90" x="579.667" y="841.333" width="8" height="30.6667"/>
+  <object id="91" x="705.333" y="906" width="41.3333" height="42.6667"/>
+  <object id="92" x="618.334" y="823.667" width="12.6667" height="32.6666"/>
+  <object id="93" x="635.334" y="826" width="32" height="42.6667"/>
+  <object id="94" x="762.666" y="921.334" width="3.33333" height="25.3333"/>
+  <object id="107" x="246.667" y="612.333" width="9.33333" height="21.3333"/>
+  <object id="108" x="37.3333" y="618.667" width="70.6667" height="5.33333"/>
+  <object id="109" x="144" y="617.333" width="74.6667" height="4"/>
+  <object id="110" x="86.6667" y="366.667" width="76" height="166.667"/>
+  <object id="111" x="228" y="385.333" width="28" height="62.6667"/>
+  <object id="112" x="14.6667" y="385.333" width="18.6667" height="61.3333"/>
+  <object id="113" x="14.6667" y="354.667" width="241.333" height="12"/>
+  <object id="114" x="14.6667" y="369.333" width="74.6667" height="14.6667"/>
+  <object id="115" x="167.333" y="370.333" width="90.6667" height="9.33333"/>
+  <object id="116" x="248" y="466.667" width="10.6667" height="142.667"/>
+  <object id="117" x="216" y="542.667" width="9.33333" height="9.33333"/>
+  <object id="118" x="33.3333" y="542.667" width="10.6667" height="10.6667"/>
+  <object id="119" x="5.66667" y="477.333" width="78.6667" height="21.3333"/>
+  <object id="121" x="209.333" y="525.333" width="9.33333" height="17.3333"/>
+  <object id="122" x="228" y="481.333" width="21.3333" height="22.6667"/>
+  <object id="123" x="29.3333" y="506.667" width="26.6667" height="13.3333"/>
+  <object id="124" x="26.6667" y="501.333" width="62.6667" height="52"/>
+  <object id="125" x="395.333" y="821.333" width="117.333" height="1.33333"/>
+  <object id="128" x="650.333" y="860" height="20"/>
+  <object id="129" x="592" y="816" width="48" height="8"/>
+  <object id="130" x="542.333" y="889" width="6.66667" height="24"/>
  </objectgroup>
- <objectgroup id="18" name="interacao">
+ <objectgroup id="18" name="interacao" visible="0">
   <object id="98" x="200.25" y="191.477" width="27.5" height="29.0455"/>
  </objectgroup>
  <objectgroup id="11" name="portais">
-  <object id="68" x="672.25" y="174.875" width="31.5" height="24.5"/>
-  <object id="70" x="816" y="531.5" width="32.375" height="28.625"/>
-  <object id="95" x="119.333" y="623.333" width="15.3333" height="12">
+  <object id="68" x="672.25" y="174.875" width="31.5" height="24.5">
    <properties>
-    <property name="destino" value="&quot;hospital_fechado&quot;"/>
+    <property name="destino" value="supermercado_fechado"/>
+    <property name="spawn_x" type="int" value="856"/>
+    <property name="spawn_y" type="int" value="625"/>
+   </properties>
+  </object>
+  <object id="70" x="816" y="531.5" width="32.375" height="28.625">
+   <properties>
+    <property name="destino" value="laboratorio_fechado"/>
+    <property name="spawn_x" type="int" value="889"/>
+    <property name="spawn_y" type="int" value="631"/>
+   </properties>
+  </object>
+  <object id="95" x="119.333" y="623.333" width="15.3333" height="13.3333">
+   <properties>
+    <property name="destino" value="hospital_fechado"/>
     <property name="spawn_x" type="int" value="9"/>
     <property name="spawn_y" type="int" value="231"/>
    </properties>
   </object>
-  <object id="96" x="778.667" y="831.333" width="6.66667" height="10.6667">
+  <object id="96" x="777" y="821" width="6.66667" height="21.3334">
    <properties>
-    <property name="destino" value="&quot;fabrica_fechado&quot;"/>
+    <property name="destino" value="fabrica_fechado"/>
     <property name="spawn_x" type="int" value="634"/>
     <property name="spawn_y" type="int" value="235"/>
    </properties>
   </object>
-  <object id="97" x="603.333" y="833.333" width="13.3333" height="7.33333">
+  <object id="97" x="603.333" y="833.333" width="13.3333" height="10">
    <properties>
-    <property name="destino" value="&quot;fabrica_fechado&quot;"/>
+    <property name="destino" value="fabrica_fechado"/>
     <property name="spawn_x" type="int" value="562"/>
     <property name="spawn_y" type="int" value="473"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="16" name="vida"/>
- <objectgroup id="17" name="municao"/>
- <objectgroup id="19" name="inimigos">
+ <objectgroup id="16" name="vida" visible="0"/>
+ <objectgroup id="17" name="municao" visible="0"/>
+ <objectgroup id="19" name="inimigos" visible="0">
   <object id="99" x="84" y="913.333" width="17.3333" height="17.3333"/>
   <object id="100" x="48" y="822.667" width="17.3333" height="14.6667"/>
-  <object id="101" x="868" y="857.333" width="14.6667" height="14.6667"/>
+  <object id="101" x="868" y="909.333" width="14.6667" height="14.6667"/>
   <object id="102" x="798.667" y="50.6667" width="12" height="14.6667"/>
   <object id="103" x="280" y="41.3333" width="13.3333" height="12"/>
   <object id="104" x="869.333" y="333.333" width="13.3333" height="13.3333"/>

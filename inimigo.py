@@ -9,7 +9,7 @@ class InimigoControlavel(Character):
         
         # Sprites (use os caminhos para seus assets)
 
-        self.sprite_down = Sprite("assets\inimigo\inimigo_down.png", 3)
+        self.sprite_down = Sprite("assets/inimigo/inimigo_down.png", 3)
         self.sprite_down.set_sequence_time(0, 3, 300)
         
         # O sprite atual que será desenhado

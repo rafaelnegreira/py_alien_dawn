@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="70" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="68">
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="70" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="70">
  <editorsettings>
   <export target="laboratorio.json" format="json"/>
  </editorsettings>
@@ -205,11 +205,20 @@
  <objectgroup id="8" name="vida" visible="0">
   <object id="50" x="991.455" y="50.5455" width="30.1818" height="33.2727"/>
  </objectgroup>
+ <objectgroup id="13" name="portais">
+  <object id="68" x="846.667" y="624" width="85.3333" height="14.6667">
+   <properties>
+    <property name="destino" value="cidade"/>
+    <property name="spawn_x" type="int" value="832"/>
+    <property name="spawn_y" type="int" value="573"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="11" name="municao" visible="0">
   <object id="65" x="1069.09" y="52.7273" width="29.8182" height="30.5455"/>
   <object id="67" x="561.088" y="433.568" width="26.1875" height="30.5"/>
  </objectgroup>
- <objectgroup id="3" name="solidos" visible="0">
+ <objectgroup id="3" name="solidos">
   <object id="1" x="0" y="0.5" width="1119.67" height="30.5"/>
   <object id="2" x="-0.0454545" y="26.9545" width="15.5455" height="599.773"/>
   <object id="3" x="0.151515" y="624.091" width="848.348" height="15.4091"/>
@@ -248,5 +257,6 @@
   <object id="44" x="166.167" y="42.5" width="22" height="5.0001"/>
   <object id="45" x="776.208" y="33.4167" width="31.0833" height="15.6667"/>
   <object id="64" x="560.5" y="417.5" width="28" height="16.5"/>
+  <object id="69" x="845.333" y="638.667" width="88" height="9.33333"/>
  </objectgroup>
 </map>
