@@ -9,8 +9,8 @@ teclado = Window.get_keyboard()
 largura_janela = janela.width
 altura_janela = janela.height
 
-cofre_fechado = GameImage("img\cofre_fechado.png")
-cofre_aberto = GameImage("img\cofre_aberto.png")
+cofre_fechado = GameImage("assets/img/cofre_fechado.png")
+cofre_aberto = GameImage("assets/img/cofre_aberto.png")
 cofre_fechado.set_position(largura_janela/2 - cofre_fechado.width/2, altura_janela/1.4 - cofre_fechado.height/2)
 cofre_aberto.set_position(largura_janela/2 - cofre_fechado.width/2, altura_janela/1.4 - cofre_fechado.height/2)
 

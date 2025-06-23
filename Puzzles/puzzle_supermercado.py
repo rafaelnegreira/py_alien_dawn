@@ -14,7 +14,7 @@ lampadas = [False] * 8
 # Lâmpadas em duas linhas de 4
 lamp_sprites = []
 for i in range(8):
-    sprite = Sprite("img/lamp_apagada.png", 1)
+    sprite = Sprite("assets/img/lamp_apagada.png", 1)
     x = 125 + (i % 4) * 150
     y = 80 if i < 4 else 220
     sprite.set_position(x, y)
@@ -24,7 +24,7 @@ for i in range(8):
 # Botões com sprites únicos organizados em 2 linhas de 3
 botoes = []
 for i in range(6):
-    botao = Sprite(f"img/botao_{i}.png", 1)
+    botao = Sprite(f"assets/img/botao_{i}.png", 1)
     x = 150 + (i % 3) * 170  # 3 colunas
     y = 400 + (i // 3) * 100  # 2 linhas
     botao.set_position(x, y)
@@ -45,8 +45,8 @@ def alternar_lampadas(indices):
     for i in indices:
         lampadas[i] = not lampadas[i]
 
-img_on = GameImage("img/lamp_acesa.png").image
-img_off = GameImage("img/lamp_apagada.png").image
+img_on = GameImage("assets/img/lamp_acesa.png").image
+img_off = GameImage("assets/img/lamp_apagada.png").image
 
 def atualizar_lampadas():
     for i, estado in enumerate(lampadas):
@@ -57,7 +57,7 @@ def todas_ligadas():
 
 tempo_tecla = janela.time_elapsed()
 
-fundo = GameImage("img/puzzle.png")
+fundo = GameImage("assets/img/puzzle.png")
 
 while True:
 

@@ -24,10 +24,10 @@ teclado = Keyboard()
 # --- Carregamento de Assets ---
 # Imagem do Cadeado
 
-cadeado_fechado = Sprite("img/cadeado_fechado.png")
+cadeado_fechado = Sprite("assets/img/cadeado_fechado.png")
 cadeado_fechado.set_position(LARGURA_JANELA / 2 - cadeado_fechado.width / 2, 50)
 
-cadeado_aberto = Sprite("img/cadeado_aberto.png")
+cadeado_aberto = Sprite("assets/img/cadeado_aberto.png")
 cadeado_aberto.set_position(LARGURA_JANELA / 2 - cadeado_aberto.width / 2, 50)
 
 cadeado_img = cadeado_fechado
@@ -35,7 +35,7 @@ cadeado_img = cadeado_fechado
 # Imagens dos Números (1-9)
 numeros_spritesheet = []
 for i in range(1, 10):
-    numeros_spritesheet.append(GameImage(f"img/{i}.png"))
+    numeros_spritesheet.append(GameImage(f"assets/img/{i}.png"))
 
 # --- Configuração dos Elementos do Jogo ---
 # Posições dos slots dos números
