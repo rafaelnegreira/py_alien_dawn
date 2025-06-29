@@ -24,10 +24,10 @@ teclado = Keyboard()
 # --- Carregamento de Assets ---
 # Imagem do Cadeado
 
-cadeado_fechado = Sprite("img/cadeado_fechado.png")
+cadeado_fechado = Sprite("assets/img/cadeado_fechado.png")
 cadeado_fechado.set_position(LARGURA_JANELA / 2 - cadeado_fechado.width / 2, 50)
 
-cadeado_aberto = Sprite("img/cadeado_aberto.png")
+cadeado_aberto = Sprite("assets/img/cadeado_aberto.png")
 cadeado_aberto.set_position(LARGURA_JANELA / 2 - cadeado_aberto.width / 2, 50)
 
 cadeado_img = cadeado_fechado
@@ -35,7 +35,7 @@ cadeado_img = cadeado_fechado
 # Imagens dos Números (1-9)
 numeros_spritesheet = []
 for i in range(1, 10):
-    numeros_spritesheet.append(GameImage(f"img/{i}.png"))
+    numeros_spritesheet.append(GameImage(f"assets/img/{i}.png"))
 
 # --- Configuração dos Elementos do Jogo ---
 # Posições dos slots dos números
@@ -52,7 +52,7 @@ posicoes_slots = [
 
 # Sprites dos Botões
 
-botao_confirma = Sprite("img/abrir.png")
+botao_confirma = Sprite("assets/img/abrir.png")
 botao_confirma.set_position(440, 165)
 
 botoes_cima = []
@@ -65,12 +65,12 @@ for i in range(3):
     y_base_botoes = posicoes_slots[i][1] + y_offset_botao
 
     # Botão Cima
-    btn_c = Sprite("img/seta_cima.png")
+    btn_c = Sprite("assets/img/seta_cima.png")
     btn_c.set_position(x_slot + largura_numero / 2 - btn_c.width / 2, y_base_botoes)
     botoes_cima.append(btn_c)
 
     # Botão Baixo
-    btn_b = Sprite("img/seta_baixo.png")
+    btn_b = Sprite("assets/img/seta_baixo.png")
     btn_b.set_position(x_slot + largura_numero / 2 - btn_b.width / 2, y_base_botoes + btn_c.height + 5)
     botoes_baixo.append(btn_b)
 

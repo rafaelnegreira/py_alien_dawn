@@ -15,12 +15,12 @@ from game_conf import *
 
 def game_menu(janela, mouse):
 
-    fundo = GameImage("img/fundo_menu.png")
+    fundo = GameImage("assets/img/menu/fundo_menu.png")
 
-    jogar = Sprite("img/jogar.png")
+    jogar = Sprite("assets/img/menu/jogar.png")
     jogar.set_position(janela.width/2 - jogar.width/2, janela.height/2 - jogar.height/2)
 
-    sair = Sprite("img/sair.png")
+    sair = Sprite("assets/img/menu/sair.png")
     sair.set_position(janela.width/2 - jogar.width/2, janela.height/2 + jogar.height)
 
     while True:

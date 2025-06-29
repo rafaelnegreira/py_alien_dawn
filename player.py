@@ -30,16 +30,16 @@ class Arma:
 
             match direcao.upper():
                 case "UP":
-                    proj_sprite = Sprite("img/projetil_up.png", 1)
+                    proj_sprite = Sprite("assets/img/projetil_up.png", 1)
                     proj_sprite.set_position(x - proj_sprite.width / 2, y - proj_sprite.height)
                 case "DOWN":
-                    proj_sprite = Sprite("img/projetil_down.png", 1)
+                    proj_sprite = Sprite("assets/img/projetil_down.png", 1)
                     proj_sprite.set_position(x - proj_sprite.width / 2, y)
                 case "LEFT":
-                    proj_sprite = Sprite("img/projetil_left.png", 1)
+                    proj_sprite = Sprite("assets/img/projetil_left.png", 1)
                     proj_sprite.set_position(x - proj_sprite.width, y - proj_sprite.height / 2)
                 case "RIGHT":
-                    proj_sprite = Sprite("img/projetil_right.png", 1)
+                    proj_sprite = Sprite("assets/img/projetil_right.png", 1)
                     proj_sprite.set_position(x, y - proj_sprite.height / 2)
 
             if proj_sprite:
