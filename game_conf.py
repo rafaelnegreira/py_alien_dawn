@@ -120,7 +120,7 @@ class Game_Manager:
                     spawn_x = int(getattr(portal, 'spawn_x', 100))
                     spawn_y = int(getattr(portal, 'spawn_y', 100))
                     if destino:
-                        self.carregar_mapa(destino, spawn_x, spawn_y)
+                        self.carregar_mapa(destino, spawn_x, spawn_y - self.player.sprite.height)
                         break
             # Interação com Puzzles
             for pz in self.puzzles:
@@ -228,9 +228,9 @@ class Game_Manager:
                 if completou:
                     self.puzzle_ativo.concluir()
 
-                    # Habilita arma após puzzle do laboratório
                     if self.puzzle_ativo.name.lower() == "cofre_lab":
                         self.player.arma_equip = True
+                        self.carregar_mapa("laboratorio", self.player.get_position_x(), self.player.get_position_y())
 
                     portal_id = getattr(self.puzzle_ativo, 'portal_target_id', None)
                     if portal_id:
@@ -238,8 +238,9 @@ class Game_Manager:
                             if str(portal.id) == str(portal_id):
                                 portal.unlock()
                                 break
-                    self.GAME_STATE = "jogo"
 
+                    self.GAME_STATE = "jogo"
+                    
                     if portal_id:
                         for portal in self.portais:
                             if str(portal.id) == str(portal_id):

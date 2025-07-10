@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "laboratorio_fechado.tmx",
+    "activeFile": "laboratorio.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -160,15 +160,15 @@
         },
         "laboratorio.tmx": {
             "expandedObjectLayers": [
-                3,
                 9,
+                3,
                 8
             ],
-            "scale": 0.75,
+            "scale": 1,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 599.3333333333333,
-                "y": 294.66666666666663
+                "x": 644.5,
+                "y": 314
             }
         },
         "laboratorio.tmx#Gemini_G_512-removebg-preview": {
@@ -233,14 +233,14 @@
         },
         "laboratorio_fechado.tmx": {
             "expandedObjectLayers": [
-                3,
-                8
+                8,
+                3
             ],
             "scale": 0.75,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 520.6666666666667,
-                "y": 349.3333333333333
+                "x": 580,
+                "y": 415.33333333333326
             }
         },
         "laboratorio_fechado.tmx#Gemini_G_512-removebg-preview": {
@@ -440,17 +440,17 @@
     "map.tileWidth": 16,
     "map.width": 50,
     "openFiles": [
-        "laboratorio_fechado.tmx"
+        "laboratorio.tmx"
     ],
     "project": "sem título.tiled-project",
     "recentFiles": [
+        "laboratorio.tmx",
         "laboratorio_fechado.tmx",
         "puzzle.tmx",
         "sem título.tmx",
         "cidade.tmx",
         "supermercado_fechado.tmx",
         "supermercado.tmx",
-        "laboratorio.tmx",
         "escola.tmx",
         "laboratorio_fechado.json",
         "laboratorio.json",

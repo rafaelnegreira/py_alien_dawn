@@ -215,6 +215,12 @@ class Player(Character):
                     tempo_atual
                 )
 
+    def get_position_x(self):
+        return self.sprite.x
+
+    def get_position_y(self):
+        return self.sprite.y
+
     def desenhar(self):
         self.sprite.update()
         self.sprite.draw()
