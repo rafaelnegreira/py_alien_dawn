@@ -12,7 +12,7 @@ from player import *
 from menu import game_menu
 from GameObjects import * 
 from inimigo import *
-import math
+from puzzles import puzzle_lab
 
 
 class Camera:
@@ -42,7 +42,7 @@ class Game_Manager:
         self.GAME_STATE = "menu"
         self.puzzle_ativo = None
         self.background = None
-        
+
         # Listas para guardar os objetos do mapa
         self.all_objects = []
         self.colisores = []
@@ -53,8 +53,9 @@ class Game_Manager:
 
         # Componentes do jogo
         self.arma = Arma(1000, 200)
+
         self.player = Player(
-            tipo="Player", speed=100, hp=5, arma=self.arma,
+            tipo="Player", speed=300, hp=5, arma=self.arma,
             sprite_stay="assets/Apocalypse Character Pack/Player/iddle_front2.png",
             sprite_left="assets/Apocalypse Character Pack/Player/walk_left2.png",
             sprite_right="assets/Apocalypse Character Pack/Player/walk_right2.png",
@@ -67,6 +68,7 @@ class Game_Manager:
         )
         self.camera = Camera(janela.width, janela.height)
         self.tempo_atual = 0
+        self.player.arma_equip = False  # Desativa a arma no início
 
     def carregar_mapa(self, nome_mapa, spawn_x, spawn_y):
         self.all_objects = load_map_objects(nome_mapa)
@@ -210,13 +212,26 @@ class Game_Manager:
                 self.draw_game()
 
             elif self.GAME_STATE == "puzzle":
-                # Lógica de placeholder para um puzzle
-                self.janela.set_background_color((20, 0, 20))
-                self.janela.draw_text(f"PUZZLE: {self.puzzle_ativo.name}", 250, 250, 40, (255,255,255))
-                self.janela.draw_text("Pressione 'C' para completar", 250, 300, 20, (255,255,255))
-                if self.teclado.key_pressed("C"):
+                nome = self.puzzle_ativo.name.lower()
+                completou = False
+
+                if nome == "cofre_lab":
+                    completou = puzzle_lab(self.janela, self.teclado, self.janela.delta_time())
+                else:
+                    # fallback para puzzle genérico
+                    self.janela.set_background_color((20, 0, 20))
+                    self.janela.draw_text(f"PUZZLE: {self.puzzle_ativo.name}", 250, 250, 40, (255,255,255))
+                    self.janela.draw_text("Pressione 'C' para completar", 250, 300, 20, (255,255,255))
+                    if self.teclado.key_pressed("C"):
+                        completou = True
+
+                if completou:
                     self.puzzle_ativo.concluir()
-                    # Lógica para destravar o portal associado
+
+                    # Habilita arma após puzzle do laboratório
+                    if self.puzzle_ativo.name.lower() == "cofre_lab":
+                        self.player.arma_equip = True
+
                     portal_id = getattr(self.puzzle_ativo, 'portal_target_id', None)
                     if portal_id:
                         for portal in self.portais:
@@ -224,6 +239,14 @@ class Game_Manager:
                                 portal.unlock()
                                 break
                     self.GAME_STATE = "jogo"
+
+                    if portal_id:
+                        for portal in self.portais:
+                            if str(portal.id) == str(portal_id):
+                                portal.unlock()
+                                break
+                    self.GAME_STATE = "jogo"
+
 
             elif self.GAME_STATE == "sair":
                 break # Sai do loop

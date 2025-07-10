@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="70" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="73">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="70" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="76">
  <editorsettings>
   <export target="laboratorio_fechado.json" format="json"/>
  </editorsettings>
@@ -198,9 +198,12 @@
 </data>
  </layer>
  <objectgroup id="10" name="puzzle">
-  <object id="65" x="776.182" y="50.4545" width="31.6364" height="33.0909"/>
+  <object id="65" name="cofre_lab" x="776.182" y="50.4545" width="31.6364" height="33.0909"/>
  </objectgroup>
- <objectgroup id="8" name="municao"/>
+ <objectgroup id="8" name="municao">
+  <object id="74" x="1069.5" y="54" width="28" height="30"/>
+  <object id="75" x="992" y="51" width="28.5" height="34"/>
+ </objectgroup>
  <objectgroup id="11" name="vida"/>
  <objectgroup id="9" name="inimigos">
   <object id="62" x="563.667" y="541" width="10.6667" height="12"/>
@@ -246,10 +249,10 @@
   <object id="45" x="776.208" y="33.4167" width="31.0833" height="15.6667"/>
   <object id="46" x="369.333" y="399.5" width="62.75" height="15.5"/>
   <object id="69" x="560.25" y="417" width="28" height="17"/>
-  <object id="72" x="842" y="639" width="95" height="7"/>
+  <object id="72" x="846" y="632.273" width="84.4545" height="7"/>
  </objectgroup>
  <objectgroup id="13" name="portais">
-  <object id="71" x="848.333" y="624.667" width="85.3333" height="14.6667">
+  <object id="71" x="853.969" y="602.303" width="68.9697" height="27.5758">
    <properties>
     <property name="destino" value="cidade"/>
     <property name="spawn_x" type="int" value="832"/>
