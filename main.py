@@ -1,5 +1,3 @@
-# main.py (CORRIGIDO)
-
 from game_conf import Game_Manager
 from PPlay.window import Window
 

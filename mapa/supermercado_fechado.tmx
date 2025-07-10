@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="89">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="93">
  <editorsettings>
-  <export target="supermercado.json" format="json"/>
+  <export target="supermercado_fechado.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="RetailFIXED" tilewidth="16" tileheight="16" tilecount="4000" columns="100">
   <image source="../tiles/supermercado/RetailFIXED.png" width="1600" height="640"/>
@@ -350,7 +350,7 @@
   <object id="57" x="553.833" y="0.5835" width="5.33333" height="63.6663"/>
   <object id="58" x="553.667" y="144.834" width="5.33333" height="32.333"/>
   <object id="59" x="553.667" y="62.8335" width="5.33333" height="83.333"/>
-  <object id="60" x="374.833" y="30.4169" width="108.333" height="4.9163"/>
+  <object id="60" x="375.5" y="28.4169" width="108.333" height="4.9163"/>
   <object id="62" x="384.334" y="39.7918" width="15.583" height="23.4163"/>
   <object id="63" x="240" y="311.885" width="60" height="13.5625"/>
   <object id="64" x="336.667" y="312.552" width="60" height="13.5625"/>
@@ -368,21 +368,27 @@
   <object id="83" x="307.167" y="144.625" width="61" height="28.0834"/>
  </objectgroup>
  <objectgroup id="13" name="portais">
-  <object id="88" x="814" y="628.667" width="85.3333" height="14.6667">
+  <object id="88" x="818" y="612" width="75.3333" height="14.6667">
    <properties>
     <property name="destino" value="cidade"/>
-    <property name="spawn_x" type="int" value="832"/>
-    <property name="spawn_y" type="int" value="573"/>
+    <property name="spawn_x" type="int" value="685"/>
+    <property name="spawn_y" type="int" value="205"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="11" name="vida" visible="0">
+ <objectgroup id="14" name="inimigos">
+  <object id="89" x="909.333" y="88" width="8" height="8"/>
+  <object id="90" x="496" y="468" width="12" height="10.6667"/>
+  <object id="91" x="550.667" y="253.333" width="9.33333" height="10.6667"/>
+  <object id="92" x="265.333" y="257.333" width="6.66667" height="5.33333"/>
+ </objectgroup>
+ <objectgroup id="11" name="vida">
   <object id="84" x="656.232" y="34.7545" width="15.602" height="28.8036"/>
  </objectgroup>
- <objectgroup id="12" name="municao" visible="0">
+ <objectgroup id="12" name="municao">
   <object id="87" x="592.199" y="34.5982" width="15.602" height="28.8036"/>
  </objectgroup>
- <objectgroup id="10" name="puzzle" visible="0">
-  <object id="78" x="413" y="34.5" width="37" height="13.0833"/>
+ <objectgroup id="10" name="puzzle">
+  <object id="78" name="lampadas" type="super_puzzle" x="411.667" y="34.1667" width="39.6667" height="14.75"/>
  </objectgroup>
 </map>

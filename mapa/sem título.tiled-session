@@ -59,14 +59,15 @@
                 12
             ],
             "expandedObjectLayers": [
-                11,
-                6
+                19,
+                6,
+                11
             ],
             "scale": 0.75,
-            "selectedLayer": 9,
+            "selectedLayer": 11,
             "viewCenter": {
-                "x": 1061.3333333333335,
-                "y": 574.6666666666666
+                "x": 461.99999999999994,
+                "y": 418.66666666666663
             }
         },
         "cidade.tmx#CP_V1.0.4": {
@@ -89,6 +90,18 @@
             "scaleInDock": 0.5,
             "scaleInEditor": 1
         },
+        "cidade.tmx#fabrica_ext": {
+            "scaleInDock": 1
+        },
+        "cidade.tmx#fabrica_ext2": {
+            "scaleInDock": 1
+        },
+        "cidade.tmx#hospital_ext": {
+            "scaleInDock": 1
+        },
+        "cidade.tmx#hospital_ext2": {
+            "scaleInDock": 1
+        },
         "cidade.tmx#neo_zero_tiles_and_buildings_01": {
             "scaleInDock": 1.5
         },
@@ -108,13 +121,17 @@
         },
         "escola.tmx": {
             "expandedObjectLayers": [
-                4
+                7,
+                4,
+                5,
+                6,
+                9
             ],
             "scale": 1,
-            "selectedLayer": 2,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 399,
-                "y": 240
+                "x": 549.5,
+                "y": 241
             }
         },
         "escola.tmx#NES_MStreet_Tile_Set_MockUp": {
@@ -160,15 +177,15 @@
         },
         "laboratorio.tmx": {
             "expandedObjectLayers": [
-                9,
+                8,
                 3,
-                8
+                9
             ],
             "scale": 1,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 644.5,
-                "y": 314
+                "x": 575,
+                "y": 391.5
             }
         },
         "laboratorio.tmx#Gemini_G_512-removebg-preview": {
@@ -234,13 +251,15 @@
         "laboratorio_fechado.tmx": {
             "expandedObjectLayers": [
                 8,
-                3
+                3,
+                10,
+                13
             ],
             "scale": 0.75,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 580,
-                "y": 415.33333333333326
+                "x": 355.33333333333326,
+                "y": 274.66666666666663
             }
         },
         "laboratorio_fechado.tmx#Gemini_G_512-removebg-preview": {
@@ -369,13 +388,15 @@
         "supermercado.tmx": {
             "expandedObjectLayers": [
                 4,
-                10
+                14,
+                10,
+                13
             ],
-            "scale": 2,
-            "selectedLayer": 0,
+            "scale": 0.75,
+            "selectedLayer": 9,
             "viewCenter": {
-                "x": 197,
-                "y": 270.5
+                "x": 662,
+                "y": 266.66666666666663
             }
         },
         "supermercado.tmx#CP_V1.0.4": {
@@ -400,13 +421,16 @@
         },
         "supermercado_fechado.tmx": {
             "expandedObjectLayers": [
-                4
+                4,
+                14,
+                10,
+                13
             ],
-            "scale": 1.5,
-            "selectedLayer": 0,
+            "scale": 0.75,
+            "selectedLayer": 12,
             "viewCenter": {
-                "x": 194,
-                "y": 244
+                "x": 580.6666666666666,
+                "y": 303.99999999999994
             }
         },
         "supermercado_fechado.tmx#CP_V1.0.4": {
@@ -444,14 +468,14 @@
     ],
     "project": "sem título.tiled-project",
     "recentFiles": [
-        "laboratorio.tmx",
+        "escola.tmx",
+        "supermercado_fechado.tmx",
         "laboratorio_fechado.tmx",
+        "cidade.tmx",
+        "supermercado.tmx",
+        "laboratorio.tmx",
         "puzzle.tmx",
         "sem título.tmx",
-        "cidade.tmx",
-        "supermercado_fechado.tmx",
-        "supermercado.tmx",
-        "escola.tmx",
         "laboratorio_fechado.json",
         "laboratorio.json",
         "escola.json",

@@ -12,7 +12,7 @@ from player import *
 from menu import game_menu
 from GameObjects import * 
 from inimigo import *
-from puzzles import puzzle_lab
+from puzzles import *
 
 
 class Camera:
@@ -51,6 +51,8 @@ class Game_Manager:
         self.itens = []
         self.inimigos_vivos = []
 
+        self.puzzles_concluidos = {}  # Armazena quais puzzles foram concluídos por nome
+
         # Componentes do jogo
         self.arma = Arma(1000, 200)
 
@@ -81,6 +83,11 @@ class Game_Manager:
         self.colisores = [obj for obj in self.all_objects if isinstance(obj, Colisores)]
         self.portais = [obj for obj in self.all_objects if isinstance(obj, Portais)]
         self.puzzles = [obj for obj in self.all_objects if isinstance(obj, Puzzle)]
+        # Atualiza os puzzles com o estado salvo
+        for pz in self.puzzles:
+            if self.puzzles_concluidos.get(pz.name.lower(), False):
+                pz.concluido = True
+
         self.itens = [obj for obj in self.all_objects if isinstance(obj, Item)]
         
         # --- MUDANÇA 2: Encontrar os "spawners" de inimigos carregados do mapa ---
@@ -119,9 +126,19 @@ class Game_Manager:
                     destino = getattr(portal, 'destino', None)
                     spawn_x = int(getattr(portal, 'spawn_x', 100))
                     spawn_y = int(getattr(portal, 'spawn_y', 100))
+
+                    # Lógica para mudar o destino com base no puzzle "cofre_lab"
+                    if destino == "laboratorio_dinamico":
+                        if self.puzzles_concluidos.get("cofre_lab", False):
+                            destino = "laboratorio"
+                        else:
+                            destino = "laboratorio_fechado"
+
+
                     if destino:
-                        self.carregar_mapa(destino, spawn_x, spawn_y - self.player.sprite.height)
+                        self.carregar_mapa(destino, spawn_x, spawn_y)
                         break
+
             # Interação com Puzzles
             for pz in self.puzzles:
                  if not pz.concluido and self.player.sprite.collided(pz):
@@ -202,7 +219,8 @@ class Game_Manager:
                 # game_menu agora retorna para qual estado ir
                 proximo_estado = game_menu(self.janela, self.mouse)
                 if proximo_estado == "jogo":
-                    self.carregar_mapa("laboratorio_fechado", 150, 130) # Carrega o mapa inicial
+                    self.carregar_mapa("cidade", 150, 130) # Carrega o mapa inicial
+                    # self.carregar_mapa("laboratorio_fechado", 150, 130) # Carrega o mapa inicial
                     self.GAME_STATE = "jogo"
                 elif proximo_estado == "sair":
                     self.GAME_STATE = "sair"
@@ -217,6 +235,13 @@ class Game_Manager:
 
                 if nome == "cofre_lab":
                     completou = puzzle_lab(self.janela, self.teclado, self.janela.delta_time())
+
+                elif nome == "cadeado":
+                    completou = puzzle_cadeado(self.janela, self.teclado, self.mouse, delta)
+
+                elif nome == "lampadas":
+                    completou = puzzle_lampadas(self.janela, self.teclado, self.mouse, delta)
+
                 else:
                     # fallback para puzzle genérico
                     self.janela.set_background_color((20, 0, 20))
@@ -227,19 +252,17 @@ class Game_Manager:
 
                 if completou:
                     self.puzzle_ativo.concluir()
+                    self.puzzles_concluidos[self.puzzle_ativo.name.lower()] = True
+
 
                     if self.puzzle_ativo.name.lower() == "cofre_lab":
                         self.player.arma_equip = True
                         self.carregar_mapa("laboratorio", self.player.get_position_x(), self.player.get_position_y())
 
-                    portal_id = getattr(self.puzzle_ativo, 'portal_target_id', None)
-                    if portal_id:
-                        for portal in self.portais:
-                            if str(portal.id) == str(portal_id):
-                                portal.unlock()
-                                break
+                    if self.puzzle_ativo.name.lower() == "lampadas":
+                        self.carregar_mapa("supermercado", self.player.get_position_x(), self.player.get_position_y())
 
-                    self.GAME_STATE = "jogo"
+                    portal_id = getattr(self.puzzle_ativo, 'portal_target_id', None)
                     
                     if portal_id:
                         for portal in self.portais:
