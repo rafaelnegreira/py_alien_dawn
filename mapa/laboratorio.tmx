@@ -206,7 +206,7 @@
   <object id="71" x="560.182" y="434.727" width="28.9091" height="29.0909"/>
  </objectgroup>
  <objectgroup id="13" name="portais">
-  <object id="68" x="846.667" y="624" width="85.3333" height="14.6667">
+  <object id="68" x="850.084" y="614" width="76.3333" height="16">
    <properties>
     <property name="destino" value="cidade"/>
     <property name="spawn_x" type="int" value="832"/>
@@ -257,6 +257,6 @@
   <object id="44" x="166.167" y="42.5" width="22" height="5.0001"/>
   <object id="45" x="776.208" y="33.4167" width="31.0833" height="15.6667"/>
   <object id="64" x="560.5" y="417.5" width="28" height="16.5"/>
-  <object id="69" x="845.333" y="638.667" width="88" height="9.33333"/>
+  <object id="69" x="843.083" y="631.917" width="88" height="9.33333"/>
  </objectgroup>
 </map>

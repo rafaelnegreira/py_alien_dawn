@@ -59,16 +59,16 @@
                 12
             ],
             "expandedObjectLayers": [
-                18,
-                6,
                 11,
-                19
+                19,
+                6,
+                18
             ],
-            "scale": 1,
+            "scale": 3,
             "selectedLayer": 11,
             "viewCenter": {
-                "x": 53.5,
-                "y": 554
+                "x": 618.1666666666666,
+                "y": 866
             }
         },
         "cidade.tmx#CP_V1.0.4": {
@@ -94,27 +94,30 @@
         "cidade.tmx#buildings": {
             "scaleInDock": 1
         },
-        "cidade.tmx#fabrica_ext": {
+        "cidade.tmx#fabrica_alt": {
             "scaleInDock": 2
         },
+        "cidade.tmx#fabrica_ext": {
+            "scaleInDock": 1.5
+        },
         "cidade.tmx#fabrica_ext2": {
-            "scaleInDock": 1
+            "scaleInDock": 1.5
         },
         "cidade.tmx#hospital_ext": {
             "scaleInDock": 1
         },
         "cidade.tmx#hospital_ext2": {
-            "scaleInDock": 1
+            "scaleInDock": 1.5
         },
         "cidade.tmx#islandbuildings": {
-            "scaleInDock": 2,
+            "scaleInDock": 0.75,
             "scaleInEditor": 1
         },
         "cidade.tmx#islandbuildings 2x": {
-            "scaleInDock": 1
+            "scaleInDock": 0.5
         },
         "cidade.tmx#neo_zero_tiles_and_buildings_01": {
-            "scaleInDock": 1.5
+            "scaleInDock": 1
         },
         "escola.json": {
             "scale": 1.2599375,
@@ -132,17 +135,17 @@
         },
         "escola.tmx": {
             "expandedObjectLayers": [
+                9,
+                5,
                 6,
                 7,
-                5,
-                9,
                 4
             ],
             "scale": 1,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 192.5,
-                "y": 269
+                "x": 400,
+                "y": 239.5
             }
         },
         "escola.tmx#NES_MStreet_Tile_Set_MockUp": {
@@ -157,11 +160,15 @@
             "scaleInEditor": 1
         },
         "fabrica.tmx": {
-            "scale": 1.376015625,
-            "selectedLayer": 0,
+            "expandedObjectLayers": [
+                5,
+                7
+            ],
+            "scale": 4,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 320.12717878839493,
-                "y": 239.8228581161642
+                "x": 559.875,
+                "y": 391.75
             }
         },
         "fabrica.tmx#Box1": {
@@ -338,14 +345,14 @@
         "fabrica_fechado.tmx": {
             "expandedObjectLayers": [
                 11,
-                7,
-                5
+                5,
+                7
             ],
-            "scale": 1.5,
-            "selectedLayer": 7,
+            "scale": 3,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 609,
-                "y": 309.33333333333337
+                "x": 537.8333333333333,
+                "y": 459.3333333333333
             }
         },
         "fabrica_fechado.tmx#Box1": {
@@ -575,8 +582,8 @@
             "scale": 1.376015625,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 243.09316981774825,
-                "y": 239.8228581161642
+                "x": 319.7638108215523,
+                "y": 240.1862260830069
             }
         },
         "hospital_fechado.tmx#Floor+Objects": {
@@ -643,15 +650,15 @@
         },
         "laboratorio.tmx": {
             "expandedObjectLayers": [
-                8,
-                9,
-                3
+                13,
+                3,
+                8
             ],
-            "scale": 1,
-            "selectedLayer": 5,
+            "scale": 3,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 575,
-                "y": 391.5
+                "x": 890.1666666666666,
+                "y": 557.6666666666666
             }
         },
         "laboratorio.tmx#Gemini_G_512-removebg-preview": {
@@ -716,16 +723,16 @@
         },
         "laboratorio_fechado.tmx": {
             "expandedObjectLayers": [
-                10,
                 13,
+                3,
                 8,
-                3
+                10
             ],
-            "scale": 0.75,
-            "selectedLayer": -1,
+            "scale": 4,
+            "selectedLayer": 9,
             "viewCenter": {
-                "x": 248.66666666666669,
-                "y": 362.66666666666663
+                "x": 867.625,
+                "y": 581.25
             }
         },
         "laboratorio_fechado.tmx#Gemini_G_512-removebg-preview": {
@@ -853,16 +860,16 @@
         },
         "supermercado.tmx": {
             "expandedObjectLayers": [
-                4,
-                14,
+                13,
                 10,
-                13
+                14,
+                4
             ],
             "scale": 0.75,
-            "selectedLayer": 9,
+            "selectedLayer": 7,
             "viewCenter": {
-                "x": 662,
-                "y": 266.66666666666663
+                "x": 502,
+                "y": 179.99999999999994
             }
         },
         "supermercado.tmx#CP_V1.0.4": {
@@ -887,16 +894,16 @@
         },
         "supermercado_fechado.tmx": {
             "expandedObjectLayers": [
-                10,
                 13,
+                10,
                 14,
                 4
             ],
-            "scale": 0.75,
-            "selectedLayer": 6,
+            "scale": 2,
+            "selectedLayer": 7,
             "viewCenter": {
-                "x": 200.66666666666669,
-                "y": 267.99999999999994
+                "x": 489.75,
+                "y": 89
             }
         },
         "supermercado_fechado.tmx#CP_V1.0.4": {

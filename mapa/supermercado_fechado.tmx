@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="17" nextobjectid="93">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="17" nextobjectid="95">
  <editorsettings>
   <export target="supermercado_fechado.json" format="json"/>
  </editorsettings>
@@ -329,7 +329,7 @@
  <objectgroup id="4" name="solidos">
   <object id="5" x="643.122" y="428.667" width="120.667" height="92.6667"/>
   <object id="6" x="0.666667" y="-0.666667" width="5.33333" height="640.333"/>
-  <object id="8" x="4" y="633.333" width="955.333" height="6"/>
+  <object id="8" x="4" y="633.333" width="812.333" height="6"/>
   <object id="9" x="953.333" y="-9.76996e-15" width="6.66667" height="634.667"/>
   <object id="10" x="2.66667" y="0" width="954" height="5.39583"/>
   <object id="31" x="267" y="176.302" width="164.25" height="5.39583"/>
@@ -366,9 +366,11 @@
   <object id="74" x="311" y="328.885" width="18.6667" height="6.89583"/>
   <object id="75" x="407.333" y="329.219" width="18.6667" height="6.89583"/>
   <object id="83" x="307.167" y="144.625" width="61" height="28.0834"/>
+  <object id="93" x="895.833" y="633" width="64.333" height="6"/>
+  <object id="94" x="814.167" y="637" width="85.6663" height="6"/>
  </objectgroup>
  <objectgroup id="13" name="portais">
-  <object id="88" x="817.667" y="621.5" width="75.3333" height="10.9167">
+  <object id="88" x="817.667" y="621.75" width="76.8333" height="13.6667">
    <properties>
     <property name="destino" value="cidade"/>
     <property name="spawn_x" type="int" value="685"/>

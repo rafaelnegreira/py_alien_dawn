@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="110">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="113">
  <editorsettings>
-  <export target="fabrica_fechado.tmx" format="tmx"/>
+  <export target="fabrica.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="floortiles16x16" tilewidth="16" tileheight="16" tilecount="36" columns="6">
   <image source="../tiles/fabrica/floortiles.png" width="96" height="96"/>
@@ -370,9 +370,9 @@
   <object id="94" x="165" y="137.333" width="21.3333" height="10.6667"/>
   <object id="96" x="230.333" y="440.333" width="17.3333" height="6.66667"/>
   <object id="105" x="639.383" y="181.365" width="5.41353" height="82.0935"/>
-  <object id="106" x="512.286" y="478" width="90.2256" height="9.02256"/>
+  <object id="106" x="507.559" y="473.273" width="100.226" height="9.02256"/>
  </objectgroup>
- <objectgroup id="7" name="interacao" visible="0">
+ <objectgroup id="7" name="portais">
   <object id="103" x="624.361" y="209.323" width="14.4361" height="46.9173">
    <properties>
     <property name="destino" value="&quot;cidade&quot;"/>
@@ -380,11 +380,11 @@
     <property name="spawn_y" type="int" value="846"/>
    </properties>
   </object>
-  <object id="104" x="510.677" y="465.564" width="97.4436" height="14.4361">
+  <object id="112" x="511.633" y="456.52" width="78.2341" height="14.9593">
    <properties>
-    <property name="destino" value="&quot;cidade&quot;"/>
-    <property name="spawn_x" value="562"/>
-    <property name="spawn_y" value="473"/>
+    <property name="destino" value="cidade"/>
+    <property name="spawn_x" type="int" value="624"/>
+    <property name="spawn_y" type="int" value="918"/>
    </properties>
   </object>
  </objectgroup>

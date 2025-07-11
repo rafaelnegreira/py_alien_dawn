@@ -365,13 +365,13 @@
   <object id="84" x="66.6667" y="444" width="88" height="22.6667"/>
   <object id="86" x="289.333" y="394.667" width="36" height="8.07905"/>
   <object id="89" x="160.666" y="448" width="89.3333" height="16"/>
-  <object id="91" x="616" y="472"/>
+  <object id="91" x="615.333" y="472"/>
   <object id="92" x="167" y="193.681" width="14.7025" height="9.3908"/>
   <object id="93" x="40.6595" y="206.942" width="8.0287" height="4.06465"/>
   <object id="94" x="165" y="137.333" width="21.3333" height="10.6667"/>
   <object id="96" x="230.333" y="440.333" width="17.3333" height="6.66667"/>
-  <object id="101" x="506.908" y="473.974" width="102.397" height="6.6482"/>
-  <object id="102" x="640.535" y="178.914" width="5.31856" height="77.0354"/>
+  <object id="101" x="508.241" y="472.974" width="102.397" height="6.6482"/>
+  <object id="102" x="625.535" y="176.914" width="12.9852" height="85.0354"/>
   <object id="107" x="160.464" y="351.43" width="30.5015" height="5.3046"/>
   <object id="108" x="237.381" y="359.387" width="9.28305" height="27.8492"/>
   <object id="109" x="186.987" y="251.969" width="13.2615" height="5.3046"/>
@@ -380,19 +380,12 @@
   <object id="114" x="434.977" y="46.4153" width="29.1753" height="3.97845"/>
   <object id="115" x="488.023" y="61.0029" width="141.898"/>
  </objectgroup>
- <objectgroup id="7" name="interacao">
-  <object id="99" x="624.931" y="208.753" width="13.2964" height="46.5374">
-   <properties>
-    <property name="destino" value="&quot;cidade&quot;"/>
-    <property name="spawn_x" type="int" value="610"/>
-    <property name="spawn_y" type="int" value="846"/>
-   </properties>
-  </object>
-  <object id="100" x="513.908" y="449.711" width="79.7341" height="20.9593">
+ <objectgroup id="7" name="portais">
+  <object id="100" x="513.241" y="456.044" width="76.7341" height="14.9593">
    <properties>
     <property name="destino" value="cidade"/>
-    <property name="spawn_x" type="int" value="562"/>
-    <property name="spawn_y" type="int" value="473"/>
+    <property name="spawn_x" type="int" value="634"/>
+    <property name="spawn_y" type="int" value="918"/>
    </properties>
   </object>
  </objectgroup>
@@ -405,6 +398,6 @@
  </objectgroup>
  <objectgroup id="11" name="inimigos">
   <object id="105" x="75.2094" y="365.646" width="7.2009" height="7.2009"/>
-  <object id="106" x="531.266" y="251.231" width="6.4008" height="7.2009"/>
+  <object id="106" x="535.266" y="223.231" width="6.4008" height="7.2009"/>
  </objectgroup>
 </map>

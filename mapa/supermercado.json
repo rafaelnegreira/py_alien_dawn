@@ -393,7 +393,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":955.333,
+                 "width":811.833,
                  "x":4,
                  "y":633.333
                 }, 
@@ -603,8 +603,8 @@
                  "type":"",
                  "visible":true,
                  "width":108.333,
-                 "x":374.833,
-                 "y":30.4169
+                 "x":375.166333333333,
+                 "y":26.4169
                 }, 
                 {
                  "height":23.4163,
@@ -770,6 +770,28 @@
                  "width":61,
                  "x":307.166,
                  "y":144.625
+                }, 
+                {
+                 "height":6,
+                 "id":92,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":63.833,
+                 "x":895.8335,
+                 "y":633.5
+                }, 
+                {
+                 "height":6,
+                 "id":93,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":85.333,
+                 "x":813.3335,
+                 "y":637.5
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -783,7 +805,7 @@
          "name":"portais",
          "objects":[
                 {
-                 "height":9.75,
+                 "height":14.75,
                  "id":85,
                  "name":"",
                  "properties":[
@@ -805,8 +827,8 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":79.5,
-                 "x":816,
+                 "width":77,
+                 "x":817.5,
                  "y":621.5
                 }],
          "opacity":1,
@@ -829,7 +851,7 @@
                  "visible":true,
                  "width":8,
                  "x":900,
-                 "y":93.9999833333333
+                 "y":94
                 }, 
                 {
                  "height":10.6667,
@@ -840,7 +862,7 @@
                  "visible":true,
                  "width":12,
                  "x":486.667,
-                 "y":473.999983333333
+                 "y":474
                 }, 
                 {
                  "height":10.6667,
@@ -851,7 +873,7 @@
                  "visible":true,
                  "width":9.33333,
                  "x":558.667,
-                 "y":257.999983333333
+                 "y":258
                 }, 
                 {
                  "height":5.33333,
@@ -861,8 +883,8 @@
                  "type":"",
                  "visible":true,
                  "width":6.66667,
-                 "x":274.666666666667,
-                 "y":260.666316666667
+                 "x":274.667,
+                 "y":260.666
                 }, 
                 {
                  "height":10.6667,
@@ -872,8 +894,8 @@
                  "type":"",
                  "visible":true,
                  "width":9.33333,
-                 "x":47.333335,
-                 "y":171.999983333333
+                 "x":47.3333,
+                 "y":172
                 }, 
                 {
                  "height":10.6667,
@@ -883,8 +905,8 @@
                  "type":"",
                  "visible":true,
                  "width":9.33333,
-                 "x":127.333335,
-                 "y":91.9999833333333
+                 "x":127.333,
+                 "y":92
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -937,7 +959,7 @@
          "y":0
         }],
  "nextlayerid":15,
- "nextobjectid":92,
+ "nextobjectid":94,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

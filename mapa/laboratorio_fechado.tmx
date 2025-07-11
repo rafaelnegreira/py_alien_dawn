@@ -252,7 +252,7 @@
   <object id="72" x="846" y="632.273" width="84.4545" height="7"/>
  </objectgroup>
  <objectgroup id="13" name="portais">
-  <object id="71" x="853.969" y="602.303" width="68.9697" height="27.5758">
+  <object id="71" x="850.014" y="614.151" width="76.0606" height="16.2273">
    <properties>
     <property name="destino" value="cidade"/>
     <property name="spawn_x" type="int" value="832"/>

@@ -194,15 +194,15 @@
                  "y":0
                 }, 
                 {
-                 "height":13.6666666666667,
+                 "height":13.6667,
                  "id":17,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":508.000333333333,
+                 "width":508,
                  "x":2.66667,
-                 "y":465.000333333333
+                 "y":465
                 }, 
                 {
                  "height":398.667,
@@ -675,7 +675,7 @@
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":616,
+                 "x":615.333333333333,
                  "y":472
                 }, 
                 {
@@ -729,20 +729,20 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":102.397033333333,
-                 "x":506.907666666667,
-                 "y":473.973666666667
+                 "width":102.397,
+                 "x":508.241333333333,
+                 "y":472.974
                 }, 
                 {
-                 "height":77.0354,
+                 "height":85.0354,
                  "id":102,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":5.31856,
-                 "x":640.535,
-                 "y":178.914
+                 "width":12.9852266666667,
+                 "x":625.535,
+                 "y":176.914
                 }, 
                 {
                  "height":5.3046,
@@ -830,37 +830,10 @@
         {
          "draworder":"topdown",
          "id":7,
-         "name":"interacao",
+         "name":"portais",
          "objects":[
                 {
-                 "height":46.5374,
-                 "id":99,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"destino",
-                         "type":"string",
-                         "value":"\"cidade\""
-                        }, 
-                        {
-                         "name":"spawn_x",
-                         "type":"int",
-                         "value":610
-                        }, 
-                        {
-                         "name":"spawn_y",
-                         "type":"int",
-                         "value":846
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":13.2964,
-                 "x":624.931,
-                 "y":208.753
-                }, 
-                {
-                 "height":20.9593333333333,
+                 "height":14.9593,
                  "id":100,
                  "name":"",
                  "properties":[
@@ -872,19 +845,19 @@
                         {
                          "name":"spawn_x",
                          "type":"int",
-                         "value":562
+                         "value":634
                         }, 
                         {
                          "name":"spawn_y",
                          "type":"int",
-                         "value":473
+                         "value":918
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":79.7341,
-                 "x":513.907666666667,
-                 "y":449.710666666667
+                 "width":76.7341000000001,
+                 "x":513.241333333333,
+                 "y":456.044333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -944,8 +917,8 @@
                  "type":"",
                  "visible":true,
                  "width":6.4008,
-                 "x":531.266,
-                 "y":251.231
+                 "x":535.266,
+                 "y":223.231
                 }],
          "opacity":1,
          "type":"objectgroup",

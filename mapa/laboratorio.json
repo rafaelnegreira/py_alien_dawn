@@ -256,15 +256,15 @@
          "name":"vida",
          "objects":[
                 {
-                 "height":29.0909090909091,
+                 "height":29.0909,
                  "id":71,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":28.9090909090909,
-                 "x":560.181818181818,
-                 "y":434.727272727273
+                 "width":28.9091,
+                 "x":560.182,
+                 "y":434.727
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -278,7 +278,7 @@
          "name":"portais",
          "objects":[
                 {
-                 "height":14.6667,
+                 "height":16.0000333333334,
                  "id":68,
                  "name":"",
                  "properties":[
@@ -300,9 +300,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":85.3333,
-                 "x":846.667,
-                 "y":624
+                 "width":76.3333,
+                 "x":850.083666666667,
+                 "y":614
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -334,8 +334,8 @@
                  "type":"",
                  "visible":true,
                  "width":29.8182,
-                 "x":991.757566666667,
-                 "y":52.72725
+                 "x":991.758,
+                 "y":52.7272
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -774,8 +774,8 @@
                  "type":"",
                  "visible":true,
                  "width":88,
-                 "x":845.333,
-                 "y":638.667
+                 "x":843.083,
+                 "y":631.917
                 }],
          "opacity":1,
          "type":"objectgroup",

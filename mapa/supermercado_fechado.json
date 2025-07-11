@@ -393,7 +393,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":955.333,
+                 "width":812.333,
                  "x":4,
                  "y":633.333
                 }, 
@@ -792,6 +792,28 @@
                  "width":61,
                  "x":307.167,
                  "y":144.625
+                }, 
+                {
+                 "height":6,
+                 "id":93,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64.3330000000001,
+                 "x":895.8335,
+                 "y":633
+                }, 
+                {
+                 "height":6,
+                 "id":94,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":85.6663333333332,
+                 "x":814.166833333333,
+                 "y":637
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -805,7 +827,7 @@
          "name":"portais",
          "objects":[
                 {
-                 "height":10.9167,
+                 "height":13.6667,
                  "id":88,
                  "name":"",
                  "properties":[
@@ -827,9 +849,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":75.3333,
-                 "x":817.666666666667,
-                 "y":621.5
+                 "width":76.8333,
+                 "x":817.667,
+                 "y":621.75
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -958,8 +980,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":15,
- "nextobjectid":93,
+ "nextlayerid":17,
+ "nextobjectid":95,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
