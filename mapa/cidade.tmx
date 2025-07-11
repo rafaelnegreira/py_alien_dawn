@@ -674,7 +674,7 @@
    <text fontfamily="Small Fonts" pixelsize="8" wrap="1" halign="center" valign="center">SCHOOL</text>
   </object>
  </objectgroup>
- <objectgroup id="11" name="portais" visible="0">
+ <objectgroup id="11" name="portais">
   <object id="68" x="672.25" y="174.875" width="31.5" height="24.5">
    <properties>
     <property name="destino" value="supermercado_fechado"/>
@@ -689,10 +689,10 @@
     <property name="spawn_y" type="int" value="580"/>
    </properties>
   </object>
-  <object id="95" x="113.333" y="593.833" width="58.8333" height="24.3333">
+  <object id="95" x="113.333" y="590.333" width="58.8333" height="29.8333">
    <properties>
     <property name="destino" value="hospital_fechado"/>
-    <property name="spawn_x" type="int" value="9"/>
+    <property name="spawn_x" type="int" value="33"/>
     <property name="spawn_y" type="int" value="231"/>
    </properties>
   </object>

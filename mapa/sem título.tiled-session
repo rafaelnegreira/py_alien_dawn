@@ -59,16 +59,16 @@
                 12
             ],
             "expandedObjectLayers": [
-                11,
+                18,
                 19,
-                6,
-                18
+                11,
+                6
             ],
-            "scale": 3,
+            "scale": 2,
             "selectedLayer": 11,
             "viewCenter": {
-                "x": 618.1666666666666,
-                "y": 866
+                "x": 163.25,
+                "y": 525
             }
         },
         "cidade.tmx#CP_V1.0.4": {
@@ -135,11 +135,11 @@
         },
         "escola.tmx": {
             "expandedObjectLayers": [
+                4,
                 9,
                 5,
-                6,
                 7,
-                4
+                6
             ],
             "scale": 1,
             "selectedLayer": 4,
@@ -531,10 +531,14 @@
             "scaleInEditor": 1
         },
         "hospital.tmx": {
+            "expandedObjectLayers": [
+                4,
+                5
+            ],
             "scale": 1.376015625,
-            "selectedLayer": 0,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 320.12717878839493,
+                "x": 311.4063475841708,
                 "y": 239.8228581161642
             }
         },
@@ -576,14 +580,15 @@
         },
         "hospital_fechado.tmx": {
             "expandedObjectLayers": [
-                6,
-                4
+                4,
+                5,
+                6
             ],
             "scale": 1.376015625,
-            "selectedLayer": 5,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 319.7638108215523,
-                "y": 240.1862260830069
+                "x": 208.936580934537,
+                "y": 239.8228581161642
             }
         },
         "hospital_fechado.tmx#Floor+Objects": {
@@ -724,15 +729,15 @@
         "laboratorio_fechado.tmx": {
             "expandedObjectLayers": [
                 13,
-                3,
+                10,
                 8,
-                10
+                3
             ],
             "scale": 4,
             "selectedLayer": 9,
             "viewCenter": {
-                "x": 867.625,
-                "y": 581.25
+                "x": 560,
+                "y": 320.125
             }
         },
         "laboratorio_fechado.tmx#Gemini_G_512-removebg-preview": {
@@ -895,15 +900,15 @@
         "supermercado_fechado.tmx": {
             "expandedObjectLayers": [
                 13,
-                10,
                 14,
+                10,
                 4
             ],
             "scale": 2,
             "selectedLayer": 7,
             "viewCenter": {
-                "x": 489.75,
-                "y": 89
+                "x": 405,
+                "y": 320.25
             }
         },
         "supermercado_fechado.tmx#CP_V1.0.4": {
