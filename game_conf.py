@@ -259,7 +259,7 @@ class Game_Manager:
                 # game_menu agora retorna para qual estado ir
                 proximo_estado = game_menu(self.janela, self.mouse)
                 if proximo_estado == "jogo":
-                    self.carregar_mapa("cidade", 150, 130) # Carrega o mapa inicial
+                    self.carregar_mapa("laboratorio_fechado", 667, 130) # Carrega o mapa inicial
                     # self.carregar_mapa("laboratorio_fechado", 150, 130) # Carrega o mapa inicial
                     self.GAME_STATE = "jogo"
                 elif proximo_estado == "sair":

@@ -59,18 +59,18 @@
                 12
             ],
             "expandedObjectLayers": [
-                18,
-                16,
                 19,
-                11,
+                6,
+                18,
                 17,
-                6
+                11,
+                16
             ],
-            "scale": 1,
-            "selectedLayer": 10,
+            "scale": 0.5,
+            "selectedLayer": 9,
             "viewCenter": {
-                "x": 101.5,
-                "y": 540
+                "x": 549,
+                "y": 472
             }
         },
         "cidade.tmx#CP_V1.0.4": {
@@ -137,17 +137,17 @@
         },
         "escola.tmx": {
             "expandedObjectLayers": [
-                4,
-                9,
                 5,
                 7,
-                6
+                4,
+                6,
+                9
             ],
             "scale": 1,
             "selectedLayer": 8,
             "viewCenter": {
-                "x": 256.5,
-                "y": 265
+                "x": 400,
+                "y": 239.5
             }
         },
         "escola.tmx#NES_MStreet_Tile_Set_MockUp": {
@@ -163,15 +163,15 @@
         },
         "fabrica.tmx": {
             "expandedObjectLayers": [
-                8,
                 5,
-                7
+                7,
+                8
             ],
             "scale": 1.5,
             "selectedLayer": 6,
             "viewCenter": {
                 "x": 197.66666666666666,
-                "y": 223.33333333333331
+                "y": 363.33333333333337
             }
         },
         "fabrica.tmx#Box1": {
@@ -345,13 +345,192 @@
         "fabrica.tmx#wall16x16": {
             "scaleInDock": 1
         },
+        "fabrica_fechado.json": {
+            "scale": 0.993046875,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 319.7230745023995,
+                "y": 239.6664306506176
+            }
+        },
+        "fabrica_fechado.json#Box1": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#Box3": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#Card": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#Chest": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#Fence1": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#Fence2": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#Fence3": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#Hammer": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#Locker1": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#Money": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#Space and other animated objects": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#WallsRoofs": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#bckt": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#floortiles16x16": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile1": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile10": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile11": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile12": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile13": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile14": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile15": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile16": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile17": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile19": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile2": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile20": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile21": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile22": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile23": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile3": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile4": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile5": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile6": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile7": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile8": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#ftile9": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#machine2_cable": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#machine3": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#machine4": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#objct10": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#objct11": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#objct12": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#objct13": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#objct14": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#objct15": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#objct16": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#objct17": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#objct18": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#objct2-1": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#objct2-2": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#objct2-3": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#objct3": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#objct5": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#objct6": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#supports7x7": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#tileset": {
+            "scaleInDock": 1
+        },
+        "fabrica_fechado.json#wall16x16": {
+            "scaleInDock": 1
+        },
         "fabrica_fechado.tmx": {
             "expandedObjectLayers": [
-                13,
-                11,
-                9,
                 5,
-                7
+                7,
+                13,
+                9,
+                11
             ],
             "scale": 1,
             "selectedLayer": 9,
@@ -585,8 +764,8 @@
         },
         "hospital_fechado.tmx": {
             "expandedObjectLayers": [
-                4,
                 5,
+                4,
                 6
             ],
             "scale": 1.376015625,
@@ -733,16 +912,16 @@
         },
         "laboratorio_fechado.tmx": {
             "expandedObjectLayers": [
-                13,
                 10,
-                8,
-                3
+                3,
+                13,
+                8
             ],
             "scale": 0.75,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 596.6666666666667,
-                "y": 321.3333333333333
+                "x": 560,
+                "y": 319.33333333333326
             }
         },
         "laboratorio_fechado.tmx#Gemini_G_512-removebg-preview": {
@@ -904,18 +1083,18 @@
         },
         "supermercado_fechado.tmx": {
             "expandedObjectLayers": [
-                13,
-                14,
                 10,
                 4,
-                11,
-                12
+                14,
+                13,
+                12,
+                11
             ],
             "scale": 1,
             "selectedLayer": 10,
             "viewCenter": {
-                "x": 586.5,
-                "y": 267
+                "x": 330,
+                "y": 320.5
             }
         },
         "supermercado_fechado.tmx#CP_V1.0.4": {
@@ -956,6 +1135,7 @@
     ],
     "project": "sem título.tiled-project",
     "recentFiles": [
+        "fabrica_fechado.json",
         "fabrica_fechado.tmx",
         "hospital_fechado.tmx",
         "hospital.tmx",
@@ -966,8 +1146,7 @@
         "escola.tmx",
         "supermercado_fechado.tmx",
         "laboratorio.tmx",
-        "puzzle.tmx",
-        "sem título.tmx"
+        "puzzle.tmx"
     ],
     "tileset.embedInMap": true,
     "tileset.lastUsedFilter": "Todos os Ficheiros(*)",

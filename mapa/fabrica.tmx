@@ -386,9 +386,9 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="8" name="inimigos" visible="0">
-  <object id="107" x="76.173" y="392.188" width="8.001" height="7.2009"/>
+ <objectgroup id="8" name="inimigos">
+  <object id="107" x="80.173" y="401.521" width="8.001" height="7.2009"/>
   <object id="108" x="533.154" y="246.105" width="8.001" height="8.8011"/>
-  <object id="115" x="94.6662" y="349.066" width="8.001" height="7.2009"/>
+  <object id="115" x="63.9995" y="364.399" width="8.001" height="7.2009"/>
  </objectgroup>
 </map>
