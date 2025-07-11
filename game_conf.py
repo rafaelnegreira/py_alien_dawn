@@ -233,6 +233,9 @@ class Game_Manager:
                 nome = self.puzzle_ativo.name.lower()
                 completou = False
 
+                if self.teclado.key_pressed("esc"):
+                    self.GAME_STATE = "jogo"
+
                 if nome == "cofre_lab":
                     completou = puzzle_lab(self.janela, self.teclado, self.janela.delta_time())
 
@@ -241,6 +244,10 @@ class Game_Manager:
 
                 elif nome == "lampadas":
                     completou = puzzle_lampadas(self.janela, self.teclado, self.mouse, delta)
+
+                # Permite sair do puzzle com ESC sem concluir
+
+
 
                 else:
                     # fallback para puzzle genérico

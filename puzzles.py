@@ -71,7 +71,7 @@ def puzzle_cadeado(janela, teclado, mouse, delta):
             "sprites_numeros": [GameImage(f"assets/img/{i}.png") for i in range(1, 10)],
             "botoes_cima": [],
             "botoes_baixo": [],
-            "botao_confirma": Sprite("img/abrir.png"),
+            "botao_confirma": Sprite("assets/img/abrir.png"),
             "tempo_tecla": 0,
             "dicas": [
                 "Dicas:",
@@ -101,8 +101,8 @@ def puzzle_cadeado(janela, teclado, mouse, delta):
         y_botoes = y_slots + estado["sprites_numeros"][0].height + 10
         for i in range(3):
             x = estado["posicoes_slots"][i][0] + slot_w / 2
-            cima = Sprite("img/seta_cima.png")
-            baixo = Sprite("img/seta_baixo.png")
+            cima = Sprite("assets/img/seta_cima.png")
+            baixo = Sprite("assets/img/seta_baixo.png")
             cima.set_position(x - cima.width/2, y_botoes)
             baixo.set_position(x - baixo.width/2, y_botoes + cima.height + 5)
             estado["botoes_cima"].append(cima)

@@ -805,7 +805,7 @@
          "name":"portais",
          "objects":[
                 {
-                 "height":14.6667,
+                 "height":10.9167,
                  "id":88,
                  "name":"",
                  "properties":[
@@ -828,8 +828,8 @@
                  "type":"",
                  "visible":true,
                  "width":75.3333,
-                 "x":818,
-                 "y":612
+                 "x":817.666666666667,
+                 "y":621.5
                 }],
          "opacity":1,
          "type":"objectgroup",

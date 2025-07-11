@@ -571,21 +571,31 @@
          "name":"portais",
          "objects":[
                 {
-                 "height":108.667,
-                 "id":46,
+                 "height":109.626,
+                 "id":54,
                  "name":"",
                  "properties":[
                         {
                          "name":"destino",
                          "type":"string",
-                         "value":"\"cidade\""
+                         "value":"cidade"
+                        }, 
+                        {
+                         "name":"spawn_x",
+                         "type":"int",
+                         "value":480
+                        }, 
+                        {
+                         "name":"spawn_y",
+                         "type":"int",
+                         "value":635
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":17,
-                 "x":7.66667,
-                 "y":352
+                 "width":14.7341,
+                 "x":9.13295000000005,
+                 "y":348.687
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -693,7 +703,7 @@
          "y":0
         }],
  "nextlayerid":10,
- "nextobjectid":54,
+ "nextobjectid":55,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
