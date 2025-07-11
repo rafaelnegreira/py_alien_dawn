@@ -594,7 +594,7 @@
                  "type":"",
                  "visible":true,
                  "width":14.7341,
-                 "x":9.13295000000005,
+                 "x":9.13295,
                  "y":348.687
                 }],
          "opacity":1,
@@ -666,7 +666,7 @@
                 {
                  "height":26.6667,
                  "id":53,
-                 "name":"",
+                 "name":"municao",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -688,7 +688,7 @@
                 {
                  "height":24,
                  "id":52,
-                 "name":"",
+                 "name":"vida",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -702,7 +702,7 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":10,
+ "nextlayerid":11,
  "nextobjectid":55,
  "orientation":"orthogonal",
  "renderorder":"right-down",

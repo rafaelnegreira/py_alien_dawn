@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="17" nextobjectid="95">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="17" nextobjectid="98">
  <editorsettings>
   <export target="supermercado_fechado.json" format="json"/>
  </editorsettings>
@@ -386,9 +386,11 @@
  </objectgroup>
  <objectgroup id="11" name="vida">
   <object id="84" x="656.232" y="34.7545" width="15.602" height="28.8036"/>
+  <object id="95" name="vida" x="817" y="328" width="27" height="30"/>
  </objectgroup>
  <objectgroup id="12" name="municao">
   <object id="87" x="592.199" y="34.5982" width="15.602" height="28.8036"/>
+  <object id="97" name="municao" x="273" y="437.5" width="28" height="31"/>
  </objectgroup>
  <objectgroup id="10" name="puzzle">
   <object id="78" name="lampadas" type="super_puzzle" x="411.667" y="34.1667" width="39.6667" height="14.75"/>

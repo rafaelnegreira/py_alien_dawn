@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="94">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="95">
  <editorsettings>
   <export target="supermercado.json" format="json"/>
  </editorsettings>
@@ -363,7 +363,7 @@
   <object id="73" x="247" y="440.885" width="18.6667" height="6.89583"/>
   <object id="74" x="311" y="328.885" width="18.6667" height="6.89583"/>
   <object id="75" x="407.333" y="329.219" width="18.6667" height="6.89583"/>
-  <object id="83" x="307.166" y="144.625" width="61" height="28.0834"/>
+  <object id="83" x="325.833" y="144.625" width="42.3333" height="28.0834"/>
   <object id="92" x="895.833" y="633.5" width="63.833" height="6"/>
   <object id="93" x="813.333" y="637.5" width="85.333" height="6"/>
  </objectgroup>
@@ -385,9 +385,10 @@
   <object id="91" x="127.333" y="92" width="9.33333" height="10.6667"/>
  </objectgroup>
  <objectgroup id="10" name="vida">
-  <object id="80" x="656.167" y="35.2917" width="15" height="27.0834"/>
+  <object id="80" name="vida" x="656.167" y="35.2917" width="15" height="27.0834"/>
  </objectgroup>
  <objectgroup id="12" name="municao">
-  <object id="84" x="592.167" y="36.2917" width="15" height="25.75"/>
+  <object id="84" name="municao" x="592.167" y="36.2917" width="15" height="25.75"/>
+  <object id="94" name="municao" x="544.667" y="327.333" width="28" height="30"/>
  </objectgroup>
 </map>

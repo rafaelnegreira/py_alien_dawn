@@ -203,7 +203,7 @@
   <object id="63" x="1033.33" y="336" width="8" height="8"/>
  </objectgroup>
  <objectgroup id="8" name="vida">
-  <object id="71" x="560.182" y="434.727" width="28.9091" height="29.0909"/>
+  <object id="71" name="vida" x="560.182" y="434.727" width="28.9091" height="29.0909"/>
  </objectgroup>
  <objectgroup id="13" name="portais">
   <object id="68" x="850.084" y="614" width="76.3333" height="16">
@@ -215,8 +215,8 @@
   </object>
  </objectgroup>
  <objectgroup id="11" name="municao">
-  <object id="65" x="1069.09" y="52.7273" width="29.8182" height="30.5455"/>
-  <object id="70" x="991.758" y="52.7272" width="29.8182" height="30.5455"/>
+  <object id="65" name="municao" x="1069.09" y="52.7273" width="29.8182" height="30.5455"/>
+  <object id="70" name="municao" x="991.758" y="52.7272" width="29.8182" height="30.5455"/>
  </objectgroup>
  <objectgroup id="3" name="solidos">
   <object id="1" x="0" y="0.5" width="1119.67" height="30.5"/>

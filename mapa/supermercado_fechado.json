@@ -800,8 +800,8 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":64.3330000000001,
-                 "x":895.8335,
+                 "width":64.333,
+                 "x":895.833,
                  "y":633
                 }, 
                 {
@@ -811,8 +811,8 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":85.6663333333332,
-                 "x":814.166833333333,
+                 "width":85.6663,
+                 "x":814.167,
                  "y":637
                 }],
          "opacity":1,
@@ -929,6 +929,17 @@
                  "width":15.602,
                  "x":656.232,
                  "y":34.7545
+                }, 
+                {
+                 "height":30,
+                 "id":95,
+                 "name":"vida",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":27,
+                 "x":817,
+                 "y":328
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -951,6 +962,17 @@
                  "width":15.602,
                  "x":592.199,
                  "y":34.5982
+                }, 
+                {
+                 "height":31,
+                 "id":97,
+                 "name":"municao",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":28,
+                 "x":273,
+                 "y":437.5
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -981,7 +1003,7 @@
          "y":0
         }],
  "nextlayerid":17,
- "nextobjectid":95,
+ "nextobjectid":98,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

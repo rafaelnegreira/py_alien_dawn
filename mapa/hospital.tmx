@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="66">
+ <editorsettings>
+  <export target="hospital.json" format="json"/>
+ </editorsettings>
  <tileset firstgid="1" name="wallstiles" tilewidth="16" tileheight="16" tilecount="20" columns="4">
   <image source="../tiles/hospital/wallstiles.png" width="64" height="80"/>
  </tileset>
@@ -144,7 +147,7 @@
   <object id="5" x="526.674" y="109.434" width="109.333" height="52.0575"/>
   <object id="6" x="432" y="129.333" width="46.8462" height="32"/>
   <object id="9" x="462.487" y="92.3732" width="46.6954" height="43.9282"/>
-  <object id="10" x="437.667" y="174" width="16" height="17.3333"/>
+  <object id="10" x="439.12" y="184.174" width="16" height="6.43226"/>
   <object id="11" x="593.963" y="208.317" width="12.0287" height="5.7069"/>
   <object id="13" x="462.667" y="273.333" width="17.3333" height="189.333"/>
   <object id="14" x="572" y="241.333" width="69.3333" height="237.333"/>

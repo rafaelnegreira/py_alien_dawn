@@ -236,7 +236,7 @@
                 {
                  "height":30,
                  "id":74,
-                 "name":"",
+                 "name":"municao",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -247,7 +247,7 @@
                 {
                  "height":34,
                  "id":75,
-                 "name":"",
+                 "name":"municao",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -762,7 +762,7 @@
          "name":"portais",
          "objects":[
                 {
-                 "height":16.2273151515151,
+                 "height":16.2273,
                  "id":71,
                  "name":"",
                  "properties":[
@@ -784,9 +784,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":76.0606090909091,
-                 "x":850.014454545455,
-                 "y":614.151484848485
+                 "width":76.0606,
+                 "x":850.014,
+                 "y":614.151
                 }],
          "opacity":1,
          "type":"objectgroup",

@@ -201,8 +201,8 @@
   <object id="65" name="cofre_lab" x="776.182" y="50.4545" width="31.6364" height="33.0909"/>
  </objectgroup>
  <objectgroup id="8" name="municao">
-  <object id="74" x="1069.5" y="54" width="28" height="30"/>
-  <object id="75" x="992" y="51" width="28.5" height="34"/>
+  <object id="74" name="municao" x="1069.5" y="54" width="28" height="30"/>
+  <object id="75" name="municao" x="992" y="51" width="28.5" height="34"/>
  </objectgroup>
  <objectgroup id="11" name="vida"/>
  <objectgroup id="9" name="inimigos">

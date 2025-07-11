@@ -52,6 +52,7 @@ class Game_Manager:
         self.inimigos_vivos = []
 
         self.puzzles_concluidos = {}  # Armazena quais puzzles foram concluídos por nome
+        self.itens_coletados = {}  # Armazena os itens já coletados, por ID
 
         # Componentes do jogo
         self.arma = Arma(1000, 200)
@@ -76,7 +77,7 @@ class Game_Manager:
         self.all_objects = load_map_objects(nome_mapa)
         self.background = GameImage(f"mapa/{nome_mapa}.png")
         
-        # --- MUDANÇA 1: Limpar a lista de inimigos do mapa anterior ---
+        #Limpar a lista de inimigos do mapa anterior
         # É importante para garantir que inimigos não passem de uma fase para outra.
         self.inimigos_vivos.clear() 
 
@@ -89,12 +90,18 @@ class Game_Manager:
                 pz.concluido = True
 
         self.itens = [obj for obj in self.all_objects if isinstance(obj, Item)]
+
+        # Marca os itens como coletados com base no progresso salvo
+        for item in self.itens:
+            if self.itens_coletados.get(str(item.id), False):
+                item.coletado = True
+
         
-        # --- MUDANÇA 2: Encontrar os "spawners" de inimigos carregados do mapa ---
-        # Aqui, filtramos os objetos que foram marcados como 'Inimigo' no Tiled.
+        #Encontrar os "spawners" de inimigos carregados do mapa
+        #filtramos os objetos que foram marcados como 'Inimigo' no Tiled.
         map_inimigos_spawners = [obj for obj in self.all_objects if isinstance(obj, Inimigo)]
 
-        # --- MUDANÇA 3: Criar os inimigos 'vivos' a partir dos spawners ---
+        #Criar os inimigos 'vivos' a partir dos spawners
         # Para cada marcador encontrado no mapa, criamos um inimigo real e controlável
         # e o adicionamos na lista de inimigos ativos da fase.
         for spawner in map_inimigos_spawners:
@@ -134,6 +141,23 @@ class Game_Manager:
                         else:
                             destino = "laboratorio_fechado"
 
+                    if destino == "supermercado_dinamico":
+                        if self.puzzles_concluidos.get("lampadas", False):
+                            destino = "supermercado"
+                        else:
+                            destino = "supermercado_fechado"
+
+                    if destino == "fabrica_dinamico":
+                        if self.puzzles_concluidos.get("puzzle_fabrica", False):
+                            destino = "fabrica"
+                        else:
+                            destino = "fabrica_fechado"
+
+                    if destino == "hospital_dinamico":
+                        if self.puzzles_concluidos.get("puzzle_hospital", False):
+                            destino = "hospital"
+                        else:
+                            destino = "hospital_fechado"
 
                     if destino:
                         self.carregar_mapa(destino, spawn_x, spawn_y)
@@ -146,7 +170,23 @@ class Game_Manager:
                          self.puzzle_ativo = pz
                          self.GAME_STATE = "puzzle"
                          break
-                     
+        
+            # Coleta de itens
+            for item in self.itens:
+                if not item.coletado and self.player.sprite.collided(item):
+                    nome_item = item.name.lower()
+
+                    if "vida" in nome_item:
+                        self.player.hp += 1
+                        print("Vida +1")
+
+                    if "municao" in nome_item:
+                        self.arma.qtd_municao += 10
+                        print(f"Munição +10 QTD = {self.arma.qtd_municao}")
+
+                    item.interagir()
+                    self.itens_coletados[str(item.id)] = True  # Marca como coletado permanentemente
+
         for inimigo in self.inimigos_vivos:
             inimigo.perseguir(self.player, self.colisores, delta)
 
@@ -268,6 +308,12 @@ class Game_Manager:
 
                     if self.puzzle_ativo.name.lower() == "lampadas":
                         self.carregar_mapa("supermercado", self.player.get_position_x(), self.player.get_position_y())
+
+                    if self.puzzle_ativo.name.lower() == "puzzle_fabrica":
+                        self.carregar_mapa("fabrica", self.player.get_position_x(), self.player.get_position_y())
+
+                    if self.puzzle_ativo.name.lower() == "puzzle_hospital":
+                        self.carregar_mapa("hospital", self.player.get_position_x(), self.player.get_position_y())
 
                     portal_id = getattr(self.puzzle_ativo, 'portal_target_id', None)
                     

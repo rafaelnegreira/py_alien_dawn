@@ -258,7 +258,7 @@
                 {
                  "height":29.0909,
                  "id":71,
-                 "name":"",
+                 "name":"vida",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -278,7 +278,7 @@
          "name":"portais",
          "objects":[
                 {
-                 "height":16.0000333333334,
+                 "height":16,
                  "id":68,
                  "name":"",
                  "properties":[
@@ -301,7 +301,7 @@
                  "type":"",
                  "visible":true,
                  "width":76.3333,
-                 "x":850.083666666667,
+                 "x":850.084,
                  "y":614
                 }],
          "opacity":1,
@@ -318,7 +318,7 @@
                 {
                  "height":30.5455,
                  "id":65,
-                 "name":"",
+                 "name":"municao",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -329,7 +329,7 @@
                 {
                  "height":30.5455,
                  "id":70,
-                 "name":"",
+                 "name":"municao",
                  "rotation":0,
                  "type":"",
                  "visible":true,

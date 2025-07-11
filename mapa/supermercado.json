@@ -603,7 +603,7 @@
                  "type":"",
                  "visible":true,
                  "width":108.333,
-                 "x":375.166333333333,
+                 "x":375.166,
                  "y":26.4169
                 }, 
                 {
@@ -767,8 +767,8 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":61,
-                 "x":307.166,
+                 "width":42.3333,
+                 "x":325.833,
                  "y":144.625
                 }, 
                 {
@@ -779,7 +779,7 @@
                  "type":"",
                  "visible":true,
                  "width":63.833,
-                 "x":895.8335,
+                 "x":895.833,
                  "y":633.5
                 }, 
                 {
@@ -790,7 +790,7 @@
                  "type":"",
                  "visible":true,
                  "width":85.333,
-                 "x":813.3335,
+                 "x":813.333,
                  "y":637.5
                 }],
          "opacity":1,
@@ -922,7 +922,7 @@
                 {
                  "height":27.0834,
                  "id":80,
-                 "name":"",
+                 "name":"vida",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -944,13 +944,24 @@
                 {
                  "height":25.75,
                  "id":84,
-                 "name":"",
+                 "name":"municao",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":15,
                  "x":592.167,
                  "y":36.2917
+                }, 
+                {
+                 "height":30,
+                 "id":94,
+                 "name":"municao",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":28,
+                 "x":544.667,
+                 "y":327.333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -959,7 +970,7 @@
          "y":0
         }],
  "nextlayerid":15,
- "nextobjectid":94,
+ "nextobjectid":95,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

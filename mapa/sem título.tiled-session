@@ -60,15 +60,17 @@
             ],
             "expandedObjectLayers": [
                 18,
+                16,
                 19,
                 11,
+                17,
                 6
             ],
-            "scale": 2,
-            "selectedLayer": 11,
+            "scale": 1,
+            "selectedLayer": 10,
             "viewCenter": {
-                "x": 163.25,
-                "y": 525
+                "x": 101.5,
+                "y": 540
             }
         },
         "cidade.tmx#CP_V1.0.4": {
@@ -142,10 +144,10 @@
                 6
             ],
             "scale": 1,
-            "selectedLayer": 4,
+            "selectedLayer": 8,
             "viewCenter": {
-                "x": 400,
-                "y": 239.5
+                "x": 256.5,
+                "y": 265
             }
         },
         "escola.tmx#NES_MStreet_Tile_Set_MockUp": {
@@ -161,14 +163,15 @@
         },
         "fabrica.tmx": {
             "expandedObjectLayers": [
+                8,
                 5,
                 7
             ],
-            "scale": 4,
-            "selectedLayer": 5,
+            "scale": 1.5,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 559.875,
-                "y": 391.75
+                "x": 197.66666666666666,
+                "y": 223.33333333333331
             }
         },
         "fabrica.tmx#Box1": {
@@ -344,15 +347,17 @@
         },
         "fabrica_fechado.tmx": {
             "expandedObjectLayers": [
+                13,
                 11,
+                9,
                 5,
                 7
             ],
-            "scale": 3,
-            "selectedLayer": 5,
+            "scale": 1,
+            "selectedLayer": 9,
             "viewCenter": {
-                "x": 537.8333333333333,
-                "y": 459.3333333333333
+                "x": 318.5,
+                "y": 234
             }
         },
         "fabrica_fechado.tmx#Box1": {
@@ -538,8 +543,8 @@
             "scale": 1.376015625,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 311.4063475841708,
-                "y": 239.8228581161642
+                "x": 215.47720433770507,
+                "y": 231.82876284562536
             }
         },
         "hospital.tmx#Floor+Objects": {
@@ -585,10 +590,10 @@
                 6
             ],
             "scale": 1.376015625,
-            "selectedLayer": 4,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 208.936580934537,
-                "y": 239.8228581161642
+                "x": 200.94248566399818,
+                "y": 241.2763299835349
             }
         },
         "hospital_fechado.tmx#Floor+Objects": {
@@ -656,14 +661,14 @@
         "laboratorio.tmx": {
             "expandedObjectLayers": [
                 13,
-                3,
-                8
+                8,
+                3
             ],
-            "scale": 3,
-            "selectedLayer": 6,
+            "scale": 0.75,
+            "selectedLayer": 7,
             "viewCenter": {
-                "x": 890.1666666666666,
-                "y": 557.6666666666666
+                "x": 571.3333333333333,
+                "y": 330.66666666666663
             }
         },
         "laboratorio.tmx#Gemini_G_512-removebg-preview": {
@@ -733,11 +738,11 @@
                 8,
                 3
             ],
-            "scale": 4,
-            "selectedLayer": 9,
+            "scale": 0.75,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 560,
-                "y": 320.125
+                "x": 596.6666666666667,
+                "y": 321.3333333333333
             }
         },
         "laboratorio_fechado.tmx#Gemini_G_512-removebg-preview": {
@@ -866,15 +871,15 @@
         "supermercado.tmx": {
             "expandedObjectLayers": [
                 13,
-                10,
                 14,
+                10,
                 4
             ],
-            "scale": 0.75,
-            "selectedLayer": 7,
+            "scale": 1,
+            "selectedLayer": 11,
             "viewCenter": {
-                "x": 502,
-                "y": 179.99999999999994
+                "x": 615.5,
+                "y": 203
             }
         },
         "supermercado.tmx#CP_V1.0.4": {
@@ -902,13 +907,15 @@
                 13,
                 14,
                 10,
-                4
+                4,
+                11,
+                12
             ],
-            "scale": 2,
-            "selectedLayer": 7,
+            "scale": 1,
+            "selectedLayer": 10,
             "viewCenter": {
-                "x": 405,
-                "y": 320.25
+                "x": 586.5,
+                "y": 267
             }
         },
         "supermercado_fechado.tmx#CP_V1.0.4": {
@@ -949,16 +956,16 @@
     ],
     "project": "sem título.tiled-project",
     "recentFiles": [
-        "escola.tmx",
-        "supermercado_fechado.tmx",
+        "fabrica_fechado.tmx",
         "hospital_fechado.tmx",
+        "hospital.tmx",
+        "fabrica.tmx",
+        "supermercado.tmx",
         "laboratorio_fechado.tmx",
         "cidade.tmx",
-        "fabrica_fechado.tmx",
-        "fabrica.tmx",
-        "hospital.tmx",
+        "escola.tmx",
+        "supermercado_fechado.tmx",
         "laboratorio.tmx",
-        "supermercado.tmx",
         "puzzle.tmx",
         "sem título.tmx"
     ],
