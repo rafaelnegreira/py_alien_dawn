@@ -22,10 +22,12 @@ def puzzle_lab(janela, teclado, delta):
 
     janela.set_background_color((0, 0, 50))
 
+    janela.draw_text("pressione esc para sair", 10, 5, size=15, color=(200, 250, 250), bold=True)   
+
     if cofre_esta_aberto:
-        janela.draw_text("COFRE ABERTO", largura_janela/2.7, altura_janela/10, size=20, color=(200, 200, 100), bold=True)
-        janela.draw_text("Uma arma foi adicionada ao seus itens", largura_janela/5, altura_janela/6, size=20, color=(255, 255, 255), bold=True)
-        janela.draw_text("Use as teclas direcionais mais espaço para disparar", largura_janela/10, altura_janela/4, size=20, color=(0, 255, 0), bold=True)
+        janela.draw_text("COFRE ABERTO", largura_janela/2.5, altura_janela/10, size=20, color=(200, 200, 100), bold=True)
+        janela.draw_text("Uma arma foi adicionada ao seus itens", largura_janela/3.5, altura_janela/6, size=20, color=(255, 255, 255), bold=True)
+        janela.draw_text("Use as teclas direcionais mais espaço para disparar", largura_janela/5, altura_janela/4, size=20, color=(0, 255, 0), bold=True)
         puzzle_lab.cofre_aberto.draw()
 
         if teclado.key_pressed("esc"):
@@ -34,12 +36,17 @@ def puzzle_lab(janela, teclado, delta):
     
     else:
         puzzle_lab.cofre_fechado.draw()
-        janela.draw_text("Todos me pedem, mas ninguém devia dizer.", largura_janela/4.5, altura_janela/10, size=20, color=(0, 150, 0), bold=True)
-        janela.draw_text("Mesmo assim, sou exatamente o que você vai escrever.", largura_janela/6, altura_janela/6, size=20, color=(0, 150, 0), bold=True)
+
+        janela.draw_text("use enter para confirmar e seta para esquerda para apagar", 380, 5, size=15, color=(100, 250, 250), bold=True)   
+
+        janela.draw_text("O cofre parece familiar... na lateral há um enigma para a senha", largura_janela/6.5, altura_janela/6.5, size=20, color=(150, 200, 150), bold=True)
+
+        janela.draw_text("''Todos me pedem, mas ninguém devia dizer.", largura_janela/4.2, altura_janela/3.5, size=20, color=(0, 150, 0), bold=True)
+        janela.draw_text("Mesmo assim, sou exatamente o que você vai escrever.''", largura_janela/6, altura_janela/3, size=20, color=(0, 150, 0), bold=True)
         
-        janela.draw_text("Digite a senha para abrir o cofre:", largura_janela/3.5, altura_janela/2.8, size=20, color=(255, 255, 255), bold=True)
-        janela.draw_text(">", largura_janela/2.8, altura_janela/2.3, size=20, color=(0, 255, 0), bold=True)
-        janela.draw_text(senha_digitada, largura_janela/2.5, altura_janela/2.3, size=20, color=(0, 255, 0), bold=True)
+        janela.draw_text("Digite a senha para abrir o cofre:", largura_janela/3.2, altura_janela/2.25, size=20, color=(255, 255, 255), bold=True)
+        janela.draw_text(">", largura_janela/2.8, altura_janela/2, size=20, color=(0, 255, 0), bold=True)
+        janela.draw_text(senha_digitada, largura_janela/2.6, altura_janela/2, size=20, color=(0, 255, 0), bold=True)
 
         for tecla in range(65, 91):  # letras A-Z
             if teclado.key_pressed(chr(tecla).lower()) and tempo_tecla >= 0.2:
@@ -55,7 +62,7 @@ def puzzle_lab(janela, teclado, delta):
             if senha_digitada == senha_correta:
                 cofre_esta_aberto = True
             else:
-                janela.draw_text("INCORRETO", largura_janela/2.4, altura_janela/2.29, size=18, color=(255, 55, 50), bold=True)
+                janela.draw_text("INCORRETO", largura_janela/2.5, altura_janela/2, size=18, color=(255, 55, 50), bold=True)
                 senha_digitada = ""
 
     return False  # Ainda não terminou
@@ -108,7 +115,7 @@ def puzzle_cadeado(janela, teclado, mouse, delta):
             estado["botoes_cima"].append(cima)
             estado["botoes_baixo"].append(baixo)
 
-        estado["botao_confirma"].set_position(440, 165)
+        estado["botao_confirma"].set_position(cima.x + cima.width + 30, cima.y)
         estado["cadeado_aberto"].set_position(largura / 2 - estado["cadeado_aberto"].width / 2, 50)
         estado["cadeado_fechado"].set_position(largura / 2 - estado["cadeado_fechado"].width / 2, 50)
 
@@ -118,6 +125,7 @@ def puzzle_cadeado(janela, teclado, mouse, delta):
     if estado["jogo_finalizado"]:
         estado["cadeado_aberto"].draw()
     else:
+        janela.draw_text("pressione esc para sair", 10, 5, size=15, color=(200, 250, 250), bold=True)   
         estado["cadeado_fechado"].draw()
 
     # Números
@@ -153,7 +161,7 @@ def puzzle_cadeado(janela, teclado, mouse, delta):
     estado["mouse_pressionado_anterior"] = clique
 
     if estado["jogo_finalizado"]:
-        janela.draw_text("Cadeado aberto! O código era 582", janela.width/4, 260, 20, (0,255,0))
+        janela.draw_text("Cadeado aberto! O código era 582", janela.width/3.3, 260, 20, (0,255,0))
         if teclado.key_pressed("esc"):
             return True
 
@@ -212,7 +220,7 @@ def puzzle_lampadas(janela, teclado, mouse, delta):
     janela.draw_text("Cumpra a rotina de segurança para habilitar o sistema.", 50, 30, 24, (0, 100, 0), "Consolas", True)
 
     if all(estado["lampadas"]):
-        janela.draw_text("Rotina completa! Portas destravadas.", 90, 345, 24, (210, 100, 30), "Consolas", True)
+        janela.draw_text("Rotina completa! Portas destravadas.", 170, 345, 24, (210, 100, 30), "Consolas", True)
         if teclado.key_pressed("esc"):
             return True
 

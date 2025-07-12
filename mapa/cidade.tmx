@@ -666,7 +666,7 @@
   <object id="146" x="555.333" y="903" width="57.3333" height="8.83333"/>
   <object id="150" x="159.371" y="333.78" width="13.2576" height="14.4394"/>
  </objectgroup>
- <objectgroup id="18" name="interacao" visible="0" opacity="0.85">
+ <objectgroup id="18" name="interacao" opacity="0.85">
   <object id="136" x="462.636" y="582.5" width="34" height="7.25">
    <text fontfamily="Small Fonts" pixelsize="8" wrap="1" halign="center" valign="center">SCHOOL</text>
   </object>

@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "laboratorio_fechado.tmx",
+    "activeFile": "cidade.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -59,18 +59,18 @@
                 12
             ],
             "expandedObjectLayers": [
-                19,
-                6,
                 18,
-                17,
                 11,
-                16
+                16,
+                17,
+                19,
+                6
             ],
-            "scale": 0.5,
-            "selectedLayer": 9,
+            "scale": 0.75,
+            "selectedLayer": 10,
             "viewCenter": {
-                "x": 549,
-                "y": 472
+                "x": 384.66666666666674,
+                "y": 533.3333333333333
             }
         },
         "cidade.tmx#CP_V1.0.4": {
@@ -137,17 +137,17 @@
         },
         "escola.tmx": {
             "expandedObjectLayers": [
+                9,
                 5,
-                7,
                 4,
-                6,
-                9
+                7,
+                6
             ],
             "scale": 1,
             "selectedLayer": 8,
             "viewCenter": {
-                "x": 400,
-                "y": 239.5
+                "x": 399.5,
+                "y": 239
             }
         },
         "escola.tmx#NES_MStreet_Tile_Set_MockUp": {
@@ -771,8 +771,8 @@
             "scale": 1.376015625,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 200.94248566399818,
-                "y": 241.2763299835349
+                "x": 319.7638108215523,
+                "y": 240.1862260830069
             }
         },
         "hospital_fechado.tmx#Floor+Objects": {
@@ -912,16 +912,16 @@
         },
         "laboratorio_fechado.tmx": {
             "expandedObjectLayers": [
-                10,
-                3,
+                8,
                 13,
-                8
+                3,
+                10
             ],
             "scale": 0.75,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 560,
-                "y": 319.33333333333326
+                "x": 732.6666666666667,
+                "y": 318.66666666666663
             }
         },
         "laboratorio_fechado.tmx#Gemini_G_512-removebg-preview": {
@@ -1083,12 +1083,12 @@
         },
         "supermercado_fechado.tmx": {
             "expandedObjectLayers": [
-                10,
-                4,
-                14,
+                11,
                 13,
+                14,
+                4,
                 12,
-                11
+                10
             ],
             "scale": 1,
             "selectedLayer": 10,
@@ -1131,20 +1131,21 @@
         "escola.tmx",
         "supermercado_fechado.tmx",
         "laboratorio_fechado.tmx",
-        "hospital_fechado.tmx"
+        "hospital_fechado.tmx",
+        "cidade.tmx"
     ],
     "project": "sem título.tiled-project",
     "recentFiles": [
+        "escola.tmx",
+        "supermercado_fechado.tmx",
+        "laboratorio_fechado.tmx",
+        "hospital_fechado.tmx",
+        "cidade.tmx",
         "fabrica_fechado.json",
         "fabrica_fechado.tmx",
-        "hospital_fechado.tmx",
         "hospital.tmx",
         "fabrica.tmx",
         "supermercado.tmx",
-        "laboratorio_fechado.tmx",
-        "cidade.tmx",
-        "escola.tmx",
-        "supermercado_fechado.tmx",
         "laboratorio.tmx",
         "puzzle.tmx"
     ],
