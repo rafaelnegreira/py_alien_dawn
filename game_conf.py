@@ -42,7 +42,8 @@ class Game_Manager:
         self.GAME_STATE = "menu"
         self.puzzle_ativo = None
         self.background = None
-
+        
+        self.final = False
         # Listas para guardar os objetos do mapa
         self.all_objects = []
         self.colisores = []
@@ -184,8 +185,27 @@ class Game_Manager:
                         self.arma.qtd_municao += 10
                         print(f"Munição +10 QTD = {self.arma.qtd_municao}")
 
-                    item.interagir()
-                    self.itens_coletados[str(item.id)] = True  # Marca como coletado permanentemente
+                    if "vela_ignicao" in nome_item:
+                        self.player.inventario.append(item.name)
+                        print(f"{item.name} adicionado ao inventário.")
+
+                    if "combustivel" in nome_item:
+                        self.player.inventario.append(item.name)
+                        print(f"{item.name} adicionado ao inventário.")
+
+                    if "bateria" in nome_item:
+                        self.player.inventario.append(item.name)
+                        print(f"{item.name} adicionado ao inventário.")
+                    
+                    if "final" in nome_item:
+                        if "vela_ignicao" in self.player.inventario:
+                            if "chave_roda" in self.player.inventario:
+                                if "combustivel" in self.player.inventario:
+                                    if "bateria" in self.player.inventario:
+                                        self.GAME_STATE = "final"
+                    else:
+                        item.interagir()
+                        self.itens_coletados[str(item.id)] = True  # Marca como coletado permanentemente
 
         for inimigo in self.inimigos_vivos:
             inimigo.perseguir(self.player, self.colisores, delta)
@@ -264,6 +284,10 @@ class Game_Manager:
                     self.GAME_STATE = "jogo"
                 elif proximo_estado == "sair":
                     self.GAME_STATE = "sair"
+            
+            elif self.GAME_STATE == "final":
+                self.GAME_STATE = "jogo"
+                self.carregar_mapa("laboratorio_fechado", 667, 130) # Carrega o mapa inicial
 
             elif self.GAME_STATE == "jogo":
                 self.update_game(delta)
@@ -284,10 +308,6 @@ class Game_Manager:
 
                 elif nome == "lampadas":
                     completou = puzzle_lampadas(self.janela, self.teclado, self.mouse, delta)
-
-                # Permite sair do puzzle com ESC sem concluir
-
-
 
                 else:
                     # fallback para puzzle genérico
@@ -314,6 +334,11 @@ class Game_Manager:
 
                     if self.puzzle_ativo.name.lower() == "puzzle_hospital":
                         self.carregar_mapa("hospital", self.player.get_position_x(), self.player.get_position_y())
+
+                    if self.puzzle_ativo.name.lower() == "cadeado":
+                        self.player.inventario.append("chave_roda")
+                        print(f"chave_roda adicionado ao inventário.")
+                        self.carregar_mapa("escola", self.player.get_position_x(), self.player.get_position_y())
 
                     portal_id = getattr(self.puzzle_ativo, 'portal_target_id', None)
                     
