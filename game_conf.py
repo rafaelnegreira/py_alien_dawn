@@ -13,6 +13,7 @@ from menu import game_menu
 from GameObjects import * 
 from inimigo import *
 from puzzles import *
+from PPlay.sound import Sound
 
 
 class Camera:
@@ -73,6 +74,15 @@ class Game_Manager:
         self.camera = Camera(janela.width, janela.height)
         self.tempo_atual = 0
         self.player.arma_equip = False  # Desativa a arma no início
+
+        # self.som_tiro = Sound("assets/sounds/tiro.wav")
+        # self.som_acerto_inimigo = Sound("assets/sounds/acerto_inimigo.wav")
+        # self.som_acerto_parede = Sound("assets/sounds/tiro_bate_parede.wav")
+        self.som_ganhar_vida = Sound("assets/sounds/ganhar_vida.wav")
+        # self.som_perder_vida = Sound("assets/sounds/perder_vida.wav")
+        # self.som_pegar_municao = Sound("assets/sounds/municao.wav")
+        # self.som_ambiente = Sound("assets/sounds/ambiente_loop.wav")
+        # self.som_ambiente.play(loop=True)
 
     def carregar_mapa(self, nome_mapa, spawn_x, spawn_y):
         self.all_objects = load_map_objects(nome_mapa)
@@ -179,6 +189,7 @@ class Game_Manager:
 
                     if "vida" in nome_item:
                         self.player.hp += 1
+                        self.som_ganhar_vida.play()
                         print("Vida +1")
 
                     if "municao" in nome_item:
