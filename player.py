@@ -23,9 +23,11 @@ class Arma:
         self.projeteis_ativos = []
         self.cooldown = 0.3  # segundos
         self.tempo_ultimo_disparo = 0
+        self.som_disparo = Sound("assets\sounds\som_tiro.wav")
 
     def disparo(self, x, y, direcao, tempo_atual):
         if self.qtd_municao > 0 and tempo_atual - self.tempo_ultimo_disparo > self.cooldown:
+            self.som_disparo.play()
             proj_sprite = None
 
             match direcao.upper():

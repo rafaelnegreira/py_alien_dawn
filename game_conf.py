@@ -57,7 +57,7 @@ class Game_Manager:
         self.itens_coletados = {}  # Armazena os itens já coletados, por ID
 
         # Componentes do jogo
-        self.arma = Arma(1000, 200)
+        self.arma = Arma(1, 200)
 
         self.player = Player(
             tipo="Player", speed=300, hp=5, arma=self.arma,
@@ -75,14 +75,16 @@ class Game_Manager:
         self.tempo_atual = 0
         self.player.arma_equip = False  # Desativa a arma no início
 
-        # self.som_tiro = Sound("assets/sounds/tiro.wav")
-        # self.som_acerto_inimigo = Sound("assets/sounds/acerto_inimigo.wav")
-        # self.som_acerto_parede = Sound("assets/sounds/tiro_bate_parede.wav")
+        self.som_acerto_inimigo = Sound("assets/sounds/acerto_inimigo.wav")
+        self.som_acerto_inimigo.set_volume(10)
+        self.som_acerto_parede = Sound("assets/sounds/tiro_bate_parede.wav")
+        self.som_acerto_parede.set_volume(5)
         self.som_ganhar_vida = Sound("assets/sounds/ganhar_vida.wav")
-        # self.som_perder_vida = Sound("assets/sounds/perder_vida.wav")
-        # self.som_pegar_municao = Sound("assets/sounds/municao.wav")
-        # self.som_ambiente = Sound("assets/sounds/ambiente_loop.wav")
-        # self.som_ambiente.play(loop=True)
+        self.som_perder_vida = Sound("assets/sounds/perder_vida.wav")
+        self.som_pegar_municao = Sound("assets/sounds/municao.wav")
+        self.som_pegar_item = Sound("assets/sounds/pegar_item.wav")
+        self.som_ambiente_cidade = Sound("assets/sounds/ambiente_cidade.wav")
+        self.som_ambiente_cidade.set_repeat(True)
 
     def carregar_mapa(self, nome_mapa, spawn_x, spawn_y):
         self.all_objects = load_map_objects(nome_mapa)
@@ -117,7 +119,7 @@ class Game_Manager:
         # e o adicionamos na lista de inimigos ativos da fase.
         for spawner in map_inimigos_spawners:
             novo_inimigo = InimigoControlavel(
-                tipo="zumbi", 
+                tipo="alien", 
                 hp=3, 
                 speed=60,
                 x=spawner.x,  # Usa a posição X definida no mapa
@@ -147,28 +149,38 @@ class Game_Manager:
 
                     # Lógica para mudar o destino com base no puzzle "cofre_lab"
                     if destino == "laboratorio_dinamico":
+                        self.som_ambiente_cidade.stop()
                         if self.puzzles_concluidos.get("cofre_lab", False):
                             destino = "laboratorio"
                         else:
                             destino = "laboratorio_fechado"
 
                     if destino == "supermercado_dinamico":
+                        self.som_ambiente_cidade.stop()
                         if self.puzzles_concluidos.get("lampadas", False):
                             destino = "supermercado"
                         else:
                             destino = "supermercado_fechado"
 
                     if destino == "fabrica_dinamico":
+                        self.som_ambiente_cidade.stop()
                         if self.puzzles_concluidos.get("puzzle_fabrica", False):
                             destino = "fabrica"
                         else:
                             destino = "fabrica_fechado"
 
                     if destino == "hospital_dinamico":
+                        self.som_ambiente_cidade.stop()
                         if self.puzzles_concluidos.get("puzzle_hospital", False):
                             destino = "hospital"
                         else:
                             destino = "hospital_fechado"
+                    
+                    if destino == "cidade":
+                        self.som_ambiente_cidade.play()
+
+                    if destino == "escola":
+                        self.som_ambiente_cidade.stop()
 
                     if destino:
                         self.carregar_mapa(destino, spawn_x, spawn_y)
@@ -194,18 +206,22 @@ class Game_Manager:
 
                     if "municao" in nome_item:
                         self.arma.qtd_municao += 10
+                        self.som_pegar_municao.play()
                         print(f"Munição +10 QTD = {self.arma.qtd_municao}")
 
                     if "vela_ignicao" in nome_item:
                         self.player.inventario.append(item.name)
+                        self.som_pegar_item.play()
                         print(f"{item.name} adicionado ao inventário.")
 
                     if "combustivel" in nome_item:
                         self.player.inventario.append(item.name)
+                        self.som_pegar_item.play()
                         print(f"{item.name} adicionado ao inventário.")
 
                     if "bateria" in nome_item:
                         self.player.inventario.append(item.name)
+                        self.som_pegar_item.play()
                         print(f"{item.name} adicionado ao inventário.")
                     
                     if "final" in nome_item:
@@ -228,6 +244,7 @@ class Game_Manager:
             for bloco in self.colisores:
                 # Se um projétil colidiu com um bloco sólido...
                 if proj["sprite"].collided(bloco):
+                    self.som_acerto_parede.play()
                     # ...e ainda não foi marcado para remoção...
                     if proj not in projeteis_para_remover:
                         # ...marque-o para ser removido.
@@ -239,7 +256,7 @@ class Game_Manager:
             for inimigo in self.inimigos_vivos:
                 # Usamos a colisão da própria PPlay
                 if proj["sprite"].collided(inimigo.sprite):
-                    
+                    self.som_acerto_inimigo.play()
                     # Adiciona ambos às listas de remoção
                     if proj not in projeteis_para_remover:
                         projeteis_para_remover.append(proj)
@@ -300,7 +317,7 @@ class Game_Manager:
         # --- INVENTÁRIO ---
         inventario_base_x = 10
         inventario_base_y = 110
-        espacamento = 50
+        espacamento = 40
 
         for idx, item_nome in enumerate(self.player.inventario):
             try:
@@ -366,6 +383,7 @@ class Game_Manager:
                     if self.puzzle_ativo.name.lower() == "cofre_lab":
                         self.player.arma_equip = True
                         self.carregar_mapa("laboratorio", self.player.get_position_x(), self.player.get_position_y())
+                        self.som_pegar_item.play()
 
                     if self.puzzle_ativo.name.lower() == "lampadas":
                         self.carregar_mapa("supermercado", self.player.get_position_x(), self.player.get_position_y())
@@ -380,6 +398,7 @@ class Game_Manager:
                         self.player.inventario.append("chave_roda")
                         print(f"chave_roda adicionado ao inventário.")
                         self.carregar_mapa("escola", self.player.get_position_x(), self.player.get_position_y())
+                        self.som_pegar_item.play()
 
                     portal_id = getattr(self.puzzle_ativo, 'portal_target_id', None)
                     
