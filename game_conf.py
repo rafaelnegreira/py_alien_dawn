@@ -270,6 +270,36 @@ class Game_Manager:
             inimigo.desenhar()
             self.camera.undo(inimigo.sprite)
 
+        self.desenhar_interface()
+
+
+    def desenhar_interface(self):
+        # --- VIDA ---
+        coracao = GameImage("assets/ui/coracao_cheio.png")
+        for i in range(self.player.hp):
+            coracao.set_position(10 + i * (coracao.width + 5), 10)
+            coracao.draw()
+
+        # --- MUNIÇÃO ---
+        icone_municao = GameImage("assets/ui/icone_municao.png")
+        icone_municao.set_position(10, 60)
+        icone_municao.draw()
+        self.janela.draw_text(f"{self.arma.qtd_municao}", 50, 60, size=24, color=(255,255,255), bold=True)
+
+        # --- INVENTÁRIO ---
+        inventario_base_x = 10
+        inventario_base_y = 110
+        espacamento = 50
+
+        for idx, item_nome in enumerate(self.player.inventario):
+            try:
+                item_img = GameImage(f"assets/ui/{item_nome}.png")
+                item_img.set_position(inventario_base_x + idx * espacamento, inventario_base_y)
+                item_img.draw()
+            except:
+                # Caso o arquivo do item não exista, ignora
+                pass
+
     def run(self):
         """O loop principal que controla todos os estados do jogo."""
         while True:
