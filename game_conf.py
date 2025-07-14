@@ -75,6 +75,7 @@ class Game_Manager:
         self.tempo_atual = 0
         self.player.arma_equip = False  # Desativa a arma no início
 
+        #efeitos sonoros e sons ambientes
         self.som_acerto_inimigo = Sound("assets/sounds/acerto_inimigo.wav")
         self.som_acerto_inimigo.set_volume(10)
         self.som_acerto_parede = Sound("assets/sounds/tiro_bate_parede.wav")
@@ -83,8 +84,25 @@ class Game_Manager:
         self.som_perder_vida = Sound("assets/sounds/perder_vida.wav")
         self.som_pegar_municao = Sound("assets/sounds/municao.wav")
         self.som_pegar_item = Sound("assets/sounds/pegar_item.wav")
+
         self.som_ambiente_cidade = Sound("assets/sounds/ambiente_cidade.wav")
         self.som_ambiente_cidade.set_repeat(True)
+        self.som_ambiente_cidade.set_volume(50)
+        self.som_ambiente_escola = Sound("assets/sounds/ambiente_escola.wav")
+        self.som_ambiente_escola.set_repeat(True)
+        self.som_ambiente_escola.set_volume(50)
+        self.som_ambiente_laboratorio = Sound("assets/sounds/ambiente_laboratorio.wav")
+        self.som_ambiente_laboratorio.set_repeat(True)
+        self.som_ambiente_laboratorio.set_volume(50)
+        self.som_ambiente_supermercado = Sound("assets/sounds/ambiente_supermercado.wav")
+        self.som_ambiente_supermercado.set_repeat(True)
+        self.som_ambiente_supermercado.set_volume(50)
+        self.som_ambiente_fabrica = Sound("assets/sounds/ambiente_fabrica.wav")
+        self.som_ambiente_fabrica.set_repeat(True)
+        self.som_ambiente_fabrica.set_volume(50)
+        self.som_ambiente_hospital = Sound("assets/sounds/ambiente_hospital.wav")
+        self.som_ambiente_hospital.set_repeat(True)
+        self.som_ambiente_hospital.set_volume(50)
 
     def carregar_mapa(self, nome_mapa, spawn_x, spawn_y):
         self.all_objects = load_map_objects(nome_mapa)
@@ -150,6 +168,8 @@ class Game_Manager:
                     # Lógica para mudar o destino com base no puzzle "cofre_lab"
                     if destino == "laboratorio_dinamico":
                         self.som_ambiente_cidade.stop()
+                        self.som_ambiente_laboratorio.play()
+                        
                         if self.puzzles_concluidos.get("cofre_lab", False):
                             destino = "laboratorio"
                         else:
@@ -157,6 +177,8 @@ class Game_Manager:
 
                     if destino == "supermercado_dinamico":
                         self.som_ambiente_cidade.stop()
+                        self.som_ambiente_supermercado.play()
+                        
                         if self.puzzles_concluidos.get("lampadas", False):
                             destino = "supermercado"
                         else:
@@ -164,6 +186,8 @@ class Game_Manager:
 
                     if destino == "fabrica_dinamico":
                         self.som_ambiente_cidade.stop()
+                        self.som_ambiente_fabrica.play()
+                        
                         if self.puzzles_concluidos.get("puzzle_fabrica", False):
                             destino = "fabrica"
                         else:
@@ -171,16 +195,24 @@ class Game_Manager:
 
                     if destino == "hospital_dinamico":
                         self.som_ambiente_cidade.stop()
+                        self.som_ambiente_hospital.play()
+
                         if self.puzzles_concluidos.get("puzzle_hospital", False):
                             destino = "hospital"
                         else:
                             destino = "hospital_fechado"
                     
                     if destino == "cidade":
+                        self.som_ambiente_hospital.stop()
+                        self.som_ambiente_fabrica.stop()
+                        self.som_ambiente_escola.stop()
+                        self.som_ambiente_supermercado.stop()
+                        self.som_ambiente_laboratorio.stop()
                         self.som_ambiente_cidade.play()
 
                     if destino == "escola":
                         self.som_ambiente_cidade.stop()
+                        self.som_ambiente_escola.play()
 
                     if destino:
                         self.carregar_mapa(destino, spawn_x, spawn_y)
