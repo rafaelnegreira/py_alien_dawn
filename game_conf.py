@@ -85,9 +85,12 @@ class Game_Manager:
         self.som_pegar_municao = Sound("assets/sounds/municao.wav")
         self.som_pegar_item = Sound("assets/sounds/pegar_item.wav")
 
-        self.som_ambiente_cidade = Sound("assets/sounds/ambiente_cidade.wav")
+        self.som_ambiente_cidade = Sound("assets/sounds/ambiente_cidade1.wav")
         self.som_ambiente_cidade.set_repeat(True)
         self.som_ambiente_cidade.set_volume(50)
+        self.som_ambiente_cidade2 = Sound("assets/sounds/ambiente_cidade2.wav")
+        self.som_ambiente_cidade2.set_repeat(True)
+        self.som_ambiente_cidade2.set_volume(50)
         self.som_ambiente_escola = Sound("assets/sounds/ambiente_escola.wav")
         self.som_ambiente_escola.set_repeat(True)
         self.som_ambiente_escola.set_volume(50)
@@ -168,6 +171,7 @@ class Game_Manager:
                     # Lógica para mudar o destino com base no puzzle "cofre_lab"
                     if destino == "laboratorio_dinamico":
                         self.som_ambiente_cidade.stop()
+                        self.som_ambiente_cidade2.stop()
                         self.som_ambiente_laboratorio.play()
                         
                         if self.puzzles_concluidos.get("cofre_lab", False):
@@ -177,6 +181,7 @@ class Game_Manager:
 
                     if destino == "supermercado_dinamico":
                         self.som_ambiente_cidade.stop()
+                        self.som_ambiente_cidade2.stop()
                         self.som_ambiente_supermercado.play()
                         
                         if self.puzzles_concluidos.get("lampadas", False):
@@ -186,6 +191,7 @@ class Game_Manager:
 
                     if destino == "fabrica_dinamico":
                         self.som_ambiente_cidade.stop()
+                        self.som_ambiente_cidade2.stop()
                         self.som_ambiente_fabrica.play()
                         
                         if self.puzzles_concluidos.get("puzzle_fabrica", False):
@@ -195,6 +201,7 @@ class Game_Manager:
 
                     if destino == "hospital_dinamico":
                         self.som_ambiente_cidade.stop()
+                        self.som_ambiente_cidade2.stop()
                         self.som_ambiente_hospital.play()
 
                         if self.puzzles_concluidos.get("puzzle_hospital", False):
@@ -209,9 +216,11 @@ class Game_Manager:
                         self.som_ambiente_supermercado.stop()
                         self.som_ambiente_laboratorio.stop()
                         self.som_ambiente_cidade.play()
+                        self.som_ambiente_cidade2.play()
 
                     if destino == "escola":
                         self.som_ambiente_cidade.stop()
+                        self.som_ambiente_cidade2.stop()
                         self.som_ambiente_escola.play()
 
                     if destino:
@@ -371,6 +380,7 @@ class Game_Manager:
                 if proximo_estado == "jogo":
                     self.carregar_mapa("laboratorio_fechado", 667, 130) # Carrega o mapa inicial
                     # self.carregar_mapa("laboratorio_fechado", 150, 130) # Carrega o mapa inicial
+                    self.som_ambiente_laboratorio.play()
                     self.GAME_STATE = "jogo"
                 elif proximo_estado == "sair":
                     self.GAME_STATE = "sair"
