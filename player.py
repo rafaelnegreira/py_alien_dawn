@@ -89,6 +89,9 @@ class Player(Character):
 
         self.inventario = []
 
+        self.invulneravel = False
+        self.tempo_invulneravel = 0
+
         self.sprite_stay = Sprite(sprite_stay, 2)
         self.sprite_right = Sprite(sprite_right, 4)
         self.sprite_left = Sprite(sprite_left, 4)
@@ -112,6 +115,13 @@ class Player(Character):
         self.sprite_shoot_right.set_sequence_time(0,1,200, True)
 
         self.sprite = self.sprite_stay
+
+    def atualizar_invulnerabilidade(self, delta):
+        if self.invulneravel:
+            self.tempo_invulneravel -= delta
+            if self.tempo_invulneravel <= 0:
+                self.invulneravel = False
+
 
     def position(self, x, y):
         self.sprite.set_position(x, y)

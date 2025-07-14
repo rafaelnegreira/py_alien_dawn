@@ -158,6 +158,7 @@ class Game_Manager:
         self.player.atirar(self.teclado, self.tempo_atual)
         self.arma.atualizar_projeteis(delta)
         self.camera.update(self.player.sprite)
+        self.player.atualizar_invulnerabilidade(delta)
 
         # Lógica de interação
         if self.teclado.key_pressed("E"):
@@ -290,6 +291,20 @@ class Game_Manager:
         for inimigo in self.inimigos_vivos:
             inimigo.perseguir(self.player, self.colisores, delta)
 
+                # Colisão inimigo → jogador
+            if self.player.sprite.collided(inimigo.sprite) and not self.player.invulneravel:
+                self.player.hp -= 1
+                self.player.invulneravel = True
+                self.player.tempo_invulneravel = 2  # 2 segundos de invulnerabilidade
+                self.som_perder_vida.play()
+                print(f"Jogador atingido! Vidas restantes: {self.player.hp}")
+
+        if self.player.hp <= 0:
+            self.cutscene([GameImage("assets/img/historia/H_morte1.png")])
+            self.resetar_jogo()
+            return
+
+
         projeteis_para_remover = []
         inimigos_para_remover = []
 
@@ -336,9 +351,11 @@ class Game_Manager:
         #     b.draw()
         #     self.camera.undo(b)
 
-        self.camera.apply(self.player.sprite)
-        self.player.desenhar()
-        self.camera.undo(self.player.sprite)
+        if not self.player.invulneravel or int(self.tempo_atual * 10) % 2 == 0:
+            self.camera.apply(self.player.sprite)
+            self.player.desenhar()
+            self.camera.undo(self.player.sprite)
+
 
         for proj in self.arma.projeteis_ativos:
             sprite_proj = proj["sprite"]
@@ -412,7 +429,7 @@ class Game_Manager:
     def cutscene(self, imagens):
 
         texto = "Pressione ESPAÇO para continuar"
-        fonte = pygame.font.SysFont("Arial", 14)
+        fonte = pygame.font.SysFont("Arial", 16)
         largura, altura = fonte.size(texto)
 
         for img in imagens:
@@ -424,7 +441,7 @@ class Game_Manager:
                 tempo += delta
 
                 img.draw()
-                self.janela.draw_text(texto, self.janela.width/2 - largura/2, self.janela.height - 40, size=14, color=(0, 0, 0))
+                self.janela.draw_text(texto, self.janela.width/2 - largura/2, self.janela.height - 40, size=16, color=(0, 0, 0))
 
                 if self.teclado.key_pressed("SPACE") and tempo > 0.5:
                     break
@@ -454,7 +471,46 @@ class Game_Manager:
                     break
 
                 self.janela.update()
-                
+
+    def resetar_jogo(self):
+        # Reset de variáveis principais
+        self.player.hp = 5
+        self.player.inventario.clear()
+        self.player.invulneravel = False
+        self.player.tempo_invulneravel = 0
+        self.arma.qtd_municao = 0
+        self.arma.projeteis_ativos.clear()
+        self.player.arma_equip = False
+
+        self.puzzles_concluidos.clear()
+        self.itens_coletados.clear()
+
+        # Resetar os estados dos puzzles visíveis
+        for pz in self.puzzles:
+            pz.concluido = False
+
+        # Resetar os itens
+        for item in self.itens:
+            item.coletado = False
+
+        self.inimigos_vivos.clear()
+        self.all_objects.clear()
+        self.portais.clear()
+        self.puzzles.clear()
+        self.itens.clear()
+        self.colisores.clear()
+
+        # Sons (parar todos)
+        self.som_ambiente_escola.stop()
+        self.som_ambiente_fabrica.stop()
+        self.som_ambiente_supermercado.stop()
+        self.som_ambiente_laboratorio.stop()
+        self.som_ambiente_hospital.stop()
+        self.som_ambiente_cidade.stop()
+        self.som_ambiente_cidade2.stop()
+
+        self.GAME_STATE = "menu"
+
     def run(self):
         """O loop principal que controla todos os estados do jogo."""
         while True:
@@ -476,7 +532,8 @@ class Game_Manager:
             elif self.GAME_STATE == "final":
 
                 self.tela_final()
-                self.GAME_STATE = "menu"
+                self.resetar_jogo()
+                continue
                 # self.carregar_mapa("laboratorio_fechado", 667, 130) # Carrega o mapa inicial
 
             elif self.GAME_STATE == "jogo":
