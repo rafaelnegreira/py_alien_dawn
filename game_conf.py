@@ -240,16 +240,6 @@ class Game_Manager:
                 if not item.coletado and self.player.sprite.collided(item):
                     nome_item = item.name.lower()
 
-                    if "vida" in nome_item:
-                        self.player.hp += 1
-                        self.som_ganhar_vida.play()
-                        print("Vida +1")
-
-                    if "municao" in nome_item:
-                        self.arma.qtd_municao += 10
-                        self.som_pegar_municao.play()
-                        print(f"Munição +10 QTD = {self.arma.qtd_municao}")
-
                     if "vela_ignicao" in nome_item:
                         self.player.inventario.append(item.name)
                         self.som_pegar_item.play()
@@ -268,13 +258,31 @@ class Game_Manager:
                         print(f"{item.name} adicionado ao inventário.")
                         self.cutscene([GameImage("assets\img\historia\H_bateria.png")])
 
-                    
+                    if "vida" in nome_item:
+                        self.player.hp += 1
+                        self.som_ganhar_vida.play()
+                        print("Vida +1")
+
+                    if "municao" in nome_item:
+                        self.arma.qtd_municao += 10
+                        self.som_pegar_municao.play()
+                        print(f"Munição +10 QTD = {self.arma.qtd_municao}")
+
                     if "final" in nome_item:
                         if "vela_ignicao" in self.player.inventario:
                             if "chave_roda" in self.player.inventario:
                                 if "combustivel" in self.player.inventario:
                                     if "bateria" in self.player.inventario:
                                         self.GAME_STATE = "final"
+                                    else:
+                                        self.cutscene([GameImage("assets\img\historia\H_carro.png")])
+                                else:
+                                    self.cutscene([GameImage("assets\img\historia\H_carro.png")])
+                            else:
+                                self.cutscene([GameImage("assets\img\historia\H_carro.png")])
+                        else:
+                            self.cutscene([GameImage("assets\img\historia\H_carro.png")])
+
                     else:
                         item.interagir()
                         self.itens_coletados[str(item.id)] = True  # Marca como coletado permanentemente
@@ -380,6 +388,10 @@ class Game_Manager:
             GameImage("assets/img/historia/H3.png")
         ]
 
+        texto = "Pressione ESPAÇO para continuar"
+        fonte = pygame.font.SysFont("Arial", 20)
+        largura, altura = fonte.size(texto)
+
         for img in imagens:
             img.set_position(0, 0)
             tempo = 0
@@ -390,7 +402,7 @@ class Game_Manager:
 
                 # self.janela.set_background_color((0, 0, 0))
                 img.draw()
-                self.janela.draw_text("Pressione ESPAÇO para continuar", 250, self.janela.height - 40, size=20, color=(255, 255, 255))
+                self.janela.draw_text(texto, self.janela.width/2 - largura/2, self.janela.height - 40, size=20, color=(255, 255, 255))
 
                 if self.teclado.key_pressed("SPACE") and tempo > 0.5:
                     break
@@ -398,6 +410,10 @@ class Game_Manager:
                 self.janela.update()
 
     def cutscene(self, imagens):
+
+        texto = "Pressione ESPAÇO para continuar"
+        fonte = pygame.font.SysFont("Arial", 14)
+        largura, altura = fonte.size(texto)
 
         for img in imagens:
             img.set_position(0, 0)
@@ -408,7 +424,7 @@ class Game_Manager:
                 tempo += delta
 
                 img.draw()
-                self.janela.draw_text("Pressione ESPAÇO para continuar", self.janela.width/2 - 110, self.janela.height - 40, size=14, color=(0, 0, 0))
+                self.janela.draw_text(texto, self.janela.width/2 - largura/2, self.janela.height - 40, size=14, color=(0, 0, 0))
 
                 if self.teclado.key_pressed("SPACE") and tempo > 0.5:
                     break
@@ -417,22 +433,28 @@ class Game_Manager:
 
 
     def tela_final(self):
-        tela = GameImage("assets/img/final_screen.png")
-        tempo_espera = 0
+        imagens = [GameImage("assets/img/historia/H_final1.png"), GameImage("assets/img/historia/H_final2.png")]
+        
+        texto = "Pressione ESPAÇO para continuar"
+        fonte = pygame.font.SysFont("Arial", 18)
+        largura, altura = fonte.size(texto)
 
-        while True:
-            delta = self.janela.delta_time()
-            tempo_espera += delta
+        for img in imagens:
+            img.set_position(0, 0)
+            tempo = 0
 
-            self.janela.set_background_color((0, 0, 0))
-            tela.set_position(0, 0)
-            tela.draw()
+            while True:
+                delta = self.janela.delta_time()
+                tempo += delta
 
-            if self.teclado.key_pressed("ESC") and tempo_espera > 1:
-                break
+                img.draw()
+                self.janela.draw_text(texto, self.janela.width/2 - largura/2, self.janela.height - 40, size=18, color=(255, 255, 255))
 
-            self.janela.update()
+                if self.teclado.key_pressed("SPACE") and tempo > 0.5:
+                    break
 
+                self.janela.update()
+                
     def run(self):
         """O loop principal que controla todos os estados do jogo."""
         while True:
@@ -452,8 +474,10 @@ class Game_Manager:
                     self.GAME_STATE = "sair"
             
             elif self.GAME_STATE == "final":
-                self.GAME_STATE = "jogo"
-                self.carregar_mapa("laboratorio_fechado", 667, 130) # Carrega o mapa inicial
+
+                self.tela_final()
+                self.GAME_STATE = "menu"
+                # self.carregar_mapa("laboratorio_fechado", 667, 130) # Carrega o mapa inicial
 
             elif self.GAME_STATE == "jogo":
                 self.update_game(delta)
