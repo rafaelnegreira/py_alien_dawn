@@ -254,16 +254,20 @@ class Game_Manager:
                         self.player.inventario.append(item.name)
                         self.som_pegar_item.play()
                         print(f"{item.name} adicionado ao inventário.")
+                        self.cutscene([GameImage("assets\img\historia\H_vela.png")])
 
                     if "combustivel" in nome_item:
                         self.player.inventario.append(item.name)
                         self.som_pegar_item.play()
                         print(f"{item.name} adicionado ao inventário.")
+                        self.cutscene([GameImage("assets\img\historia\H_combustivel.png")])
 
                     if "bateria" in nome_item:
                         self.player.inventario.append(item.name)
                         self.som_pegar_item.play()
                         print(f"{item.name} adicionado ao inventário.")
+                        self.cutscene([GameImage("assets\img\historia\H_bateria.png")])
+
                     
                     if "final" in nome_item:
                         if "vela_ignicao" in self.player.inventario:
@@ -369,6 +373,66 @@ class Game_Manager:
                 # Caso o arquivo do item não exista, ignora
                 pass
 
+    def cutscene_inicial(self):
+        imagens = [
+            GameImage("assets/img/historia/H1.png"),
+            GameImage("assets/img/historia/H2.png"),
+            GameImage("assets/img/historia/H3.png")
+        ]
+
+        for img in imagens:
+            img.set_position(0, 0)
+            tempo = 0
+
+            while True:
+                delta = self.janela.delta_time()
+                tempo += delta
+
+                # self.janela.set_background_color((0, 0, 0))
+                img.draw()
+                self.janela.draw_text("Pressione ESPAÇO para continuar", 250, self.janela.height - 40, size=20, color=(255, 255, 255))
+
+                if self.teclado.key_pressed("SPACE") and tempo > 0.5:
+                    break
+
+                self.janela.update()
+
+    def cutscene(self, imagens):
+
+        for img in imagens:
+            img.set_position(0, 0)
+            tempo = 0
+
+            while True:
+                delta = self.janela.delta_time()
+                tempo += delta
+
+                img.draw()
+                self.janela.draw_text("Pressione ESPAÇO para continuar", 250, self.janela.height - 30, size=14, color=(0, 0, 0))
+
+                if self.teclado.key_pressed("SPACE") and tempo > 0.5:
+                    break
+
+                self.janela.update()
+
+
+    def tela_final(self):
+        tela = GameImage("assets/img/final_screen.png")
+        tempo_espera = 0
+
+        while True:
+            delta = self.janela.delta_time()
+            tempo_espera += delta
+
+            self.janela.set_background_color((0, 0, 0))
+            tela.set_position(0, 0)
+            tela.draw()
+
+            if self.teclado.key_pressed("ESC") and tempo_espera > 1:
+                break
+
+            self.janela.update()
+
     def run(self):
         """O loop principal que controla todos os estados do jogo."""
         while True:
@@ -378,10 +442,12 @@ class Game_Manager:
                 # game_menu agora retorna para qual estado ir
                 proximo_estado = game_menu(self.janela, self.mouse)
                 if proximo_estado == "jogo":
-                    self.carregar_mapa("laboratorio_fechado", 667, 130) # Carrega o mapa inicial
-                    # self.carregar_mapa("laboratorio_fechado", 150, 130) # Carrega o mapa inicial
-                    self.som_ambiente_laboratorio.play()
-                    self.GAME_STATE = "jogo"
+                    if proximo_estado == "jogo":
+                        self.cutscene_inicial()
+                        self.carregar_mapa("laboratorio_fechado", 150, 130)
+                        self.som_ambiente_laboratorio.play()
+                        self.GAME_STATE = "jogo"
+            
                 elif proximo_estado == "sair":
                     self.GAME_STATE = "sair"
             
@@ -426,6 +492,7 @@ class Game_Manager:
                         self.player.arma_equip = True
                         self.carregar_mapa("laboratorio", self.player.get_position_x(), self.player.get_position_y())
                         self.som_pegar_item.play()
+                        self.cutscene([GameImage("assets\img\historia\H_cofre_lab1.png"), GameImage("assets\img\historia\H_cofre_lab2.png"), GameImage("assets\img\historia\H_cofre_lab3.png")])
 
                     if self.puzzle_ativo.name.lower() == "lampadas":
                         self.carregar_mapa("supermercado", self.player.get_position_x(), self.player.get_position_y())
@@ -441,6 +508,7 @@ class Game_Manager:
                         print(f"chave_roda adicionado ao inventário.")
                         self.carregar_mapa("escola", self.player.get_position_x(), self.player.get_position_y())
                         self.som_pegar_item.play()
+                        self.cutscene([GameImage("assets\img\historia\H_chave_roda.png")])
 
                     portal_id = getattr(self.puzzle_ativo, 'portal_target_id', None)
                     

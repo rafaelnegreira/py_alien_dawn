@@ -59,17 +59,17 @@
                 12
             ],
             "expandedObjectLayers": [
-                19,
-                17,
-                11,
                 16,
+                19,
                 6,
-                18
+                18,
+                11,
+                17
             ],
             "scale": 0.75,
             "selectedLayer": 8,
             "viewCenter": {
-                "x": 419.3333333333333,
+                "x": 556.6666666666666,
                 "y": 452
             }
         },
@@ -119,6 +119,60 @@
             "scaleInDock": 0.33
         },
         "cidade.tmx#neo_zero_tiles_and_buildings_01": {
+            "scaleInDock": 1
+        },
+        "cidade_final.tmx": {
+            "expandedObjectLayers": [
+                20,
+                6
+            ],
+            "scale": 0.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 451,
+                "y": 558
+            }
+        },
+        "cidade_final.tmx#CP_V1.0.4": {
+            "scaleInDock": 1
+        },
+        "cidade_final.tmx#CP_V1.0.4 2x": {
+            "scaleInDock": 1
+        },
+        "cidade_final.tmx#City Prop Tileset update 2": {
+            "scaleInDock": 1
+        },
+        "cidade_final.tmx#NES_MStreet_Tile_Set_MockUp": {
+            "scaleInDock": 1.5
+        },
+        "cidade_final.tmx#SL001 2x": {
+            "scaleInDock": 1
+        },
+        "cidade_final.tmx#Sem título": {
+            "scaleInDock": 1
+        },
+        "cidade_final.tmx#fabrica_alt": {
+            "scaleInDock": 1
+        },
+        "cidade_final.tmx#fabrica_ext": {
+            "scaleInDock": 1
+        },
+        "cidade_final.tmx#fabrica_ext2": {
+            "scaleInDock": 1
+        },
+        "cidade_final.tmx#hospital_ext": {
+            "scaleInDock": 1
+        },
+        "cidade_final.tmx#hospital_ext2": {
+            "scaleInDock": 1
+        },
+        "cidade_final.tmx#islandbuildings": {
+            "scaleInDock": 1
+        },
+        "cidade_final.tmx#islandbuildings 2x": {
+            "scaleInDock": 1
+        },
+        "cidade_final.tmx#neo_zero_tiles_and_buildings_01": {
             "scaleInDock": 1
         },
         "escola.json": {
@@ -717,17 +771,17 @@
         },
         "hospital.tmx": {
             "expandedObjectLayers": [
-                10,
-                5,
                 9,
-                6,
-                4
+                5,
+                10,
+                4,
+                6
             ],
             "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 341.66666666666663,
-                "y": 218.66666666666666
+                "x": 320,
+                "y": 240.33333333333331
             }
         },
         "hospital.tmx#Floor+Objects": {
@@ -772,9 +826,9 @@
         "hospital_fechado.tmx": {
             "expandedObjectLayers": [
                 5,
-                11,
+                4,
                 6,
-                4
+                11
             ],
             "scale": 2,
             "selectedLayer": 5,
@@ -1060,17 +1114,17 @@
         },
         "supermercado.tmx": {
             "expandedObjectLayers": [
-                10,
-                13,
                 15,
                 14,
-                4
+                10,
+                4,
+                13
             ],
-            "scale": 1.5,
-            "selectedLayer": 10,
+            "scale": 1,
+            "selectedLayer": 8,
             "viewCenter": {
-                "x": 225,
-                "y": 168.66666666666666
+                "x": 336.5,
+                "y": 228
             }
         },
         "supermercado.tmx#CP_V1.0.4": {
@@ -1095,19 +1149,19 @@
         },
         "supermercado_fechado.tmx": {
             "expandedObjectLayers": [
-                10,
-                17,
-                11,
-                13,
                 12,
                 14,
-                4
+                10,
+                4,
+                13,
+                11,
+                17
             ],
             "scale": 1,
-            "selectedLayer": 11,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 339.5,
-                "y": 246
+                "x": 230.5,
+                "y": 241
             }
         },
         "supermercado_fechado.tmx#CP_V1.0.4": {
@@ -1129,6 +1183,10 @@
             "scaleInDock": 0.75,
             "scaleInEditor": 1
         },
+        "supermercado_fechado.tmx#carro 1": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "supermercado_fechado.tmx#japanese-school_8x8-final.tilesetx2": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -1139,7 +1197,7 @@
     },
     "last.exportedFilePath": "C:/Users/rafin/OneDrive/Área de Trabalho/Exercicios/Alien Dawn LAB JOGOS/py_alien_dawn/mapa",
     "last.externalTilesetPath": "C:/Users/rafin/OneDrive/Área de Trabalho/Exercicios/Alien Dawn LAB JOGOS/py_alien_dawn/tiles/laboratorio",
-    "last.imagePath": "C:/Users/rafin/OneDrive/Área de Trabalho/Exercicios/Alien Dawn LAB JOGOS/py_alien_dawn/assets/tiles/hospital",
+    "last.imagePath": "C:/Users/rafin/OneDrive/Área de Trabalho/Exercicios/Alien Dawn LAB JOGOS/py_alien_dawn/assets/tiles/cidade",
     "map.height": 38,
     "map.lastUsedExportFilter": "Arquivos de mapa JSON (*.tmj *.json)",
     "map.lastUsedFormat": "tmx",
@@ -1152,18 +1210,18 @@
     ],
     "project": "sem título.tiled-project",
     "recentFiles": [
+        "cidade_final.tmx",
+        "cidade.tmx",
         "hospital_fechado.tmx",
         "hospital.tmx",
         "supermercado_fechado.tmx",
         "supermercado.tmx",
         "fabrica_fechado.tmx",
         "fabrica.tmx",
-        "cidade.tmx",
         "laboratorio_fechado.tmx",
         "escola.tmx",
         "fabrica_fechado.json",
-        "laboratorio.tmx",
-        "puzzle.tmx"
+        "laboratorio.tmx"
     ],
     "tileset.embedInMap": true,
     "tileset.lastUsedFilter": "Todos os Ficheiros(*)",

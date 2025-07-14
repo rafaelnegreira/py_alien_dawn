@@ -142,7 +142,7 @@ def puzzle_cadeado(janela, teclado, mouse, delta):
 
     # Dicas
     for i, dica in enumerate(estado["dicas"]):
-        janela.draw_text(dica, 20, 300 + i*20, 16, (0,0,0))
+        janela.draw_text(dica, 20, 300 + i*20, 18, (0,0,0))
 
     # Clique
     clique = mouse.is_button_pressed(1)
@@ -157,7 +157,7 @@ def puzzle_cadeado(janela, teclado, mouse, delta):
         if mouse.is_over_object(estado["botao_confirma"]):
             if estado["numeros_jogador"] == [5, 8, 2]:
                 estado["jogo_finalizado"] = True
-
+                
     estado["mouse_pressionado_anterior"] = clique
 
     if estado["jogo_finalizado"]:
