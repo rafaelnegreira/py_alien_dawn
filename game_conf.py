@@ -509,6 +509,11 @@ class Game_Manager:
         self.som_ambiente_cidade.stop()
         self.som_ambiente_cidade2.stop()
 
+        resetar_puzzle_lab()
+        resetar_puzzle_cadeado()
+        resetar_puzzle_lampadas()
+
+
         self.GAME_STATE = "menu"
 
     def run(self):
@@ -521,9 +526,10 @@ class Game_Manager:
                 proximo_estado = game_menu(self.janela, self.mouse)
                 if proximo_estado == "jogo":
                     if proximo_estado == "jogo":
+                        
+                        self.som_ambiente_laboratorio.play()
                         self.cutscene_inicial()
                         self.carregar_mapa("laboratorio_fechado", 150, 130)
-                        self.som_ambiente_laboratorio.play()
                         self.GAME_STATE = "jogo"
             
                 elif proximo_estado == "sair":

@@ -233,3 +233,24 @@ def puzzle_lampadas(janela, teclado, mouse, delta):
                 break
 
     return False
+
+
+def resetar_puzzle_lab():
+    global senha_digitada, cofre_esta_aberto, tempo_tecla
+    senha_digitada = ""
+    cofre_esta_aberto = False
+    tempo_tecla = 0
+    if hasattr(puzzle_lab, "cofre_fechado"):
+        del puzzle_lab.cofre_fechado
+    if hasattr(puzzle_lab, "cofre_aberto"):
+        del puzzle_lab.cofre_aberto
+
+def resetar_puzzle_cadeado():
+    if hasattr(puzzle_cadeado, "estado"):
+        del puzzle_cadeado.estado
+
+def resetar_puzzle_lampadas():
+    if hasattr(puzzle_lampadas, "estado"):
+        del puzzle_lampadas.estado
+    if hasattr(puzzle_lampadas, "init"):
+        del puzzle_lampadas.init
