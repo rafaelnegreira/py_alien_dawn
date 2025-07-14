@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "hospital.tmx",
+    "activeFile": "supermercado.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -59,18 +59,18 @@
                 12
             ],
             "expandedObjectLayers": [
-                16,
-                19,
-                6,
                 18,
-                11,
-                17
+                19,
+                16,
+                17,
+                6,
+                11
             ],
-            "scale": 0.75,
-            "selectedLayer": 8,
+            "scale": 2,
+            "selectedLayer": 11,
             "viewCenter": {
-                "x": 556.6666666666666,
-                "y": 452
+                "x": 716,
+                "y": 542
             }
         },
         "cidade.tmx#CP_V1.0.4": {
@@ -194,13 +194,13 @@
                 5,
                 9,
                 6,
-                4,
-                7
+                7,
+                4
             ],
             "scale": 1,
-            "selectedLayer": 8,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 764.5,
+                "x": 651.5,
                 "y": 184
             }
         },
@@ -771,11 +771,11 @@
         },
         "hospital.tmx": {
             "expandedObjectLayers": [
-                9,
                 5,
+                9,
+                6,
                 10,
-                4,
-                6
+                4
             ],
             "scale": 1.5,
             "selectedLayer": 1,
@@ -826,15 +826,15 @@
         "hospital_fechado.tmx": {
             "expandedObjectLayers": [
                 5,
-                4,
                 6,
-                11
+                11,
+                4
             ],
             "scale": 2,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 409.75,
-                "y": 104
+                "x": 327.5,
+                "y": 275.75
             }
         },
         "hospital_fechado.tmx#Floor+Objects": {
@@ -904,14 +904,14 @@
         },
         "laboratorio.tmx": {
             "expandedObjectLayers": [
-                13,
                 8,
-                3
+                3,
+                13
             ],
             "scale": 0.75,
-            "selectedLayer": 7,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 571.3333333333333,
+                "x": 502.66666666666663,
                 "y": 330.66666666666663
             }
         },
@@ -977,15 +977,15 @@
         },
         "laboratorio_fechado.tmx": {
             "expandedObjectLayers": [
-                10,
-                13,
                 8,
-                3
+                3,
+                10,
+                13
             ],
             "scale": 0.75,
-            "selectedLayer": 5,
+            "selectedLayer": 9,
             "viewCenter": {
-                "x": 560.6666666666666,
+                "x": 491.99999999999994,
                 "y": 318.66666666666663
             }
         },
@@ -1117,14 +1117,14 @@
                 15,
                 14,
                 10,
-                4,
-                13
+                13,
+                4
             ],
             "scale": 1,
             "selectedLayer": 8,
             "viewCenter": {
-                "x": 336.5,
-                "y": 228
+                "x": 480,
+                "y": 320.5
             }
         },
         "supermercado.tmx#CP_V1.0.4": {
@@ -1143,6 +1143,9 @@
             "scaleInDock": 2,
             "scaleInEditor": 1
         },
+        "supermercado.tmx#carro 1": {
+            "scaleInDock": 1
+        },
         "supermercado.tmx#japanese-school_8x8-final.tilesetx2": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -1150,18 +1153,18 @@
         "supermercado_fechado.tmx": {
             "expandedObjectLayers": [
                 12,
+                17,
                 14,
                 10,
-                4,
                 13,
                 11,
-                17
+                4
             ],
             "scale": 1,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 230.5,
-                "y": 241
+                "x": 499,
+                "y": 271
             }
         },
         "supermercado_fechado.tmx#CP_V1.0.4": {
@@ -1206,16 +1209,18 @@
     "map.width": 50,
     "openFiles": [
         "hospital_fechado.tmx",
-        "hospital.tmx"
+        "hospital.tmx",
+        "supermercado_fechado.tmx",
+        "supermercado.tmx"
     ],
     "project": "sem título.tiled-project",
     "recentFiles": [
-        "cidade_final.tmx",
-        "cidade.tmx",
         "hospital_fechado.tmx",
         "hospital.tmx",
         "supermercado_fechado.tmx",
         "supermercado.tmx",
+        "cidade_final.tmx",
+        "cidade.tmx",
         "fabrica_fechado.tmx",
         "fabrica.tmx",
         "laboratorio_fechado.tmx",

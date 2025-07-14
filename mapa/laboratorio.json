@@ -290,12 +290,12 @@
                         {
                          "name":"spawn_x",
                          "type":"int",
-                         "value":832
+                         "value":815
                         }, 
                         {
                          "name":"spawn_y",
                          "type":"int",
-                         "value":573
+                         "value":581
                         }],
                  "rotation":0,
                  "type":"",

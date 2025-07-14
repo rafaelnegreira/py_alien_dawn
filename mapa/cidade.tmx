@@ -618,7 +618,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2147507129,0
 </data>
  </layer>
- <objectgroup id="6" name="solidos" visible="0">
+ <objectgroup id="6" name="solidos">
   <object id="1" x="432.084" y="49.0837" width="286.833" height="123.583"/>
   <object id="9" x="573.955" y="390.03" width="8.75758" height="9.9394"/>
   <object id="10" x="369.121" y="208.572" width="12.7576" height="13.4394"/>
@@ -671,7 +671,7 @@
    <text fontfamily="Small Fonts" pixelsize="8" wrap="1" halign="center" valign="center">SCHOOL</text>
   </object>
  </objectgroup>
- <objectgroup id="11" name="portais" visible="0">
+ <objectgroup id="11" name="portais">
   <object id="68" x="672.25" y="174.875" width="31.5" height="24.5">
    <properties>
     <property name="destino" value="supermercado_dinamico"/>
@@ -679,7 +679,7 @@
     <property name="spawn_y" type="int" value="586"/>
    </properties>
   </object>
-  <object id="70" x="800" y="518.5" width="32.375" height="28.625">
+  <object id="70" x="800" y="518.5" width="32.375" height="26.625">
    <properties>
     <property name="destino" value="laboratorio_dinamico"/>
     <property name="spawn_x" type="int" value="889"/>

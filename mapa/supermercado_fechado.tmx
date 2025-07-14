@@ -397,7 +397,7 @@
   <object id="87" x="592.199" y="34.5982" width="15.602" height="28.8036"/>
   <object id="97" name="municao" x="273" y="437.5" width="28" height="31"/>
  </objectgroup>
- <objectgroup id="10" name="puzzle">
+ <objectgroup id="10" name="puzzle" visible="0">
   <object id="78" name="lampadas" type="super_puzzle" x="411.667" y="34.1667" width="39.6667" height="14.75"/>
  </objectgroup>
 </map>

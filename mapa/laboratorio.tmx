@@ -209,8 +209,8 @@
   <object id="68" x="850.084" y="614" width="76.3333" height="16">
    <properties>
     <property name="destino" value="cidade"/>
-    <property name="spawn_x" type="int" value="832"/>
-    <property name="spawn_y" type="int" value="573"/>
+    <property name="spawn_x" type="int" value="815"/>
+    <property name="spawn_y" type="int" value="581"/>
    </properties>
   </object>
  </objectgroup>

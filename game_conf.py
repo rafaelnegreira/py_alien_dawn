@@ -408,7 +408,7 @@ class Game_Manager:
                 tempo += delta
 
                 img.draw()
-                self.janela.draw_text("Pressione ESPAÇO para continuar", 250, self.janela.height - 30, size=14, color=(0, 0, 0))
+                self.janela.draw_text("Pressione ESPAÇO para continuar", self.janela.width/2 - 110, self.janela.height - 40, size=14, color=(0, 0, 0))
 
                 if self.teclado.key_pressed("SPACE") and tempo > 0.5:
                     break
