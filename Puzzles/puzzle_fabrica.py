@@ -1,6 +1,6 @@
-from pplay.window import Window
-from pplay.sprite import Sprite
-from pplay.mouse import Mouse
+from PPlay.window import Window
+from PPlay.sprite import Sprite
+from PPlay.mouse import Mouse
 WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 480
 ASSETS_PATH = "assets/img/"
