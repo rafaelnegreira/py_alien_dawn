@@ -1,6 +1,6 @@
 from PPlay.gameimage import *
 from PPlay.sprite import *
-
+from Puzzles.puzzle_fabrica import*
 senha_digitada = ""
 cofre_esta_aberto = False
 senha_correta = "senha"
@@ -254,3 +254,12 @@ def resetar_puzzle_lampadas():
         del puzzle_lampadas.estado
     if hasattr(puzzle_lampadas, "init"):
         del puzzle_lampadas.init
+
+def puzzle_hosp():
+    return False
+def puzzle_fabrica(janela, mouse):
+    puzzle_fb = SequencePuzzle(janela, mouse)
+    while True:
+        puzzle_fb.update()
+        puzzle_fb.draw()
+        janela.update()
