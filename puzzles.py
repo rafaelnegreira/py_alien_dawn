@@ -254,3 +254,104 @@ def resetar_puzzle_lampadas():
         del puzzle_lampadas.estado
     if hasattr(puzzle_lampadas, "init"):
         del puzzle_lampadas.init
+
+import random
+
+# --- Estado do puzzle_arrastar ---
+# Dentro de puzzles.py
+
+def resetar_puzzle_hospital():
+    if hasattr(puzzle_hospital, "pecas"):
+        del puzzle_hospital.pecas
+    if hasattr(puzzle_hospital, "peca_selecionada"):
+        del puzzle_hospital.peca_selecionada
+    if hasattr(puzzle_hospital, "mensagem"):
+        del puzzle_hospital.mensagem
+
+def puzzle_hospital(janela, teclado, mouse):
+
+    if not hasattr(puzzle_hospital, "pecas"):
+        class Peca:
+            def __init__(self, imagem, pos_final):
+                self.img = GameImage(imagem)
+                self.pos_final = pos_final
+                self.pos_atual = [0, 0]
+                self.selecionada = False
+
+            def desenhar(self):
+                self.img.set_position(*self.pos_atual)
+                self.img.draw()
+
+            def esta_no_lugar(self):
+                x, y = self.pos_atual
+                xf, yf = self.pos_final
+                return abs(x - xf) < 10 and abs(y - yf) < 10
+
+        tamanho_peca = 100
+        margem_x = (janela.width - (tamanho_peca * 3)) // 2
+        margem_y = (janela.height - (tamanho_peca * 3)) // 2
+
+        pecas = []
+        for i in range(3):
+            for j in range(3):
+                idx = i * 3 + j + 1
+                caminho = f"assets/img/p{idx}.png"
+                pos_final = (j * tamanho_peca + margem_x, i * tamanho_peca + margem_y)
+                pecas.append(Peca(caminho, pos_final))
+
+        posicoes_iniciais = [p.pos_final for p in pecas]
+        random.shuffle(posicoes_iniciais)
+        for i, peca in enumerate(pecas):
+            peca.pos_atual = list(posicoes_iniciais[i])
+
+        puzzle_hospital.pecas = pecas
+        puzzle_hospital.peca_selecionada = None
+        puzzle_hospital.mensagem = ""
+
+    janela.set_background_color((245, 245, 245))
+
+    janela.draw_text("Arraste as peças para montar a imagem!", 220, 20, size=26, color=(30, 30, 30))
+    janela.draw_text("pressione ESC para sair", 10, 5, size=15, color=(100, 100, 100))
+
+    if mouse.is_button_pressed(1):
+        if not puzzle_hospital.peca_selecionada:
+            for peca in reversed(puzzle_hospital.pecas):
+                if mouse.is_over_object(peca.img):
+                    puzzle_hospital.peca_selecionada = peca
+                    break
+    else:
+        if puzzle_hospital.peca_selecionada:
+            if puzzle_hospital.peca_selecionada.esta_no_lugar():
+                puzzle_hospital.peca_selecionada.pos_atual = list(puzzle_hospital.peca_selecionada.pos_final)
+            puzzle_hospital.peca_selecionada = None
+
+    if puzzle_hospital.peca_selecionada:
+        pos_mouse = mouse.get_position()
+        puzzle_hospital.peca_selecionada.pos_atual = [pos_mouse[0] - 50, pos_mouse[1] - 50]
+
+    for p in puzzle_hospital.pecas:
+        p.desenhar()
+
+    if all(p.esta_no_lugar() for p in puzzle_hospital.pecas):
+        puzzle_hospital.mensagem = "Puzzle resolvido!"
+        puzzle_hospital.finalizado = True
+
+    if hasattr(puzzle_hospital, "finalizado") and puzzle_hospital.finalizado:
+        janela.draw_text("Puzzle resolvido! Pressione ESC para sair.", janela.width // 2 - 200, janela.height - 40, size=28, color=(0, 128, 0))
+        if teclado.key_pressed("esc"):
+            return True
+
+    if teclado.key_pressed("esc"):
+        return False
+
+    return False
+
+def resetar_puzzle_hospital():
+    if hasattr(puzzle_hospital, "pecas"):
+        del puzzle_hospital.pecas
+    if hasattr(puzzle_hospital, "peca_selecionada"):
+        del puzzle_hospital.peca_selecionada
+    if hasattr(puzzle_hospital, "mensagem"):
+        del puzzle_hospital.mensagem
+    if hasattr(puzzle_hospital, "finalizado"):
+        del puzzle_hospital.finalizado

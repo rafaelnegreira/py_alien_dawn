@@ -70,7 +70,7 @@ class Game_Manager:
         self.arma = Arma(0, 200)
 
         self.player = Player(
-            tipo="Player", speed=150, hp=3, arma=self.arma,
+            tipo="Player", speed=350, hp=3, arma=self.arma,
             sprite_stay="assets/Apocalypse Character Pack/Player/iddle_front2.png",
             sprite_left="assets/Apocalypse Character Pack/Player/walk_left2.png",
             sprite_right="assets/Apocalypse Character Pack/Player/walk_right2.png",
@@ -521,6 +521,7 @@ class Game_Manager:
         resetar_puzzle_lab()
         resetar_puzzle_cadeado()
         resetar_puzzle_lampadas()
+        resetar_puzzle_hospital()
 
 
         self.GAME_STATE = "menu"
@@ -570,6 +571,11 @@ class Game_Manager:
 
                 elif nome == "lampadas":
                     completou = puzzle_lampadas(self.janela, self.teclado, self.mouse, delta)
+
+                elif nome == "puzzle_hospital":
+                    completou = puzzle_hospital(self.janela, self.teclado, self.mouse)
+
+
 
                 else:
                     # fallback para puzzle genérico
