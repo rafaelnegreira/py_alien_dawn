@@ -522,7 +522,7 @@ class Game_Manager:
         resetar_puzzle_cadeado()
         resetar_puzzle_lampadas()
         resetar_puzzle_hospital()
-
+        resetar_puzzle_luzes()
 
         self.GAME_STATE = "menu"
 
@@ -574,6 +574,9 @@ class Game_Manager:
 
                 elif nome == "puzzle_hospital":
                     completou = puzzle_hospital(self.janela, self.teclado, self.mouse)
+ 
+                elif nome == "puzzle_fabrica":
+                    completou = puzzle_luzes(self.janela, self.teclado, self.mouse)
 
 
 

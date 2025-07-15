@@ -1,84 +1,66 @@
 from PPlay.window import Window
-from PPlay.gameimage import GameImage
 from PPlay.mouse import Mouse
-import random
+import pygame
 
+# Inicializar PPlay e Pygame mixer
 janela = Window(800, 600)
-janela.set_title("Puzzle de Arrastar")
+janela.set_title("Puzzle de Luzes 4x4")
 mouse = Mouse()
+pygame.mixer.init()
 
-# Classe da peça
-class Peca:
-    def __init__(self, imagem, pos_final):
-        self.img = GameImage(imagem)
-        self.pos_final = pos_final
-        self.pos_atual = [0, 0]
-        self.selecionada = False
+# Som de clique
+som_click = pygame.mixer.Sound("assets\sounds\click.wav")
 
-    def desenhar(self):
-        self.img.set_position(*self.pos_atual)
-        self.img.draw()
+# Tamanho e grade
+TAM = 100
+GRID_SIZE = 4
 
-    def esta_no_lugar(self):
-        x, y = self.pos_atual
-        xf, yf = self.pos_final
-        return abs(x - xf) < 10 and abs(y - yf) < 10
+# Offsets para centralizar a grade 4x4
+OFFSET_X = (janela.width - (TAM * GRID_SIZE)) // 2  # (800 - 400) // 2 = 200
+OFFSET_Y = (janela.height - (TAM * GRID_SIZE)) // 2  # (600 - 400) // 2 = 100
 
-# Centralizar grade 3x3 de peças 100x100
-tamanho_peca = 100
-margem_x = (janela.width - (tamanho_peca * 3)) // 2  # 800 - 300 = 250
-margem_y = (janela.height - (tamanho_peca * 3)) // 2  # 600 - 300 = 150
+# Estado das luzes (1 = ligado, 0 = desligado)
+grid = [[1 for _ in range(GRID_SIZE)] for _ in range(GRID_SIZE)]
 
-pecas = []
-for i in range(3):
-    for j in range(3):
-        idx = i * 3 + j + 1
-        caminho = f"assets/img/p{idx}.png"
-        pos_final = (j * tamanho_peca + margem_x, i * tamanho_peca + margem_y)
-        pecas.append(Peca(caminho, pos_final))
+def desenhar_grid():
+    for i in range(GRID_SIZE):
+        for j in range(GRID_SIZE):
+            x = j * TAM + OFFSET_X
+            y = i * TAM + OFFSET_Y
+            cor = (255, 255, 0) if grid[i][j] else (100, 100, 100)
+            pygame.draw.rect(janela.screen, cor, (x, y, TAM - 5, TAM - 5))
 
-# Embaralhar posições iniciais
-posicoes_iniciais = [peca.pos_final for peca in pecas]
-random.shuffle(posicoes_iniciais)
-for i, peca in enumerate(pecas):
-    peca.pos_atual = list(posicoes_iniciais[i])
+def alternar(i, j):
+    if 0 <= i < GRID_SIZE and 0 <= j < GRID_SIZE:
+        grid[i][j] = 1 - grid[i][j]
 
-peca_selecionada = None
 mensagem = ""
 
 while True:
-    janela.set_background_color((245, 245, 245))
+    janela.set_background_color((30, 30, 30))
+    desenhar_grid()
 
-    # Texto de instrução
-    janela.draw_text("Arraste as peças para montar a imagem!", 220, 20, size=26, color=(30, 30, 30))
+    if all(cell == 0 for row in grid for cell in row):
+        mensagem = "🎉 Puzzle resolvido!"
 
-    # Evento de clique
-    if mouse.is_button_pressed(1):
-        if not peca_selecionada:
-            for peca in reversed(pecas):
-                if mouse.is_over_object(peca.img):
-                    peca_selecionada = peca
-                    break
-    else:
-        if peca_selecionada:
-            if peca_selecionada.esta_no_lugar():
-                peca_selecionada.pos_atual = list(peca_selecionada.pos_final)
-            peca_selecionada = None
-
-    # Mover peça com o mouse
-    if peca_selecionada:
-        pos_mouse = mouse.get_position()
-        peca_selecionada.pos_atual = [pos_mouse[0] - 50, pos_mouse[1] - 50]
-
-    # Desenhar peças
-    for peca in pecas:
-        peca.desenhar()
-
-    # Verificar resolução
-    if all(p.esta_no_lugar() for p in pecas):
-        mensagem = "Puzzle resolvido!"
-
+    janela.draw_text("Apague todas as luzes!", 280, 40, size=26, color=(255, 255, 255))
     if mensagem:
-        janela.draw_text(mensagem, janela.width // 2 - 120, janela.height - 40, size=28, color=(0, 128, 0))
+        janela.draw_text(mensagem, janela.width // 2 - 130, 550, size=30, color=(0, 255, 0))
+
+    if mouse.is_button_pressed(1):
+        mx, my = mouse.get_position()
+        for i in range(GRID_SIZE):
+            for j in range(GRID_SIZE):
+                x = j * TAM + OFFSET_X
+                y = i * TAM + OFFSET_Y
+                if x <= mx <= x + TAM and y <= my <= y + TAM:
+                    alternar(i, j)
+                    alternar(i - 1, j)
+                    alternar(i + 1, j)
+                    alternar(i, j - 1)
+                    alternar(i, j + 1)
+                    som_click.play()
+                    janela.delay(250)
+                    break
 
     janela.update()

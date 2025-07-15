@@ -1,5 +1,6 @@
 from PPlay.gameimage import *
 from PPlay.sprite import *
+import pygame
 
 senha_digitada = ""
 cofre_esta_aberto = False
@@ -355,3 +356,78 @@ def resetar_puzzle_hospital():
         del puzzle_hospital.mensagem
     if hasattr(puzzle_hospital, "finalizado"):
         del puzzle_hospital.finalizado
+
+def resetar_puzzle_luzes():
+    if hasattr(puzzle_luzes, "grid"):
+        del puzzle_luzes.grid
+    if hasattr(puzzle_luzes, "mensagem"):
+        del puzzle_luzes.mensagem
+    if hasattr(puzzle_luzes, "resolvido"):
+        del puzzle_luzes.resolvido
+    if hasattr(puzzle_luzes, "som_click"):
+        del puzzle_luzes.som_click
+
+def puzzle_luzes(janela, teclado, mouse):
+    if not hasattr(puzzle_luzes, "grid"):
+        pygame.mixer.init()
+        puzzle_luzes.som_click = pygame.mixer.Sound("assets/sounds/click.wav")
+
+        TAM = 100
+        GRID_SIZE = 4
+        puzzle_luzes.TAM = TAM
+        puzzle_luzes.GRID_SIZE = GRID_SIZE
+        puzzle_luzes.OFFSET_X = (janela.width - (TAM * GRID_SIZE)) // 2
+        puzzle_luzes.OFFSET_Y = (janela.height - (TAM * GRID_SIZE)) // 2
+        puzzle_luzes.grid = [[1 for _ in range(GRID_SIZE)] for _ in range(GRID_SIZE)]
+        puzzle_luzes.mensagem = ""
+        puzzle_luzes.resolvido = False
+
+    TAM = puzzle_luzes.TAM
+    GRID_SIZE = puzzle_luzes.GRID_SIZE
+    OFFSET_X = puzzle_luzes.OFFSET_X
+    OFFSET_Y = puzzle_luzes.OFFSET_Y
+    grid = puzzle_luzes.grid
+
+    def alternar(i, j):
+        if 0 <= i < GRID_SIZE and 0 <= j < GRID_SIZE:
+            grid[i][j] = 1 - grid[i][j]
+
+    def desenhar_grid():
+        for i in range(GRID_SIZE):
+            for j in range(GRID_SIZE):
+                x = j * TAM + OFFSET_X
+                y = i * TAM + OFFSET_Y
+                cor = (255, 255, 0) if grid[i][j] else (100, 100, 100)
+                pygame.draw.rect(janela.screen, cor, (x, y, TAM - 5, TAM - 5))
+
+    janela.set_background_color((30, 30, 30))
+    desenhar_grid()
+
+    if not puzzle_luzes.resolvido and all(cell == 0 for row in grid for cell in row):
+        puzzle_luzes.mensagem = "Puzzle resolvido!"
+        puzzle_luzes.resolvido = True
+
+    janela.draw_text("Apague todas as luzes!", 280, 40, size=26, color=(255, 255, 255))
+    if puzzle_luzes.mensagem:
+        janela.draw_text(puzzle_luzes.mensagem, janela.width // 2 - 110, 550, size=30, color=(0, 255, 0))
+
+    if mouse.is_button_pressed(1):
+        mx, my = mouse.get_position()
+        for i in range(GRID_SIZE):
+            for j in range(GRID_SIZE):
+                x = j * TAM + OFFSET_X
+                y = i * TAM + OFFSET_Y
+                if x <= mx <= x + TAM and y <= my <= y + TAM:
+                    alternar(i, j)
+                    alternar(i - 1, j)
+                    alternar(i + 1, j)
+                    alternar(i, j - 1)
+                    alternar(i, j + 1)
+                    puzzle_luzes.som_click.play()
+                    janela.delay(250)
+                    break
+
+    if puzzle_luzes.resolvido and teclado.key_pressed("esc"):
+        return True
+
+    return False
