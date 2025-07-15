@@ -70,7 +70,7 @@ class Game_Manager:
         self.arma = Arma(0, 200)
 
         self.player = Player(
-            tipo="Player", speed=350, hp=3, arma=self.arma,
+            tipo="Player", speed=150, hp=4, arma=self.arma,
             sprite_stay="assets/Apocalypse Character Pack/Player/iddle_front2.png",
             sprite_left="assets/Apocalypse Character Pack/Player/walk_left2.png",
             sprite_right="assets/Apocalypse Character Pack/Player/walk_right2.png",
@@ -483,7 +483,7 @@ class Game_Manager:
 
     def resetar_jogo(self):
         # Reset de variáveis principais
-        self.player.hp = 5
+        self.player.hp = 4
         self.player.inventario.clear()
         self.player.invulneravel = False
         self.player.tempo_invulneravel = 0
