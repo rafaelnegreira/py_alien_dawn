@@ -48,7 +48,7 @@ class SequencePuzzle:
     def __init__(self, window, mouse):        
         self.window = window
         self.mouse = mouse
-        self.is_solved = solved        
+        self.is_solved = False        
         # Carrega o fundo principal do puzzle
         self.background = Sprite(ASSETS_PATH + "puzzle_fabricabg.png")
         
