@@ -23,9 +23,20 @@ class Camera:
         self.window_width = window_width
         self.window_height = window_height
 
-    def update(self, target):
-        self.x = target.x - self.window_width / 2 + target.width / 2
-        self.y = target.y - self.window_height / 2 + target.height / 2
+    def update(self, target, mapa_largura, mapa_altura):
+        # Se o mapa for menor que a tela, centraliza o mapa inteiro
+        if mapa_largura <= self.window_width:
+            self.x = -(self.window_width - mapa_largura) / 2
+        else:
+            self.x = target.x - self.window_width / 2 + target.width / 2
+            self.x = max(0, min(self.x, mapa_largura - self.window_width))
+
+        if mapa_altura <= self.window_height:
+            self.y = -(self.window_height - mapa_altura) / 2
+        else:
+            self.y = target.y - self.window_height / 2 + target.height / 2
+            self.y = max(0, min(self.y, mapa_altura - self.window_height))
+
 
     def apply(self, obj):
         obj.set_position(obj.x - self.x, obj.y - self.y)
@@ -56,10 +67,10 @@ class Game_Manager:
         self.itens_coletados = {}  # Armazena os itens já coletados, por ID
 
         # Componentes do jogo
-        self.arma = Arma(1, 200)
+        self.arma = Arma(0, 200)
 
         self.player = Player(
-            tipo="Player", speed=300, hp=5, arma=self.arma,
+            tipo="Player", speed=150, hp=3, arma=self.arma,
             sprite_stay="assets/Apocalypse Character Pack/Player/iddle_front2.png",
             sprite_left="assets/Apocalypse Character Pack/Player/walk_left2.png",
             sprite_right="assets/Apocalypse Character Pack/Player/walk_right2.png",
@@ -155,7 +166,7 @@ class Game_Manager:
         self.player.mover(self.teclado, self.colisores, self.janela)
         self.player.atirar(self.teclado, self.tempo_atual)
         self.arma.atualizar_projeteis(delta)
-        self.camera.update(self.player.sprite)
+        self.camera.update(self.player.sprite, self.background.width, self.background.height)
         self.player.atualizar_invulnerabilidade(delta)
 
         # Lógica de interação
@@ -263,9 +274,9 @@ class Game_Manager:
                         print("Vida +1")
 
                     if "municao" in nome_item:
-                        self.arma.qtd_municao += 10
+                        self.arma.qtd_municao += 8
                         self.som_pegar_municao.play()
-                        print(f"Munição +10 QTD = {self.arma.qtd_municao}")
+                        print(f"Munição +8 QTD = {self.arma.qtd_municao}")
 
                     if "final" in nome_item:
                         if "vela_ignicao" in self.player.inventario:
@@ -575,6 +586,7 @@ class Game_Manager:
 
                     if self.puzzle_ativo.name.lower() == "cofre_lab":
                         self.player.arma_equip = True
+                        self.arma.qtd_municao += 8
                         self.carregar_mapa("laboratorio", self.player.get_position_x(), self.player.get_position_y())
                         self.som_pegar_item.play()
                         self.cutscene([GameImage("assets\img\historia\H_cofre_lab1.png"), GameImage("assets\img\historia\H_cofre_lab2.png"), GameImage("assets\img\historia\H_cofre_lab3.png")])
