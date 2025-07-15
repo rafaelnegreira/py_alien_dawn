@@ -315,7 +315,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="8" name="inimigos" visible="0">
+ <objectgroup id="8" name="inimigos">
   <object id="65" x="399.25" y="231.229" width="6.4008" height="5.6007"/>
   <object id="66" x="206.426" y="352.844" width="5.6007" height="6.4008"/>
  </objectgroup>

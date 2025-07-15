@@ -152,7 +152,7 @@ class Game_Manager:
             novo_inimigo = InimigoControlavel(
                 tipo="alien", 
                 hp=1, 
-                speed=60,
+                speed=70,
                 x=spawner.x,  # Usa a posição X definida no mapa
                 y=spawner.y   # Usa a posição Y definida no mapa
             )
