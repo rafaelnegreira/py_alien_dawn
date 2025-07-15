@@ -17,7 +17,6 @@ from PPlay.sound import Sound
 
 
 class Camera:
-    # (A classe Camera está correta e permanece a mesma)
     def __init__(self, window_width, window_height):
         self.x = 0
         self.y = 0
@@ -141,14 +140,13 @@ class Game_Manager:
         for spawner in map_inimigos_spawners:
             novo_inimigo = InimigoControlavel(
                 tipo="alien", 
-                hp=3, 
+                hp=1, 
                 speed=60,
                 x=spawner.x,  # Usa a posição X definida no mapa
                 y=spawner.y   # Usa a posição Y definida no mapa
             )
             self.inimigos_vivos.append(novo_inimigo)
 
-        # Esta linha continua no final para posicionar o jogador corretamente
         self.player.position(spawn_x, spawn_y)
 
     def update_game(self, delta):

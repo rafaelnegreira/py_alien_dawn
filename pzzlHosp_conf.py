@@ -29,7 +29,7 @@ class ManageTerminal():
         self.key_press_cooldown = 0.3
         self.background_playing = Sprite("assets/img/hosp_background0.png")
         self.background_text = Sprite("assets/img/hosp_background1.png")
-        self.font_path = "fonts/PressStart2P-Regular.ttf"
+        self.font_path = "assets/font/PressStart2P-Regular.ttf"
         self.buses = []
         self.internal_state = "BRIEFING"
         self._setup_puzzle()

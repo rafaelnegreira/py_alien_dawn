@@ -16,7 +16,6 @@ def load_map_objects(map_name):
         if layer["type"] == "objectgroup":
             layer_name = layer['name'].lower()
             
-            # --- CORREÇÃO DE INDENTAÇÃO E LÓGICA ---
             for obj_data in layer['objects']:
                 new_obj = None
                 
