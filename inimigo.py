@@ -1,23 +1,25 @@
 import math
 from PPlay.sprite import *
-from player import Character # Herda de Character, que está em player.py
+from player import Character
+import os
+
+# Obtém o diretório do script para construir caminhos absolutos
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 class InimigoControlavel(Character):
     def __init__(self, tipo, hp, speed, x, y):
         super().__init__(tipo, hp)
         self.speed = speed
         
-        # Sprites (use os caminhos para seus assets)
-
-        self.sprite_down = Sprite("assets/inimigo/inimigo_down.png", 3)
+        # Caminho absoluto para o sprite do inimigo
+        sprite_path = os.path.join(BASE_DIR, "assets", "inimigo", "inimigo_down.png")
+        self.sprite_down = Sprite(sprite_path, 3)
         self.sprite_down.set_sequence_time(0, 3, 300)
         
-        # O sprite atual que será desenhado
         self.sprite = self.sprite_down
         self.sprite.set_position(x, y)
 
-    def perseguir(self, player, colisores, delta_time): # <-- ADICIONADO 'colisores'
-        """Calcula a direção até o jogador e se move, evitando paredes."""
+    def perseguir(self, player, colisores, delta_time):
         player_x = player.sprite.x
         player_y = player.sprite.y
 
@@ -29,35 +31,24 @@ class InimigoControlavel(Character):
             vetor_x_normalizado = vetor_x / distancia
             vetor_y_normalizado = vetor_y / distancia
 
-            # --- LÓGICA DE COLISÃO ---
-            
-        # 1. Salva a posição original antes de qualquer movimento neste frame
-        old_x = self.sprite.x
-        old_y = self.sprite.y
+            old_x = self.sprite.x
+            old_y = self.sprite.y
 
-        # 2. Calcula o quanto mover em cada eixo
-        movimento_x = vetor_x_normalizado * self.speed * delta_time
-        movimento_y = vetor_y_normalizado * self.speed * delta_time
+            movimento_x = vetor_x_normalizado * self.speed * delta_time
+            movimento_y = vetor_y_normalizado * self.speed * delta_time
 
-        # 3. Tenta mover no eixo X
-        self.sprite.x += movimento_x
-        # 4. Verifica colisão no eixo X
-        for bloco in colisores:
-            if self.sprite.collided(bloco):
-                # Se colidiu, REVERTE a posição X para a que era antes.
-                self.sprite.x = old_x
-                break # Para o loop de colisores para este eixo
+            self.sprite.x += movimento_x
+            for bloco in colisores:
+                if self.sprite.collided(bloco):
+                    self.sprite.x = old_x
+                    break
 
-        # 5. Tenta mover no eixo Y
-        self.sprite.y += movimento_y
-        # 6. Verifica colisão no eixo Y
-        for bloco in colisores:
-            if self.sprite.collided(bloco):
-                # Se colidiu, REVERTE a posição Y para a que era antes.
-                self.sprite.y = old_y
-                break # Para o loop de colisores para este eixo
+            self.sprite.y += movimento_y
+            for bloco in colisores:
+                if self.sprite.collided(bloco):
+                    self.sprite.y = old_y
+                    break
 
     def desenhar(self):
-        """Atualiza e desenha o sprite atual do inimigo."""
         self.sprite.update()
         self.sprite.draw()
